@@ -1,20 +1,6 @@
-import React from 'react'
-
-import { SubstrateContextProvider } from '../utils/substrate'
-import Router from '@components/Router'
-
-import { BrowserRouter } from 'react-router-dom'
-import { Provider } from 'react-redux'
-import { store } from '@store/store'
+import React from "react";
+import Home from "../pages/home";
 
 export default function App() {
-  return (
-    <SubstrateContextProvider>
-      <Provider store={store}>
-        <BrowserRouter>
-            <Router />
-        </BrowserRouter>
-      </Provider>
-    </SubstrateContextProvider>
-  )
+  return <Home />;
 }
