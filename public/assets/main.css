@@ -10,6 +10,10 @@
     font-family: "DS-Digital";
     src: url("./fonts/DS-DIGI.TTF");
 }
+@font-face {
+    font-family: "DS-Digital-Bold";
+    src: url("./fonts/DS-DIGIB.TTF");
+}
 
 body {
     margin: 0;
@@ -43,11 +47,16 @@ a {
     line-height: 30px;
 }
 
+.menu {
+    background: #000;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+    position: sticky;
+}
+
 .herobg {
-    background: url('./bg-hero.png') no-repeat top center;
     width: 100%;
-    height: 1201px;
-    opacity: 0.8;
     position: absolute;
     top: 0; left: 0;
     z-index: -2;
@@ -62,21 +71,32 @@ a {
     margin: 0 auto;
     padding: 0 20px;
 }
-
-.navbar span a {
-    height: 50px;
-    display: flex;
+.navbar .burger,
+.navbar .closeButton {
+    width: 70px; height: 70px;
+    display: none;
+    justify-content: center;
     align-items: center;
 }
 
-.navbar span a:hover {
+.navbar a {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.navbar a:hover {
     text-decoration: underline;
     color: #7AE7FF;
 }
-
+.navbar .icons {
+    display: flex;
+    gap: 27px;
+}
 .hero {
     max-width: 1290px;
-    margin: 115px auto 242px;
+    margin: 115px auto 142px;
     display: flex;
     align-items: center;
     padding: 0 20px;
@@ -92,6 +112,7 @@ a {
     align-content: center;
     position: relative;
     flex-shrink: 0;
+    background-size: cover;
 }
 
 .hero .robot .block {
@@ -127,7 +148,6 @@ a {
 }
 .hero .text {
     padding-left: 30px;
-    text-transform: uppercase;
 }
 .hero .text .heading {
     font-size: 72px;
@@ -148,36 +168,40 @@ a {
     justify-content: center;
     align-items: center;
     color: #000;
+    text-transform: uppercase;
 }
 
 .airdrop {
     height: 889px;
     position: relative;
+    padding-top: 100px;
 }
 .airdrop h2 { text-align: center }
 .airdrop .stars-left {
     position: absolute;
-    top: 110px; left: 0;
+    top: 210px; left: 0;
+    z-index: -2;
 }
 .airdrop .ufo {
     position: absolute;
-    top: 25px; left: 0; right: 0;
+    top: 125px; left: 0; right: 0;
     margin: 0 auto;
     z-index: -1;
 }
 .airdrop .ufo-ellipse {
     position: absolute;
-    top: 25px; left: 0; right: 0;
+    top: 125px; left: 0; right: 0;
     margin: 0 auto;
     z-index: -1;
 }
 .airdrop .stars-right {
     position: absolute;
-    top: 110px; right: 0;
+    top: 210px; right: 0;
+    z-index: -2;
 }
 .airdrop .ground {
     position: absolute;
-    top: 275px; left: 0;
+    top: 375px; left: 0;
     width: 100%;
     z-index: -1;
 }
@@ -252,6 +276,8 @@ a {
     margin-top: 70px;
 }
 
+.nft .wrapper .cards .card .mobile { display: none }
+
 .nft .wrapper .cards .connect-wallet .frame { margin: -55px 0 0 -60px }
 .nft .wrapper .cards .create-nft { height: 355px }
 .nft .wrapper .cards .create-collection { height: 283px }
@@ -313,11 +339,12 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 36px 0 251px;
+    padding-top: 100px;
+    margin-bottom: 151px;
 }
 .partners .bg {
     position: absolute;
-    top: -100px; left: 0;
+    top: 0; left: 0;
     z-index: -1;
     width: 100%;
 }
@@ -331,7 +358,9 @@ a {
     align-items: center;
     justify-content: center;
 }
-
+.team {
+    padding-top: 100px;
+}
 .team h2 {
     text-align: center;
 }
@@ -488,13 +517,13 @@ input:focus {
     border-bottom: 10px solid white;
     width: 0;
 }
-.subscribe .social {
+.social {
     display: flex;
     justify-content: center;
     gap: 20px;
     margin-bottom: 60px;
 }
-.subscribe .social > div {
+.social > div {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -503,28 +532,255 @@ input:focus {
     background: #282828;
     cursor: pointer;
 }
-.subscribe .social > div:hover {
+.social > div:hover {
     background: #7AE7FF;
     box-shadow: 0 0 24px 0 #7AE7FFB2;
 }
-.subscribe .social > div .icon {
+.social > div .icon {
     width: 27px; height: 27px;
 }
-.subscribe .social .telegram .icon {
+.social .telegram .icon {
     background: url("/assets/subscribe-telegram.svg") no-repeat center center;
 }
-.subscribe .social .telegram:hover .icon {
+.social .telegram:hover .icon {
     background: url("/assets/subscribe-telegram-hover.svg") no-repeat center center;
 }
-.subscribe .social .email .icon {
+.social .twitter .icon {
+    background: url("/assets/subscribe-twitter.svg") no-repeat center center;
+}
+.social .twitter:hover .icon {
+    background: url("/assets/subscribe-twitter-hover.svg") no-repeat center center;
+}
+.social .email .icon {
     background: url("/assets/subscribe-email.svg") no-repeat center center;
 }
-.subscribe .social .email:hover .icon {
+.social .email:hover .icon {
     background: url("/assets/subscribe-email-hover.svg") no-repeat center center;
 }
-.subscribe .copyright {
+.copyright {
     font-size: 15px;
     text-align: center;
     color: #ABABAB;
     margin-bottom: 80px;
+}
+
+@media (max-width: 1366px) {
+    .hero {
+        margin-top: 50px;
+    }
+    .roadmap {
+        justify-content: center;
+        height: auto;
+    }
+    .roadmap > img {
+        display: none;
+    }
+}
+
+@media (max-width: 1290px) {
+    .hero {
+        margin-top: 0;
+        margin-bottom: 100px;
+    }
+    .airdrop > img {
+        width: 50%;
+    }
+    .airdrop .stars-left,
+    .airdrop .stars-right,
+    .airdrop .ufo,
+    .airdrop .ufo-ellipse {
+        top: 150px;
+    }
+    .airdrop .winners {
+        font-size: 100px;
+    }
+    .roadmap {
+        height: auto;
+    }
+    .roadmap .main {
+        margin: 0 20px;
+        padding-left: 35px;
+    }
+    .roadmap .main .grid {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .nft .bg {
+        width: 100%;
+    }
+    .nft .wrapper .cards {
+        height: 850px;
+    }
+    .roadmap {
+        padding-top: 100px;
+    }
+    .roadmap .main {
+        height: auto; width: auto;
+        margin: 0; padding: 0;
+    }
+    .roadmap .main .grid {
+        display: none;
+    }
+    .roadmap .main h2 {
+        text-align: center;
+    }
+    .roadmap .main .desc {
+        margin: 0 auto 40px;
+    }
+    .roadmap .main .cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 22px;
+    }
+    .roadmap .main .cards .q2,
+    .roadmap .main .cards .q3 {
+        margin: 0;
+    }
+    .partners {
+        margin-bottom: 50px;
+    }
+    .partners .bg {
+        top: 100px;
+    }
+    .advisors {
+        width: auto;
+    }
+    .advisors > img {
+        width: 100vw;
+    }
+    .advisors .main .heading {
+        margin-right: 50px;
+    }
+    .subscribe .bg {
+        top: 0;
+    }
+}
+
+@media (max-width: 1000px) {
+    h2 {
+        font-size: 32px;
+        line-height: 40px;
+    }
+    h3 {
+        font-size: 20px;
+        line-height: 26px;
+        margin-bottom: 7px;
+    }
+    .navbar .burger,
+    .navbar .closeButton {
+        display: flex;
+    }
+    .navbar a {
+        display: none;
+    }
+    .navbar .icons {
+        width: 70px;
+    }
+    .menu > a {
+        display: block;
+        margin-left: 2em;
+        font-size: 32px;
+        line-height: 56px;
+        margin-bottom: 14px;
+    }
+    .footer {
+        position: absolute;
+        bottom: 0; left: 0; right: 0;
+    }
+    .herobg {
+        width: auto;
+        height: 100%;
+        left: -500px;
+    }
+    .hero {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 45px;
+    }
+    .hero .robot {
+        margin-bottom: 40px;
+        width: 327px;
+        height: 327px;
+    }
+    .hero .robot .block {
+        width: 63px;
+        height: 63px;
+    }
+    .hero .text {
+        padding-left: 0;
+    }
+    .hero .text .heading {
+        font-size: 40px;
+        line-height: 48px;
+        margin-bottom: 6px;
+    }
+    .hero .text .desc {
+        margin-bottom: 39px;
+    }
+    .hero .text .button {
+        margin: 0 auto;
+    }
+    .airdrop {
+        padding-top: 45px;
+        height: auto;
+    }
+    .airdrop h2 {
+        margin-bottom: 9px;
+    }
+    .airdrop .winners {
+        font-family: "DS-Digital-Bold", sans-serif;
+        font-size: 40px;
+        line-height: 40px;
+        font-weight: 700;
+        letter-spacing: 0.3em;
+    }
+    .airdrop .desc.follow {
+        margin-bottom: 40px;
+    }
+    .nft .bg {
+        top: 0;
+    }
+    .nft .wrapper {
+        flex-direction: column;
+        padding-top: 40px;
+    }
+    .nft .wrapper .text h2 {
+        margin-bottom: 42px;
+        width: auto;
+    }
+    .nft .wrapper .cards {
+        height: auto;
+        flex-wrap: nowrap;
+    }
+    .nft .wrapper .cards .card {
+        margin: 0;
+        padding: 0;
+        height: auto; width: 330px;
+        display: flex;
+        padding-top: 27px;
+    }
+    .nft .wrapper .cards .card .mobile {
+        display: block;
+    }
+    .nft .wrapper .cards .card .desktop {
+        display: none;
+    }
+
+    .nft .wrapper .cards .connect-wallet .frame.mobile { margin: -70px -25px }
+    .nft .wrapper .cards .create-nft .frame.mobile { margin: -70px -25px }
+    .nft .wrapper .cards .create-collection .frame.mobile { margin: -70px -25px }
+    .nft .wrapper .cards .list-nft .frame.mobile { margin: -70px -25px }
+
+    .nft .wrapper .cards .card .icon {
+        margin: 0 16px 0 19px;
+    }
+    .nft .wrapper .cards .card .icon img {
+        width: 40px; height: 40px;
+    }
+    .nft .wrapper .text {
+        flex-basis: auto;
+    }
+    .nft .wrapper .cards .connect-wallet { height: 129px }
 }
