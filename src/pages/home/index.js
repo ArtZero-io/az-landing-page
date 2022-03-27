@@ -1,10 +1,42 @@
-import React, {useRef, useState} from 'react'
+import React, {useRef, useState, useEffect} from 'react'
 
 import RoadmapItem from "../../components/RoadmapItem/RoadmapItem"
 import Footer from "../../components/Footer"
 
+function useWindowSize() {
+    // Initialize state with undefined width/height so server and client renders match
+    // Learn more here: https://joshwcomeau.com/react/the-perils-of-rehydration/
+    const [windowSize, setWindowSize] = useState({
+        width: undefined,
+        height: undefined,
+    });
+
+    useEffect(() => {
+        // Handler to call on window resize
+        function handleResize() {
+            // Set window width/height to state
+            setWindowSize({
+                width: window.innerWidth,
+                height: window.innerHeight,
+            });
+        }
+
+        // Add event listener
+        window.addEventListener("resize", handleResize);
+
+        // Call handler right away so state gets updated with initial window size
+        handleResize();
+
+        // Remove event listener on cleanup
+        return () => window.removeEventListener("resize", handleResize);
+    }, []); // Empty array ensures that effect is only run on mount
+
+    return windowSize;
+}
+
 const HomePage = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
+    const [offsetCarousel, setOffsetCarousel] = useState(0)
 
     const airdropRef = useRef(null)
     const roadmapRef = useRef(null)
@@ -25,6 +57,18 @@ const HomePage = () => {
     const closeMenu = () => {
         document.body.style.position = 'static'
         setIsMenuOpen(false)
+    }
+
+    const size = useWindowSize();
+
+    const offset = size.width <= 600 ? 175 : 258
+    const offsetLimit = size.width <= 600 ? -875 : -516
+
+    const slideLeft = () => {
+        if (offsetCarousel !== 0) setOffsetCarousel(offsetCarousel + offset)
+    }
+    const slideRight = () => {
+        if (offsetCarousel !== offsetLimit) setOffsetCarousel(offsetCarousel - offset)
     }
 
     return (
@@ -49,7 +93,7 @@ const HomePage = () => {
                 </div>
             : '' }
 
-            <img className="herobg" src="/assets/bg-hero.png" />
+            <div className="hero-bg" />
 
             <div className="navbar">
                 <div onClick={openMenu} className="burger">
@@ -98,7 +142,7 @@ const HomePage = () => {
                 <img src="/assets/ufo-ellipse.svg" className="ufo-ellipse" />
                 <img src="/assets/ufo.png" className="ufo" />
                 <img src="/assets/stars.png" className="stars-right" />
-                <img src="/assets/ground.png" className="ground" />
+                <div className="ground" />
 
                 <h2>Airdrop / Bounty programs</h2>
                 <div className="desc">We recently announced 80 winners for our first airdrop campaign.</div>
@@ -107,15 +151,14 @@ const HomePage = () => {
             </section>
 
             <section className="nft">
-                <img className="bg" src="/assets/bg-nft.png" />
+                <div className="bg" />
                 <div className="wrapper">
                     <div className="text">
                         <h2>Create & sell your NFTs</h2>
                     </div>
                     <div className="cards">
                         <div className="card connect-wallet">
-                            <img className="frame desktop" src="/assets/frame-connect-wallet.svg" />
-                            <img className="frame mobile" src="/assets/frame-mobile-connect-wallet.svg" />
+                            <img className="frame" src="/assets/frame-connect-wallet.svg" />
                             <div className="icon">
                                 <img src="/assets/icon-connect-wallet.svg" />
                             </div>
@@ -125,8 +168,6 @@ const HomePage = () => {
                             </div>
                         </div>
                         <div className="card create-nft">
-                            <img className="frame desktop" src="/assets/frame-create-nft.svg" />
-                            <img className="frame mobile" src="/assets/frame-mobile-create-nft.svg" />
                             <div className="icon">
                                 <img src="/assets/icon-create-nft.svg" />
                             </div>
@@ -136,8 +177,6 @@ const HomePage = () => {
                             </div>
                         </div>
                         <div className="card create-collection">
-                            <img className="frame desktop" src="/assets/frame-create-collection.svg" />
-                            <img className="frame mobile" src="/assets/frame-mobile-create-collection.svg" />
                             <div className="icon">
                                 <img src="/assets/icon-create-collection.svg" />
                             </div>
@@ -147,8 +186,6 @@ const HomePage = () => {
                             </div>
                         </div>
                         <div className="card list-nft">
-                            <img className="frame desktop" src="/assets/frame-list-nft.svg" />
-                            <img className="frame mobile" src="/assets/frame-mobile-list-nft.svg" />
                             <div className="icon">
                                 <img src="/assets/icon-list-nft.svg" />
                             </div>
@@ -190,7 +227,7 @@ const HomePage = () => {
             </section>
 
             <section ref={partnersRef} id="partners" className="partners">
-                <img className="bg" src="/assets/bg-partners.png" />
+                <div className="bg" />
                 <div className="heading">
                     <h2>Partners</h2>
                     <div className="desc">Friends along for a ride</div>
@@ -203,65 +240,87 @@ const HomePage = () => {
             <section ref={teamRef} id="team" className="team">
                 <h2>Core Team</h2>
                 <div className="desc">We believe in Aleph Zero</div>
-                <div className="carousel">
-                    <div className="member">
-                        <div className="circle" />
-                        <img className="brian" src="/assets/team-brian-nguyen.png" />
-                        <div className="name">Brian Nguyen</div>
-                        <div className="position">Founder</div>
-                    </div>
-                    <div className="member">
-                        <img src="/assets/team-ha-vu.png" />
-                        <div className="name">Ha Vu</div>
-                        <div className="position">Business Development</div>
-                    </div>
-                    <div className="member">
-                        <img src="/assets/team-frankie-kao.png" />
-                        <div className="name">Frankie kao</div>
-                        <div className="position">Art Director</div>
-                    </div>
-                    <div className="member">
-                        <img src="/assets/team-albert-tran.png" />
-                        <div className="name">Albert Tran</div>
-                        <div className="position">Smart Contract & Back-end Developer</div>
-                    </div>
-                    <div className="member">
-                        <img src="/assets/team-j.png" />
-                        <div className="name">J.</div>
-                        <div className="position">Full-Stack Developer</div>
+
+                <div className="carousel-wrapper">
+                    <div className="arrow left" onClick={() => slideLeft()} />
+                    <div className="arrow right" onClick={() => slideRight()} />
+                    <div className="carousel" style={{transform: `translateX(${offsetCarousel}px)`}}>
+                        <div className="member">
+                            <div className="circle" />
+                            <img className="brian" src="/assets/team-brian-nguyen.png" />
+                            <div className="name">Brian Nguyen</div>
+                            <div className="position">Founder</div>
+                        </div>
+                        <div className="member">
+                            <img src="/assets/team-ha-vu.png" />
+                            <div className="name">Ha Vu</div>
+                            <div className="position">Business Development</div>
+                        </div>
+                        <div className="member">
+                            <img src="/assets/team-frankie-kao.png" />
+                            <div className="name">Frankie kao</div>
+                            <div className="position">Art Director</div>
+                        </div>
+                        <div className="member">
+                            <img src="/assets/team-albert-tran.png" />
+                            <div className="name">Albert Tran</div>
+                            <div className="position">Smart Contract & Back-end Developer</div>
+                        </div>
+                        <div className="member">
+                            <img src="/assets/team-j.png" />
+                            <div className="name">J.</div>
+                            <div className="position">Full-Stack Developer</div>
+                        </div>
+                        <div className="member">
+                            <img src="/assets/team-j.png" />
+                            <div className="name">J.</div>
+                            <div className="position">Full-Stack Developer</div>
+                        </div>
+                        <div className="member">
+                            <img src="/assets/team-j.png" />
+                            <div className="name">J.</div>
+                            <div className="position">Full-Stack Developer</div>
+                        </div>
                     </div>
                 </div>
             </section>
 
             <section className="advisors">
-                <img src="/assets/advisor-border-top.svg" />
-                <div className="main">
-                    <div className="heading">
-                        <h2>Our Advisors</h2>
-                        <div className="desc">Professional Advices from our close business friends</div>
-                    </div>
-                    <div className="hieu">
-                        <img className="bg" src="/assets/advisor-frame-light.svg" />
-                        <div className="content">
-                            <img src="/assets/advisor-hieu.png" />
-                            <div className="name">Hieu Dao</div>
-                            <div className="desc">Co-Founder of <a href="https://subwallet.app/" target="_blank">SubWallet</a></div>
+                <div className="wrapper">
+                    <div className="border top" />
+
+                    <div className="main">
+                        <div className="heading">
+                            <h2>Our Advisors</h2>
+                            <div className="desc">Professional Advices from our close business friends</div>
+                        </div>
+                        <div className="persons">
+                            <div className="person hieu">
+                                <img className="bg desktop" src="/assets/advisor-frame-light.svg" />
+                                <img className="bg mobile" src="/assets/advisor-mobile-frame.svg" />
+                                <div className="content">
+                                    <img src="/assets/advisor-hieu.png" />
+                                    <div className="name">Hieu Dao</div>
+                                    <div className="desc">Co-Founder of <a href="https://subwallet.app/" target="_blank">SubWallet</a></div>
+                                </div>
+                            </div>
+                            <div className="person thong">
+                                <img className="bg mobile" src="/assets/advisor-mobile-frame.svg" />
+                                <div className="content">
+                                    <img src="/assets/advisor-thong.png" />
+                                    <div className="name">Thong Tran</div>
+                                    <div className="desc">Founder of <a href="https://merchize.com/" target="_blank">Merchize</a></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div className="thong">
-                        <img className="bg" src="/assets/advisor-frame.svg" />
-                        <div className="content">
-                            <img src="/assets/advisor-thong.png" />
-                            <div className="name">Thong Tran</div>
-                            <div className="desc">Founder of <a href="https://merchize.com/" target="_blank">Merchize</a></div>
-                        </div>
-                    </div>
+
+                    <div className="border bottom" />
                 </div>
-                <img src="/assets/advisor-border-bottom.svg" />
             </section>
 
             <section ref={subscribeRef} className="subscribe">
-                <img className="bg" src="/assets/bg-subscribe.png" />
+                <div className="bg" />
                 <h2>Subscribe to us</h2>
                 <div className="desc">Let’s make a great impact together</div>
                 <div className="inputs">

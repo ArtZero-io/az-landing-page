@@ -15,6 +15,11 @@
     src: url("./fonts/DS-DIGIB.TTF");
 }
 
+* {
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     background: #000;
@@ -50,16 +55,18 @@ a {
 .menu {
     background: #000;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     z-index: 1;
     position: sticky;
 }
 
-.herobg {
-    width: 100%;
+.hero-bg {
     position: absolute;
-    top: 0; left: 0;
     z-index: -2;
+    width: 100%;
+    height: 60vw;
+    background: url('/assets/bg-hero.png') center top;
+    background-size: cover;
 }
 
 .navbar {
@@ -103,7 +110,7 @@ a {
 }
 
 .hero .robot {
-    background: url('./robot.png');
+    background-image: url('./robot.png');
     width: 567px;
     height: 567px;
     display: flex;
@@ -116,8 +123,8 @@ a {
 }
 
 .hero .robot .block {
-    width: 111px;
-    height: 111px;
+    width: 113px;
+    height: 113px;
     border: 1px solid #FFFFFF;
     opacity: 0.2;
 }
@@ -172,7 +179,7 @@ a {
 }
 
 .airdrop {
-    height: 889px;
+    height: 989px;
     position: relative;
     padding-top: 100px;
 }
@@ -203,12 +210,18 @@ a {
     position: absolute;
     top: 375px; left: 0;
     width: 100%;
+    height: 33vw;
     z-index: -1;
+    background: url('/assets/bg-ground.png') center center;
+    background-size: cover;
 }
 .airdrop .desc {
     width: 360px;
     margin: 0 auto 267px;
     text-align: center;
+}
+.airdrop .desc.follow {
+    margin-bottom: 100px;
 }
 .airdrop .winners {
     font-family: DS-Digital, sans-serif;
@@ -223,11 +236,16 @@ a {
     text-decoration: underline;
 }
 
-.nft { position: relative }
+.nft {
+    position: relative;
+    padding-top: 100px;
+}
 .nft .bg {
     position: absolute;
     left: 0; top: -42px;
     z-index: -1;
+    background-image: url('/assets/bg-nft.png');
+    width: 100%; height: 100%;
 }
 .nft .wrapper {
     max-width: 1290px;
@@ -250,13 +268,8 @@ a {
 .nft .wrapper .cards .card {
     position: relative;
     padding: 41px 20px 0;
-    width: 230px;
+    width: 273px;
     margin: 0 32px 32px 0;
-}
-.nft .wrapper .cards .card .frame {
-    position: absolute;
-    top: 0; left: 0;
-    z-index: -1;
 }
 
 .nft .wrapper .cards .card .icon { margin-left: 6px }
@@ -271,17 +284,29 @@ a {
     line-height: 24px;
 }
 .nft .wrapper .cards .connect-wallet {
-    height: 256px;
+    height: 299px;
     padding: 41px 20px 0;
     margin-top: 70px;
 }
+.nft .wrapper .cards .connect-wallet .frame {
+    position: absolute;
+    top: 0; left: 0;
+    margin: -57px 0 0 -60px;
+    z-index: -1;
+}
+.nft .wrapper .cards .create-nft {
+    height: 396px;
+    background-image: url('/assets/frame-create-nft.svg');
+}
+.nft .wrapper .cards .create-collection {
+    height: 324px;
+    background-image: url('/assets/frame-create-collection.svg');
+}
+.nft .wrapper .cards .list-nft {
+    height: 348px;
+    background-image: url('/assets/frame-list-nft.svg');
+}
 
-.nft .wrapper .cards .card .mobile { display: none }
-
-.nft .wrapper .cards .connect-wallet .frame { margin: -55px 0 0 -60px }
-.nft .wrapper .cards .create-nft { height: 355px }
-.nft .wrapper .cards .create-collection { height: 283px }
-.nft .wrapper .cards .list-nft { height: 307px }
 
 .roadmap {
     display: flex;
@@ -290,7 +315,7 @@ a {
     align-items: center;
 }
 .roadmap .main {
-    width: 1225px; height: 638px;
+    width: 1290px; height: 747px;
     position: relative;
     padding: 109px 0 0 65px;
 }
@@ -310,23 +335,23 @@ a {
     display: flex;
 }
 .roadmap .main .cards > div {
-    padding: 36px 0 0 26px;
-    width: 335px;
+    padding: 36px 20px 0 26px;
+    width: 361px;
     background-repeat: no-repeat;
 }
 .roadmap .main .cards .q1 {
-    background: url("./roadmap-frame-small.svg");
-    height: 157px;
+    background-image: url("./roadmap-frame-small.svg");
+    height: 193px;
 }
 .roadmap .main .cards .q2 {
-    background: url("./roadmap-frame-big.svg");
+    background-image: url("./roadmap-frame-big.svg");
     margin: 50px 35px 0 50px;
-    height: 227px;
+    height: 263px;
 }
 .roadmap .main .cards .q3 {
-    background: url("./roadmap-frame-small.svg");
+    background-image: url("./roadmap-frame-small.svg");
     margin-top: 100px;
-    height: 157px;
+    height: 193px;
 }
 .roadmap .main .cards .item {
     display: flex;
@@ -334,6 +359,7 @@ a {
     margin-top: 25px;
     color: #ABABAB;
 }
+
 .partners {
     position: relative;
     display: flex;
@@ -344,9 +370,12 @@ a {
 }
 .partners .bg {
     position: absolute;
-    top: 0; left: 0;
-    z-index: -1;
+    top: 0;
+    z-index: -2;
     width: 100%;
+    height: 50vw;
+    background-image: url('/assets/bg-partners.png');
+    background-size: cover;
 }
 .partners .heading {
     margin: 0 78px;
@@ -368,20 +397,45 @@ a {
     margin-bottom: 24px;
     text-align: center;
 }
+
+.team .carousel-wrapper {
+    max-width: 1290px;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+}
+.team .carousel-wrapper .arrow {
+    width: 36px;
+    height: 56px;
+    background: url('/assets/icon-arrow.svg') no-repeat center center;
+    position: absolute;
+    top: 89px;
+    cursor: pointer;
+    z-index: 1;
+}
+.team .carousel-wrapper .left {
+    left: 10px;
+}
+.team .carousel-wrapper .right {
+    right: 10px;
+    transform: rotate(180deg);
+}
+
 .team .carousel {
     display: flex;
     justify-content: center;
-    gap: 30px;
     padding-bottom: 194px;
+    min-width: 1806px;
+    transition: all 0.5s ease-in-out;
 }
 .team .carousel .member {
-    width: 208px;
+    width: 258px;
     position: relative;
 }
 .team .carousel .member .circle {
     position: absolute;
-    top: -40px; left: -31px;
-    background: url("/assets/team-jedi-circle.png");
+    top: -40px; left: -6px;
+    background-image: url("/assets/team-jedi-circle.png");
     width: 273px; height: 270px;
     z-index: -1;
 }
@@ -405,10 +459,18 @@ a {
 
 .advisors {
     width: 1164px;
-    height: 550px;
+    height: 551px;
     margin: 0 auto;
-    background: url("/assets/advisor-grid.png") no-repeat;
+    background-image: url("/assets/advisor-grid.png");
 }
+.advisors .border {
+    background-size: cover;
+    height: 14px;
+    width: 100%;
+}
+.advisors .border.top { background-image: url('/assets/advisor-border-top.svg') }
+.advisors .border.bottom { background-image: url('/assets/advisor-border-bottom.svg') }
+
 .advisors .main {
     height: 522px;
     display: flex;
@@ -418,22 +480,26 @@ a {
 .advisors .main .heading {
     width: 311px;
     margin-right: 115px;
+    z-index: 1;
 }
-.advisors .main .hieu { top: -20px }
-.advisors .main .hieu,
-.advisors .main .thong {
+.advisors .main .persons {
+    display: flex;
+}
+.advisors .main .person.hieu { top: -20px }
+.advisors .main .person.thong { background-image: url('/assets/advisor-frame.svg') }
+
+.advisors .main .person {
     position: relative;
-    width: 270px;
+    width: 273px;
+    height: 280px;
     margin-right: 30px;
 }
+.advisors .main .person .mobile { display: none }
 .advisors .main .bg {
     position: absolute;
 }
-.advisors .main .hieu .bg {
-    top: -122px; left: -122px;
-}
-.advisors .main .thong .bg {
-    top: 0; left: 0;
+.advisors .main .person.hieu .bg {
+    top: -116px; left: -120px;
 }
 .advisors .main .content {
     position: relative;
@@ -458,6 +524,7 @@ a {
 
 .subscribe {
     position: relative;
+    padding-bottom: 300px;
 }
 .subscribe .bg {
     position: absolute;
@@ -465,6 +532,9 @@ a {
     top: -130px; left: 0; right: 0;
     z-index: -1;
     width: 100%;
+    height: 100%;
+    background-image: url('/assets/bg-subscribe.png');
+    background-position: center top;
 }
 .subscribe h2 {
     text-align: center;
@@ -495,7 +565,6 @@ input:focus {
 }
 .subscribe .inputs input {
     width: 414px;
-    margin-bottom: 61px;
 }
 .subscribe .inputs .button {
     width: 158px;
@@ -557,6 +626,10 @@ input:focus {
 .social .email:hover .icon {
     background: url("/assets/subscribe-email-hover.svg") no-repeat center center;
 }
+.footer {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+}
 .copyright {
     font-size: 15px;
     text-align: center;
@@ -568,6 +641,9 @@ input:focus {
     .hero {
         margin-top: 50px;
     }
+    .airdrop > img {
+        width: 50%;
+    }
     .roadmap {
         justify-content: center;
         height: auto;
@@ -575,15 +651,15 @@ input:focus {
     .roadmap > img {
         display: none;
     }
+    .partners .bg {
+        top: 140px;
+    }
 }
 
 @media (max-width: 1290px) {
     .hero {
         margin-top: 0;
         margin-bottom: 100px;
-    }
-    .airdrop > img {
-        width: 50%;
     }
     .airdrop .stars-left,
     .airdrop .stars-right,
@@ -607,6 +683,15 @@ input:focus {
 }
 
 @media (max-width: 1200px) {
+    .hero-bg {
+        height: 100vw;
+    }
+    .airdrop {
+        height: auto;
+    }
+    .airdrop .desc.follow {
+        margin-bottom: 40px;
+    }
     .nft .bg {
         width: 100%;
     }
@@ -644,24 +729,26 @@ input:focus {
     .partners .bg {
         top: 100px;
     }
+    .team .carousel {
+        gap: 0;
+    }
     .advisors {
         width: auto;
+        margin: 0 24px;
     }
-    .advisors > img {
-        width: 100vw;
+    .advisors .border {
+        background-size: contain;
     }
     .advisors .main .heading {
         margin-right: 50px;
     }
-    .subscribe .bg {
-        top: 0;
-    }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1050px) {
     h2 {
         font-size: 32px;
         line-height: 40px;
+        text-align: center;
     }
     h3 {
         font-size: 20px;
@@ -685,15 +772,7 @@ input:focus {
         line-height: 56px;
         margin-bottom: 14px;
     }
-    .footer {
-        position: absolute;
-        bottom: 0; left: 0; right: 0;
-    }
-    .herobg {
-        width: auto;
-        height: 100%;
-        left: -500px;
-    }
+
     .hero {
         flex-wrap: wrap;
         justify-content: center;
@@ -705,8 +784,8 @@ input:focus {
         height: 327px;
     }
     .hero .robot .block {
-        width: 63px;
-        height: 63px;
+        width: 65px;
+        height: 65px;
     }
     .hero .text {
         padding-left: 0;
@@ -714,7 +793,7 @@ input:focus {
     .hero .text .heading {
         font-size: 40px;
         line-height: 48px;
-        margin-bottom: 6px;
+        margin-bottom: 10px;
     }
     .hero .text .desc {
         margin-bottom: 39px;
@@ -724,7 +803,6 @@ input:focus {
     }
     .airdrop {
         padding-top: 45px;
-        height: auto;
     }
     .airdrop h2 {
         margin-bottom: 9px;
@@ -739,6 +817,7 @@ input:focus {
     .airdrop .desc.follow {
         margin-bottom: 40px;
     }
+
     .nft .bg {
         top: 0;
     }
@@ -746,41 +825,302 @@ input:focus {
         flex-direction: column;
         padding-top: 40px;
     }
+    .nft .wrapper .text {
+        flex-basis: auto;
+    }
     .nft .wrapper .text h2 {
         margin-bottom: 42px;
-        width: auto;
+        width: 270px;
     }
     .nft .wrapper .cards {
         height: auto;
         flex-wrap: nowrap;
+        gap: 19px;
     }
     .nft .wrapper .cards .card {
         margin: 0;
-        padding: 0;
-        height: auto; width: 330px;
+        width: 329px;
         display: flex;
-        padding-top: 27px;
+        padding: 27px 17px 0 0;
     }
-    .nft .wrapper .cards .card .mobile {
-        display: block;
+    .nft .wrapper .cards .card .desc { font-size: 13px }
+    .nft .wrapper .cards .card .icon { margin: 0 16px 0 19px }
+    .nft .wrapper .cards .card .icon img { width: 40px; height: 40px }
+
+    .nft .wrapper .cards .connect-wallet .frame { margin: 0 }
+
+    .nft .wrapper .cards .connect-wallet {
+        order: 1;
+        height: 131px;
+        background-image: url('/assets/frame-mobile-connect-wallet.svg');
     }
-    .nft .wrapper .cards .card .desktop {
+    .nft .wrapper .cards .connect-wallet .frame {
+        display: none;
+    }
+    .nft .wrapper .cards .create-collection {
+        order: 2;
+        height: 156px;
+        background-image: url('/assets/frame-mobile-create-collection.svg');
+    }
+    .nft .wrapper .cards .create-nft {
+        order: 3;
+        height: 196px;
+        background-image: url('/assets/frame-mobile-create-nft.svg');
+    }
+    .nft .wrapper .cards .list-nft {
+        order: 4;
+        height: 177px;
+        background-image: url('/assets/frame-mobile-list-nft.svg');
+    }
+
+    .roadmap {
+        padding-top: 56px;
+    }
+    .roadmap .main h2 {
+        margin-bottom: 10px;
+    }
+    .roadmap .main .desc {
+        text-align: center;
+    }
+    .roadmap .main .cards .q1 {
+        height: 147px;
+        background-image: url("./roadmap-mobile-frame-small.svg");
+    }
+    .roadmap .main .cards .q2 {
+        height: 174px;
+        background-image: url("./roadmap-mobile-frame-big.svg");
+    }
+    .roadmap .main .cards .q3 {
+        height: 147px;
+        background-image: url("./roadmap-mobile-frame-small.svg");
+    }
+
+    .roadmap .main .cards > div {
+        width: 330px;
+        padding: 27px 0 0 25px;
+    }
+    .roadmap .main .cards > div h3 {
+        margin-bottom: 11px;
+    }
+    .roadmap .main .cards .item {
+        margin-top: 0;
+    }
+    .roadmap .main .cards .item .text {
+        font-size: 13px;
+        line-height: 28px;
+    }
+    .partners {
+        padding-top: 54px;
+        flex-direction: column;
+        gap: 35px;
+    }
+    .partners .bg {
+        top: 0;
+        background-size: auto;
+        height: 100vw;
+        background-position: center top;
+    }
+    .partners h2 {
+        margin-bottom: 10px;
+    }
+    .partners .heading .desc {
+        font-size: 13px;
+        line-height: 21px;
+    }
+
+    .advisors .main {
+        flex-direction: column;
+    }
+    .advisors .main .heading {
+        margin-right: 0;
+    }
+    .advisors .main .heading h2 {
+        margin-bottom: 10px;
+    }
+    .advisors .main .heading .desc {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    .advisors .main .persons {
+        gap: 25px;
+    }
+    .advisors .main .person.hieu {
+        top: 0;
+    }
+    .advisors .main .person {
+        margin-right: 0;
+    }
+
+    .subscribe h2 {
+        padding-top: 170px;
+    }
+}
+
+@media (max-width: 600px) {
+    .desc {
+        font-size: 13px;
+        line-height: 21px;
+    }
+    .hero-bg {
+        background-image: url('/assets/bg-hero-mobile.png');
+        height: 217vw;
+    }
+    .hero .text .desc {
+        width: 310px;
+    }
+    .airdrop h2 {
+        width: 340px;
+    }
+    .airdrop > img {
+        width: 100%;
+    }
+    .airdrop .stars-left {
+        top: 110px;
+    }
+    .airdrop .stars-right {
+        top: 300px;
+    }
+    .airdrop .ufo {
+        top: 180px;
+    }
+    .airdrop .ground {
+        background-image: url('/assets/bg-ground-mobile.png');
+        height: 60vw;
+        top: 310px;
+    }
+    .airdrop .desc {
+        width: 300px;
+        margin-bottom: 194px;
+    }
+    .nft {
+        padding-top: 0;
+    }
+    .nft .bg {
+        width: 100%;
+        height: 93vw;
+        background-image: url('/assets/bg-nft-mobile.png');
+        background-size: cover;
+    }
+    .nft .wrapper .text h2 {
+        text-align: center;
+        width: 270px;
+    }
+
+    .partners .bg {
+        top: 210px;
+        width: 100%;
+        height: 72vw;
+        background-image: url('/assets/bg-partners-mobile.png');
+        background-size: cover;
+    }
+    .partners .subwallet {
+        width: 327px;
+        height: 140px;
+        background-size: cover;
+    }
+    .partners .subwallet img {
+        width: 250px;
+    }
+    .team {
+        padding: 50px 0;
+    }
+    .team .desc {
+        margin-bottom: 37px;
+    }
+    .team .carousel {
+        min-width: 1225px;
+    }
+    .team .carousel .member img {
+        width: 100px;
+    }
+    .team .carousel .member .circle {
         display: none;
     }
 
-    .nft .wrapper .cards .connect-wallet .frame.mobile { margin: -70px -25px }
-    .nft .wrapper .cards .create-nft .frame.mobile { margin: -70px -25px }
-    .nft .wrapper .cards .create-collection .frame.mobile { margin: -70px -25px }
-    .nft .wrapper .cards .list-nft .frame.mobile { margin: -70px -25px }
+    .team .carousel .member img.brian,
+    .team .carousel .member img {
+        margin: 0 0 14px 0;
+    }
+    .team .carousel .member {
+        width: 175px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .team .carousel .member .name {
+        margin-bottom: 3px;
+    }
+    .team .carousel .member .position {
+        font-size: 13px;
+        line-height: 21px;
+    }
 
-    .nft .wrapper .cards .card .icon {
-        margin: 0 16px 0 19px;
+    .advisors {
+        height: 468px;
+        overflow: hidden;
+        padding: 0 24px;
+        margin: 0 auto;
+        background: none;
     }
-    .nft .wrapper .cards .card .icon img {
-        width: 40px; height: 40px;
+    .advisors .wrapper {
+        margin: 0 auto;
+        background-image: url('/assets/advisor-mobile-grid.png');
+        width: 321px;
     }
-    .nft .wrapper .text {
-        flex-basis: auto;
+    .advisors .border {
+        height: 6px;
     }
-    .nft .wrapper .cards .connect-wallet { height: 129px }
+    .advisors .border.top {
+        background-image: url('/assets/advisor-mobile-border-top.svg');
+    }
+    .advisors .border.bottom {
+        background-image: url('/assets/advisor-mobile-border-bottom.svg');
+    }
+    .advisors .main {
+        justify-content: flex-start;
+        padding: 45px 0 0;
+        height: 454px;
+    }
+    .advisors .main .heading .desc {
+        width: 300px;
+    }
+    .advisors .main .person .mobile { display: block }
+    .advisors .main .person .desktop { display: none }
+    .advisors .main .person.thong { background: none }
+    .advisors .main .person {
+        width: 150px;
+        height: 218px;
+    }
+    .advisors .main .content .name {
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 5px;
+    }
+    .advisors .main .content .desc {
+        font-size: 13px;
+        line-height: 21px;
+    }
+    .advisors .main .content img {
+        width: 70px;
+        margin-bottom: 19px;
+    }
+    .advisors .main .person .bg {
+        top: -118px;
+        left: -119px;
+    }
+    .subscribe .bg {
+        background-image: url('/assets/bg-subscribe-mobile.png');
+        height: 59vw;
+        top: 50px;
+        background-size: contain;
+    }
+    .subscribe h2 {
+        margin-bottom: 10px;
+    }
+    .subscribe .inputs input {
+        width: 217px;
+    }
+    .subscribe .inputs .button {
+        width: 120px;
+    }
 }
