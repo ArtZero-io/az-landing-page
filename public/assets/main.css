@@ -101,6 +101,10 @@ a {
   text-decoration: underline;
   color: #7ae7ff;
 }
+.navbar .icons-div {
+  display: flex;
+  gap: 27px;
+}
 .navbar .icons {
   display: flex;
   /* gap: 27px; */
@@ -835,6 +839,9 @@ input:focus {
   .navbar .icons {
     width: 70px;
   }
+  .navbar .icons-div {
+    width: 70px;
+  }
   .menu > a {
     display: block;
     margin-left: 2em;
@@ -1229,4 +1236,49 @@ input:focus {
   .navbar .closeButton {
     margin-right: 0.875rem;
   }
+}
+
+ul.social-safari {
+  margin-bottom: 60px;
+  display: flex;
+  justify-content: center;
+}
+
+ul.social-safari > li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #282828;
+  cursor: pointer;
+  margin: 0 10px 0;
+}
+.social-safari > li:hover {
+  background: #7ae7ff;
+  box-shadow: 0 0 24px 0 #7ae7ffb2;
+}
+.social-safari > li .icon {
+  width: 27px;
+  height: 27px;
+}
+.social-safari .telegram .icon {
+  background: url("/assets/subscribe-telegram.svg") no-repeat center center;
+}
+.social-safari .telegram:hover .icon {
+  background: url("/assets/subscribe-telegram-hover.svg") no-repeat center
+    center;
+}
+.social-safari .twitter .icon {
+  background: url("/assets/subscribe-twitter.svg") no-repeat center center;
+}
+.social-safari .twitter:hover .icon {
+  background: url("/assets/subscribe-twitter-hover.svg") no-repeat center center;
+}
+.social-safari .email .icon {
+  background: url("/assets/subscribe-email.svg") no-repeat center center;
+}
+.social-safari .email:hover .icon {
+  background: url("/assets/subscribe-email-hover.svg") no-repeat center center;
 }

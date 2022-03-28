@@ -3,6 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <div className="footer">
+      
       <div className="social">
         <div className="telegram">
           <a
@@ -33,8 +34,38 @@ const Footer = () => {
         </div>
       </div>
       <div className="copyright">
-        © Copyright 2022 artZero. <div className="copyright-break"></div>All Rights Reserved
+        © Copyright 2022 artZero. <div className="copyright-break"></div>All
+        Rights Reserved
       </div>
+      <ul className="social-safari">
+        <li className="telegram">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://t.me/artzero_io"
+          >
+            <div className="icon" />
+          </a>
+        </li>
+        <li className="twitter">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://twitter.com/ArtZero_io"
+          >
+            <div className="icon" />
+          </a>
+        </li>
+        <li className="email">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="mailto:admin@artzero.io"
+          >
+            <div className="icon" />
+          </a>
+        </li>
+      </ul>
     </div>
   );
 };
