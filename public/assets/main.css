@@ -101,6 +101,10 @@ a {
   text-decoration: underline;
   color: #7ae7ff;
 }
+.navbar .icons-div {
+  display: flex;
+  gap: 27px;
+}
 .navbar .icons {
   display: flex;
   gap: 27px;

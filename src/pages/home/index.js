@@ -161,27 +161,33 @@ const HomePage = () => {
         <a onClick={scrollToSubscribe}>SUBSCRIBE</a>
 
         <span className="icons">
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://t.me/artzero_io"
-          >
-            <img alt="header-telegram" src="/assets/header-telegram.svg" />
-          </a>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://twitter.com/ArtZero_io"
-          >
-            <img alt="header-twitter" src="/assets/header-twitter.svg" />
-          </a>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="mailto:admin@artzero.io"
-          >
-            <img alt="header-email" src="/assets/header-email.svg" />
-          </a>
+          <div className="icons-div">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://t.me/artzero_io"
+            >
+              <img alt="header-telegram" src="/assets/header-telegram.svg" />
+            </a>
+          </div>
+          <div className="icons-div">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://twitter.com/ArtZero_io"
+            >
+              <img alt="header-twitter" src="/assets/header-twitter.svg" />
+            </a>
+          </div>
+          <div className="icons-div">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="mailto:admin@artzero.io"
+            >
+              <img alt="header-email" src="/assets/header-email.svg" />
+            </a>
+          </div>
         </span>
       </div>
 
