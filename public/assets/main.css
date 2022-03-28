@@ -1213,6 +1213,9 @@ input:focus {
   .copyright {
     margin-bottom: 108px;
   }
+  .footer .social {
+    margin-bottom: 32px;
+  }
   .navbar {
     justify-content: start;
   }
