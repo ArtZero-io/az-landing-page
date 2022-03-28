@@ -17,6 +17,7 @@
     "deploy": "gh-pages -d build -m '[ci skip] Updates'"
   },
   "dependencies": {
+    "@trendyol-js/react-carousel": "^2.0.1",
     "framer-motion": "^6",
     "node-polyfill-webpack-plugin": "^1.1.4",
     "process": "^0.11.10",

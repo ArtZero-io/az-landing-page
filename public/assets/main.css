@@ -505,6 +505,26 @@ a {
   color: #ababab;
 }
 
+.team .member {
+  margin-top: 26px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+.team .member img {
+  width: 150px;
+  margin-bottom: 28px;
+}
+.team .member .circle {
+  position: absolute;
+  top: -34px;
+  left: -21px;
+  background-image: url("/assets/team-jedi-circle.png");
+  width: 273px;
+  height: 270px;
+  z-index: -1;
+}
 .advisors {
   width: 1164px;
   height: 551px;
@@ -1240,6 +1260,9 @@ input:focus {
 
   .navbar .closeButton {
     margin-right: 0.875rem;
+  }
+  .team .member .circle {
+    display: none;
   }
 }
 

@@ -5,6 +5,7 @@ import React, { useRef, useState, useEffect } from "react";
 import RoadmapItem from "../../components/RoadmapItem/RoadmapItem";
 import Footer from "../../components/Footer";
 import FooterMenuMobile from "../../components/FooterMenuMobile";
+import TeamCarousel from "../../components/TeamCarousel";
 
 function useWindowSize() {
   // Initialize state with undefined width/height so server and client renders match
@@ -40,7 +41,6 @@ function useWindowSize() {
 const HomePage = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [offsetCarousel, setOffsetCarousel] = useState(0);
-
   const airdropRef = useRef(null);
   const roadmapRef = useRef(null);
   const partnersRef = useRef(null);
@@ -364,7 +364,7 @@ const HomePage = () => {
         <div className="desc">We believe in Aleph Zero</div>
 
         <div className="carousel-wrapper">
-          <div className="arrow left" onClick={() => slideLeft()} />
+          {/* <div className="arrow left" onClick={() => slideLeft()} />
           <div className="arrow right" onClick={() => slideRight()} />
           <div
             className="carousel"
@@ -384,8 +384,9 @@ const HomePage = () => {
                 </div>
               </>
             ))}
-          </div>
+          </div> */}
         </div>
+        <TeamCarousel style={{ maxWidth: "1186px" }} size={size} />
       </section>
 
       <section className="advisors">
