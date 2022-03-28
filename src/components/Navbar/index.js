@@ -4,28 +4,24 @@ import { Link } from "@chakra-ui/react";
 
 const Navbar = () => {
   return (
-    <div className="navbar">
-      <span>
-        <Link
-          _hover={{
-            cursor: "pointer",
-          }}
-          href="/"
-        >
-          <img src="/assets/logo.png" alt="logo" />
-        </Link>
-      </span>
-
-      {links.map(({ label, href }) => (
-        <span key={label}>
-          <Link
-            _hover={{
-              cursor: "pointer",
-            }}
-            href={href}
-          >
-            {label}
-          </Link>
+      <div className="navbar">
+        <span>
+          <Link to="/"><img src='/assets/logo.png' /></Link>
+        </span>
+        <span>
+          <Link to="#airdrop">AIRDROP/BOUNTY</Link>
+        </span>
+        <span>
+          <Link to="#roadmap">ROAD MAP</Link>
+        </span>
+        <span>
+          <Link to="#partners">PARTNERS</Link>
+        </span>
+        <span>
+          <Link to="#team">TEAM & ADVISORS</Link>
+        </span>
+        <span>
+          <Link to="#subscribe">SUBSCRIBE</Link>
         </span>
       ))}
     </div>
