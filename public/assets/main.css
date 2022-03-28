@@ -1220,6 +1220,11 @@ input:focus {
   .footer {
     max-width: 400px;
   }
+  .FooterMenuMobile {
+    margin-top: 24px;
+    position: relative;
+    max-width: 400px;
+  }
   .copyright .copyright-break {
     display: block;
   }

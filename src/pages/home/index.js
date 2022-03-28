@@ -4,6 +4,7 @@ import React, { useRef, useState, useEffect } from "react";
 
 import RoadmapItem from "../../components/RoadmapItem/RoadmapItem";
 import Footer from "../../components/Footer";
+import FooterMenuMobile from "../../components/FooterMenuMobile";
 
 function useWindowSize() {
   // Initialize state with undefined width/height so server and client renders match
@@ -88,7 +89,7 @@ const HomePage = () => {
       <>
         {" "}
         {isMenuOpen ? (
-          <div className="menu">
+          <div className="menu" style={{ overflow: "auto" }}>
             <div className="navbar">
               <div onClick={closeMenu} className="closeButton">
                 <img alt="icon-close" src="/assets/icon-close.svg" />
@@ -138,7 +139,7 @@ const HomePage = () => {
               SUBSCRIBE
             </a>
 
-            <Footer />
+            <FooterMenuMobile />
           </div>
         ) : (
           ""
@@ -461,7 +462,7 @@ const HomePage = () => {
           method="post"
           action="https://send.pageclip.co/zqaVEbuvCPviRe5ho1vL42Drc3GyedOG/subscribe"
         >
-          <div className="inputs" style={{ maxHeight: "60px" }}>
+          <div className="inputs" style={{ height: "60px" }}>
             <input
               value={subEmail}
               onChange={({ target }) => setSubEmail(target.value)}
@@ -473,6 +474,7 @@ const HomePage = () => {
               pattern=".+@.+."
             />
             <input
+              style={{ height: "60px" }}
               type="submit"
               value="SUBSCRIBE"
               class="button pageclip-form__submit"
