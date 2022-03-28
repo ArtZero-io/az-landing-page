@@ -1,49 +1,88 @@
 import React from "react";
-import { Carousel } from "@trendyol-js/react-carousel";
+import { ScrollingCarousel } from "@trendyol-js/react-carousel";
 
 function TeamCarousel({ size }) {
   const showNumber = size?.width >= 600 ? 5 : 2;
   return (
-    <div
-      style={{
-        maxWidth: "1186px",
-        margin: "0 auto",
-        padding: "0 24px 194px 24px ",
-      }}
-    >
-      <Carousel
-        className="team-carousel"
-        show={showNumber}
-        slide={1}
-        responsive={true}
-        swiping={true}
-        infinite={false}
-        leftArrow={<div className="arrow left" />}
-        rightArrow={<div className="arrow right" />}
+    <>
+      {/* <div
+        style={{
+          maxWidth: "1186px",
+          margin: "0 auto",
+          padding: "0 24px 194px 24px ",
+        }}
       >
-        {teams.map(({ isFounder, src, name, position, position2 }) => (
-          <>
-            <div className="member">
-              {isFounder && <div className="circle" />}
-              <img
-                className={isFounder ? "brian" : ""}
-                alt="team-brian"
-                src={`/assets/${src}`}
-              />
-              <div className="name" style={{ marginBottom: "8px" }}>
-                {name}
+        <Carousel
+          className="team-carousel"
+          show={showNumber}
+          slide={1}
+          responsive={true}
+          swiping={true}
+          infinite={false}
+          leftArrow={<div className="arrow left" />}
+          rightArrow={<div className="arrow right" />}
+        >
+          {teams.map(({ isFounder, src, name, position, position2 }) => (
+            <>
+              <div key={name} className="member">
+                {isFounder && <div className="circle" />}
+                <img
+                  className={isFounder ? "brian" : ""}
+                  alt="team-brian"
+                  src={`/assets/${src}`}
+                />
+                <div className="name" style={{ marginBottom: "8px" }}>
+                  {name}
+                </div>
+                <div className="position">{position}</div>
+                {position2 && <div className="position2">{position2}</div>}
               </div>
-              <div className="position">{position}</div>
-              {position2 && <div className="position2">{position2}</div>}
-            </div>
-          </>
-        ))}
-      </Carousel>
-    </div>
+            </>
+          ))}
+        </Carousel>
+      </div> */}
+      <div
+        style={{
+          maxWidth: "1186px",
+          margin: "0 auto",
+          padding: "0 24px 194px 24px ",
+        }}
+      >
+        <ScrollingCarousel
+          className="team-carousel team-scrolling-carousel"
+          show={showNumber}
+          slide={1}
+          responsive={true}
+          swiping={true}
+          infinite={false}
+          leftArrow={<div className="" />}
+          rightArrow={<div className="" />}
+        >
+          {teams.map(({ isFounder, src, name, position, position2 }) => (
+            <>
+              <div key={name} className="member">
+                {isFounder && <div className="circle" />}
+                <img
+                  className={isFounder ? "brian" : ""}
+                  alt="team-brian"
+                  src={`/assets/${src}`}
+                />
+                <div className="name" style={{ marginBottom: "8px" }}>
+                  {name}
+                </div>
+                <div className="position">{position}</div>
+                {position2 && <div className="position2">{position2}</div>}
+              </div>
+            </>
+          ))}
+        </ScrollingCarousel>
+      </div>
+    </>
   );
 }
 
 export default TeamCarousel;
+
 const teams = [
   {
     isFounder: true,

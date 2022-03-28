@@ -508,6 +508,8 @@ a {
 /* New  */
 .team .member {
   margin-top: 26px;
+  margin-left: 40px;
+  margin-right: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -526,6 +528,19 @@ a {
   height: 270px;
   z-index: -1;
 }
+.team .team-carousel.team-scrolling-carousel .member .circle {
+  position: absolute;
+  top: -34px;
+  left: -21px;
+  background-image: url("/assets/team-jedi-circle.png");
+  width: 273px;
+  height: 270px;
+  z-index: -1;
+}
+.team .team-carousel.team-scrolling-carousel button {
+  display: none;
+}
+
 .team .team-carousel {
   position: relative;
 }

@@ -428,14 +428,14 @@ const HomePage = () => {
               name="email"
               placeholder="enter your email"
               required
-              data-valueMissing="Please check your email format!"
+              data-valuemissing="Please check your email format!"
               pattern=".+@.+."
             />
             <input
               style={{ height: "60px" }}
               type="submit"
               value="SUBSCRIBE"
-              class="button pageclip-form__submit"
+              className="button pageclip-form__submit"
             />
           </div>
         </form>
