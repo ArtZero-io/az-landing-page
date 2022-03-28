@@ -363,8 +363,8 @@ const HomePage = () => {
         <h2>Core Team</h2>
         <div className="desc">We believe in Aleph Zero</div>
 
-        <div className="carousel-wrapper">
-          {/* <div className="arrow left" onClick={() => slideLeft()} />
+        {/*<div className="carousel-wrapper">
+           <div className="arrow left" onClick={() => slideLeft()} />
           <div className="arrow right" onClick={() => slideRight()} />
           <div
             className="carousel"
@@ -384,8 +384,8 @@ const HomePage = () => {
                 </div>
               </>
             ))}
-          </div> */}
-        </div>
+          </div> 
+        </div>*/}
         <TeamCarousel style={{ maxWidth: "1186px" }} size={size} />
       </section>
 

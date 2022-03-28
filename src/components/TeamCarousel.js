@@ -11,7 +11,8 @@ function TeamCarousel({ size }) {
         padding: "0 24px 194px 24px ",
       }}
     >
-      <Carousel className="team-carousel"
+      <Carousel
+        className="team-carousel"
         show={showNumber}
         slide={1}
         responsive={true}
