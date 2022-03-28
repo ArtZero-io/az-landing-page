@@ -17,18 +17,11 @@
     "deploy": "gh-pages -d build -m '[ci skip] Updates'"
   },
   "dependencies": {
-    "@chakra-ui/icons": "^1.1.7",
-    "@chakra-ui/react": "^1.8.6",
-    "@emotion/react": "^11",
-    "@emotion/styled": "^11",
-    "@yarnpkg/plugin-interactive-tools": "^3.1.2",
     "framer-motion": "^6",
     "node-polyfill-webpack-plugin": "^1.1.4",
     "process": "^0.11.10",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-icons": "^4.3.1",
-    "react-responsive": "^9.0.0-beta.6",
     "react-scripts": "^5.0.0",
     "yarn": "^1.22.18"
   },
