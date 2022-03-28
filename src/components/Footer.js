@@ -4,7 +4,40 @@ const Footer = () => {
   return (
     <div className="footer">
       
-      <ul className="social">
+      <div className="social">
+        <div className="telegram">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://t.me/artzero_io"
+          >
+            <div className="icon" />
+          </a>
+        </div>
+        <div className="twitter">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://twitter.com/ArtZero_io"
+          >
+            <div className="icon" />
+          </a>
+        </div>
+        <div className="email">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="mailto:admin@artzero.io"
+          >
+            <div className="icon" />
+          </a>
+        </div>
+      </div>
+      <div className="copyright">
+        © Copyright 2022 artZero. <div className="copyright-break"></div>All
+        Rights Reserved
+      </div>
+      <ul className="social-safari">
         <li className="telegram">
           <a
             target="_blank"
@@ -33,10 +66,6 @@ const Footer = () => {
           </a>
         </li>
       </ul>
-      <div className="copyright">
-        © Copyright 2022 artZero. <div className="copyright-break"></div>All
-        Rights Reserved
-      </div>
     </div>
   );
 };
