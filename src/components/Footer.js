@@ -33,7 +33,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="copyright">
-        © Copyright 2022 artZero. All Rights Reserved
+        © Copyright 2022 artZero. <div className="copyright-break"></div>All Rights Reserved
       </div>
     </div>
   );

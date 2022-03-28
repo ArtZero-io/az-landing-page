@@ -70,27 +70,18 @@ const HomePage = () => {
   const size = useWindowSize();
 
   const offset = size.width <= 600 ? 175 : 258;
-  const offsetLimit = size.width <= 600 ? -875 : -516;
-  // 875
+  const offsetLimit =
+    size.width <= 600 ? (teams.length - 2) * -175 : (teams.length - 5) * -258;
+  // -875 | - 516
+
   const slideLeft = () => {
-    console.log("LL offsetCarousel", offsetCarousel);
-    console.log("LL offset", offset);
     if (offsetCarousel !== 0) setOffsetCarousel(offsetCarousel + offset);
   };
+
   const slideRight = () => {
-    console.log("RR offsetCarousel", offsetCarousel);
-    console.log("RR offsetLimit", offsetLimit);
-    console.log("RR offset", offset);
-    console.log("RR +++++++++++++++++++++++++++++++++");
     if (offsetCarousel !== offsetLimit)
       setOffsetCarousel(offsetCarousel - offset);
   };
-
-  // console.log("1 size?.width", size?.width);
-  // useEffect(() => {
-  //   console.log("2 size?.width", size?.width);
-  //   size?.width <= 600 && setOffsetCarousel(-165);
-  // }, [size]);
 
   return (
     <React.Fragment>
@@ -386,48 +377,6 @@ const HomePage = () => {
                 </div>
               </>
             ))}
-            {/* <div className="member">
-              <div className="circle" />
-              <img
-                className="brian"
-                alt="team-brian"
-                src="/assets/team-brian-nguyen.png"
-              />
-              <div className="name">Brian Nguyen</div>
-              <div className="position">Founder</div>
-            </div>
-            <div className="member">
-              <img alt="team-ha" src="/assets/team-ha-vu.png" />
-              <div className="name">Ha Vu</div>
-              <div className="position">Business Development</div>
-            </div>
-            <div className="member">
-              <img alt="team-frankie" src="/assets/team-frankie-kao.png" />
-              <div className="name">Frankie kao</div>
-              <div className="position">Art Director</div>
-            </div>
-            <div className="member">
-              <img alt="team-albert" src="/assets/team-albert-tran.png" />
-              <div className="name">Albert Tran</div>
-              <div className="position">
-                Smart Contract & Back-end Developer
-              </div>
-            </div>
-            <div className="member">
-              <img alt="team-j" src="/assets/team-j.png" />
-              <div className="name">J.</div>
-              <div className="position">Full-Stack Developer</div>
-            </div> */}
-            <div className="member">
-              <img alt="team-j" src="/assets/team-j.png" />
-              <div className="name">J.</div>
-              <div className="position">Full-Stack Developer</div>
-            </div>
-            <div className="member">
-              <img alt="team-j" src="/assets/team-j.png" />
-              <div className="name">J.</div>
-              <div className="position">Full-Stack Developer</div>
-            </div>
           </div>
         </div>
       </section>

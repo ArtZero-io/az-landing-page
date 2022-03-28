@@ -462,7 +462,8 @@ a {
   display: flex;
   justify-content: center;
   padding-bottom: 194px;
-  min-width: 1806px;
+  min-width: 1290px;
+  /* min-width: 1806px; */
   transition: all 0.5s ease-in-out;
 }
 .team .carousel .member {
@@ -693,6 +694,9 @@ input:focus {
   text-align: center;
   color: #ababab;
   margin-bottom: 80px;
+}
+.copyright .copyright-break {
+  display: none;
 }
 
 @media (max-width: 1366px) {
@@ -1097,7 +1101,9 @@ input:focus {
     margin-bottom: 37px;
   }
   .team .carousel {
-    min-width: 1225px;
+    /*Mobile */
+    min-width: 875px;
+    /* min-width: 1225px; */
   }
   .team .carousel .member img {
     width: 100px;
@@ -1197,5 +1203,18 @@ input:focus {
   }
   .subscribe .inputs .button {
     width: 120px;
+  }
+  .footer {
+    max-width: 400px;
+  }
+  .copyright .copyright-break {
+    display: block;
+  }
+  .navbar {
+    justify-content: start;
+  }
+
+  .navbar .closeButton {
+    margin-right: 0.875rem;
   }
 }
