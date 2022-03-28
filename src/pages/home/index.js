@@ -461,7 +461,7 @@ const HomePage = () => {
           method="post"
           action="https://send.pageclip.co/zqaVEbuvCPviRe5ho1vL42Drc3GyedOG/subscribe"
         >
-          <div className="inputs">
+          <div className="inputs" style={{ maxHeight: "60px" }}>
             <input
               value={subEmail}
               onChange={({ target }) => setSubEmail(target.value)}
