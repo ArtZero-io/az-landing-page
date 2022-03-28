@@ -3,8 +3,9 @@ import React from "react";
 const Footer = () => {
   return (
     <div className="footer">
-      <div className="social">
-        <div className="telegram">
+      
+      <ul className="social">
+        <li className="telegram">
           <a
             target="_blank"
             rel="noopener noreferrer"
@@ -12,8 +13,8 @@ const Footer = () => {
           >
             <div className="icon" />
           </a>
-        </div>
-        <div className="twitter">
+        </li>
+        <li className="twitter">
           <a
             target="_blank"
             rel="noopener noreferrer"
@@ -21,8 +22,8 @@ const Footer = () => {
           >
             <div className="icon" />
           </a>
-        </div>
-        <div className="email">
+        </li>
+        <li className="email">
           <a
             target="_blank"
             rel="noopener noreferrer"
@@ -30,10 +31,11 @@ const Footer = () => {
           >
             <div className="icon" />
           </a>
-        </div>
-      </div>
+        </li>
+      </ul>
       <div className="copyright">
-        © Copyright 2022 artZero. <div className="copyright-break"></div>All Rights Reserved
+        © Copyright 2022 artZero. <div className="copyright-break"></div>All
+        Rights Reserved
       </div>
     </div>
   );

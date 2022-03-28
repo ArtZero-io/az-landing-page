@@ -160,8 +160,8 @@ const HomePage = () => {
         <a onClick={scrollToTeam}>TEAM & ADVISORS</a>
         <a onClick={scrollToSubscribe}>SUBSCRIBE</a>
 
-        <span className="icons">
-          <div className="icons-div">
+        <ul className="icons">
+          <li className="icons-div">
             <a
               target="_blank"
               rel="noopener noreferrer"
@@ -169,8 +169,8 @@ const HomePage = () => {
             >
               <img alt="header-telegram" src="/assets/header-telegram.svg" />
             </a>
-          </div>
-          <div className="icons-div">
+          </li>
+          <li className="icons-div">
             <a
               target="_blank"
               rel="noopener noreferrer"
@@ -178,8 +178,8 @@ const HomePage = () => {
             >
               <img alt="header-twitter" src="/assets/header-twitter.svg" />
             </a>
-          </div>
-          <div className="icons-div">
+          </li>
+          <li className="icons-div">
             <a
               target="_blank"
               rel="noopener noreferrer"
@@ -187,8 +187,8 @@ const HomePage = () => {
             >
               <img alt="header-email" src="/assets/header-email.svg" />
             </a>
-          </div>
-        </span>
+          </li>
+        </ul>
       </div>
 
       <section className="hero">

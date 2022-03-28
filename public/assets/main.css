@@ -833,6 +833,9 @@ input:focus {
   .navbar .icons {
     width: 70px;
   }
+  .navbar .icons-div {
+    width: 70px;
+  }
   .menu > a {
     display: block;
     margin-left: 2em;
