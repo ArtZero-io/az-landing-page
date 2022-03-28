@@ -1210,6 +1210,9 @@ input:focus {
   .copyright .copyright-break {
     display: block;
   }
+  .copyright {
+    margin-bottom: 108px;
+  }
   .navbar {
     justify-content: start;
   }
