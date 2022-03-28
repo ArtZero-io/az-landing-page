@@ -21,7 +21,7 @@ function TeamCarousel({ size }) {
         leftArrow={<div className="arrow left" />}
         rightArrow={<div className="arrow right" />}
       >
-        {teams.map(({ isFounder, src, name, position }) => (
+        {teams.map(({ isFounder, src, name, position, position2 }) => (
           <>
             <div className="member">
               {isFounder && <div className="circle" />}
@@ -30,8 +30,11 @@ function TeamCarousel({ size }) {
                 alt="team-brian"
                 src={`/assets/${src}`}
               />
-              <div className="name">{name}</div>
+              <div className="name" style={{ marginBottom: "8px" }}>
+                {name}
+              </div>
               <div className="position">{position}</div>
+              {position2 && <div className="position2">{position2}</div>}
             </div>
           </>
         ))}
@@ -52,7 +55,8 @@ const teams = [
     isFounder: false,
     src: "team-ha-vu.png",
     name: "Ha Vu",
-    position: "Business Development",
+    position: "Business",
+    position2: "Development",
   },
   {
     isFounder: false,
@@ -64,12 +68,14 @@ const teams = [
     isFounder: false,
     src: "team-albert-tran.png",
     name: "Albert Tran",
-    position: "Smart Contract & Back-end Developer",
+    position: "Smart Contract &",
+    position2: "Back-end Developer",
   },
   {
     isFounder: false,
     src: "team-j.png",
     name: "J.",
-    position: "Full-Stack Developer",
+    position: "Full-Stack",
+    position2: "Developer",
   },
 ];

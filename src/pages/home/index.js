@@ -1,7 +1,4 @@
-/* eslint-disable */
-
 import React, { useRef, useState, useEffect } from "react";
-
 import RoadmapItem from "../../components/RoadmapItem/RoadmapItem";
 import Footer from "../../components/Footer";
 import FooterMenuMobile from "../../components/FooterMenuMobile";
@@ -40,7 +37,6 @@ function useWindowSize() {
 
 const HomePage = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [offsetCarousel, setOffsetCarousel] = useState(0);
   const airdropRef = useRef(null);
   const roadmapRef = useRef(null);
   const partnersRef = useRef(null);
@@ -70,24 +66,9 @@ const HomePage = () => {
 
   const size = useWindowSize();
 
-  const offset = size.width <= 600 ? 175 : 258;
-  const offsetLimit =
-    size.width <= 600 ? (teams.length - 2) * -175 : (teams.length - 5) * -258;
-  // -875 | - 516
-
-  const slideLeft = () => {
-    if (offsetCarousel !== 0) setOffsetCarousel(offsetCarousel + offset);
-  };
-
-  const slideRight = () => {
-    if (offsetCarousel !== offsetLimit)
-      setOffsetCarousel(offsetCarousel - offset);
-  };
-
   return (
     <React.Fragment>
       <>
-        {" "}
         {isMenuOpen ? (
           <div className="menu" style={{ overflow: "auto" }}>
             <div className="navbar">
@@ -362,30 +343,6 @@ const HomePage = () => {
       <section ref={teamRef} id="team" className="team">
         <h2>Core Team</h2>
         <div className="desc">We believe in Aleph Zero</div>
-
-        {/*<div className="carousel-wrapper">
-           <div className="arrow left" onClick={() => slideLeft()} />
-          <div className="arrow right" onClick={() => slideRight()} />
-          <div
-            className="carousel"
-            style={{ transform: `translateX(${offsetCarousel}px)` }}
-          >
-            {teams.map(({ isFounder, src, name, position }) => (
-              <>
-                <div className="member">
-                  {isFounder && <div className="circle" />}
-                  <img
-                    className={isFounder ? "brian" : ""}
-                    alt="team-brian"
-                    src={`/assets/${src}`}
-                  />
-                  <div className="name">{name}</div>
-                  <div className="position">{position}</div>
-                </div>
-              </>
-            ))}
-          </div> 
-        </div>*/}
         <TeamCarousel style={{ maxWidth: "1186px" }} size={size} />
       </section>
 
@@ -490,36 +447,3 @@ const HomePage = () => {
 };
 
 export default HomePage;
-
-const teams = [
-  {
-    isFounder: true,
-    src: "team-brian-nguyen.png",
-    name: "Brian Nguyen",
-    position: "Founder",
-  },
-  {
-    isFounder: false,
-    src: "team-ha-vu.png",
-    name: "Ha Vu",
-    position: "Business Development",
-  },
-  {
-    isFounder: false,
-    src: "team-frankie-kao.png",
-    name: "Frankie kao",
-    position: "Art Director",
-  },
-  {
-    isFounder: false,
-    src: "team-albert-tran.png",
-    name: "Albert Tran",
-    position: "Smart Contract & Back-end Developer",
-  },
-  {
-    isFounder: false,
-    src: "team-j.png",
-    name: "J.",
-    position: "Full-Stack Developer",
-  },
-];
