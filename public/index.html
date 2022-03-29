@@ -80,5 +80,20 @@
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8" />
+    <script>
+      var form = document.querySelector(".pageclip-form");
+      console.log("form", form);
+      Pageclip.form(form, {
+        onSubmit: function (event) {
+          console.log("event", event);
+          window.location.href = "dashboard.html";
+        },
+        onResponse: function (error, response) {
+          console.log("error", error);
+          console.log("response", response);
+        },
+        successTemplate: "<span>Thank you!</span>",
+      });
+    </script>
   </body>
 </html>

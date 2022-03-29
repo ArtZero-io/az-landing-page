@@ -3,6 +3,7 @@ import RoadmapItem from "../../components/RoadmapItem/RoadmapItem";
 import Footer from "../../components/Footer";
 import FooterMenuMobile from "../../components/FooterMenuMobile";
 import TeamCarousel from "../../components/TeamCarousel";
+import toast from "react-hot-toast";
 
 function useWindowSize() {
   // Initialize state with undefined width/height so server and client renders match
@@ -63,8 +64,31 @@ const HomePage = () => {
     document.body.style.position = "static";
     setIsMenuOpen(false);
   };
+  /* eslint-disable */
 
   const size = useWindowSize();
+
+  var form = !!size.width && document?.querySelector(".pageclip-form");
+
+  !!size.width &&
+    Pageclip?.form(form, {
+      onSubmit: function (event) {},
+      onResponse: function (error, response) {
+        error?.message && toast.error(error?.message);
+        response?.data &&
+          toast.success("Subscribe successful. Thank you!", {
+            style: {
+              borderRadius: 0,
+              padding: "16px",
+              color: "#000",
+              background: "#7AE7FF",
+            },
+          });
+        setSubEmail("");
+      },
+    });
+
+  /* eslint-disable */
 
   return (
     <React.Fragment>
@@ -411,16 +435,16 @@ const HomePage = () => {
           <div className="border bottom" />
         </div>
       </section>
-
       <section ref={subscribeRef} className="subscribe">
         <div className="bg" />
         <h2>Subscribe to us</h2>
         <div className="desc">Let’s make a great impact together</div>
-        <form
-          method="post"
-          action="https://send.pageclip.co/zqaVEbuvCPviRe5ho1vL42Drc3GyedOG/subscribe"
-        >
-          <div className="inputs" style={{ height: "60px" }}>
+        <div className="inputs" style={{ height: "60px" }}>
+          <form
+            className="pageclip-form"
+            method="post"
+            action="https://send.pageclip.co/zqaVEbuvCPviRe5ho1vL42Drc3GyedOG/subscribe"
+          >
             <input
               value={subEmail}
               onChange={({ target }) => setSubEmail(target.value)}
@@ -428,17 +452,18 @@ const HomePage = () => {
               name="email"
               placeholder="enter your email"
               required
-              data-valuemissing="Please check your email format!"
               pattern=".+@.+."
             />
-            <input
-              style={{ height: "60px" }}
+
+            <button
+              class="button pageclip-form__submit"
               type="submit"
-              value="SUBSCRIBE"
-              className="button pageclip-form__submit"
-            />
-          </div>
-        </form>
+              style={{ border: 0 }}
+            >
+              <span>SUBSCRIBE</span>
+            </button>
+          </form>
+        </div>
 
         <Footer />
       </section>
