@@ -1011,7 +1011,7 @@ input:focus {
   }
   .nft .wrapper .cards .create-collection {
     order: 2;
-    height: 156px;
+    height: 172px;
     background-image: url("/assets/frame-mobile-create-collection.svg");
   }
   .nft .wrapper .cards .create-nft {
