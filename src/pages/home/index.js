@@ -40,6 +40,7 @@ const HomePage = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const airdropRef = useRef(null);
   const roadmapRef = useRef(null);
+  const tokenomicsRef = useRef(null);
   const partnersRef = useRef(null);
   const teamRef = useRef(null);
   const subscribeRef = useRef(null);
@@ -49,6 +50,8 @@ const HomePage = () => {
     airdropRef.current.scrollIntoView({ behavior: "smooth" });
   const scrollToRoadmap = () =>
     roadmapRef.current.scrollIntoView({ behavior: "smooth" });
+  const scrollToTokenomics = () =>
+    tokenomicsRef.current.scrollIntoView({ behavior: "smooth" });
   const scrollToPartners = () =>
     partnersRef.current.scrollIntoView({ behavior: "smooth" });
   const scrollToTeam = () =>
@@ -122,6 +125,14 @@ const HomePage = () => {
             <a
               onClick={() => {
                 closeMenu();
+                setTimeout(() => scrollToTokenomics(), 0);
+              }}
+            >
+              tokenomics
+            </a>
+            <a
+              onClick={() => {
+                closeMenu();
                 setTimeout(() => scrollToPartners(), 0);
               }}
             >
@@ -162,6 +173,7 @@ const HomePage = () => {
 
         <a onClick={scrollToAirdrop}>AIRDROP/BOUNTY</a>
         <a onClick={scrollToRoadmap}>ROAD MAP</a>
+        <a onClick={scrollToTokenomics}>tokenomics</a>
         <a onClick={scrollToPartners}>PARTNERS</a>
         <a onClick={scrollToTeam}>TEAM & ADVISORS</a>
         <a onClick={scrollToSubscribe}>SUBSCRIBE</a>
@@ -353,6 +365,225 @@ const HomePage = () => {
         <img alt="roadmap-right" src="/assets/roadmap-right.png" />
       </section>
 
+      <section ref={tokenomicsRef} id="tokenomics" className="tokenomics">
+        <div className="bg" />
+        <h2>tokenomics</h2>
+
+        <div className="desc">We believe in Aleph Zero</div>
+
+        <div className="wrapper">
+          <div className="chart">
+            <div className="chart-wrapper">
+              <div className="percent-30">
+                <div className="title">30%</div>
+                <div className="text">platform development and expansion</div>
+              </div>
+
+              <img
+                className="frame"
+                alt="frame-connect"
+                src="/assets/tokenomics-circle-chart.png"
+              />
+              <div className="percent-70">
+                <div className="title">70%</div>
+                <div className="text">
+                  run validator node to support the network
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="cards">
+            <div className="nft-supply">
+              <img
+                className="frame"
+                alt="frame-connect"
+                src="/assets/frame-nft-supply.svg"
+              />
+              <div className="title">
+                <h3>10k total nft supply</h3>
+              </div>
+
+              <div className="text">
+                <div className="icon">
+                  <img alt="icon-connect" src="/assets/tokenomics-bullet.svg" />
+                </div>
+                <span className="desc">
+                  Private/Seed Sale: A maximum amount of 2500 NFTs
+                </span>
+              </div>
+
+              <div className="text">
+                <div className="icon">
+                  <img alt="icon-connect" src="/assets/tokenomics-bullet.svg" />
+                </div>
+                <span className="desc">
+                  Public Sale: A maximum amount of 5000 NFTs
+                </span>
+              </div>
+
+              <div className="text">
+                <div className="icon">
+                  <img alt="icon-connect" src="/assets/tokenomics-bullet.svg" />
+                </div>
+                <span className="desc">
+                  Airdrop/Bounty/Partners: A maximum amount of 500 NFTs
+                </span>
+              </div>
+
+              <div className="text">
+                <div className="icon">
+                  <img alt="icon-connect" src="/assets/tokenomics-bullet.svg" />
+                </div>
+                <span className="desc">
+                  Foundation Team and Founders: A fixed amount of 2000 NFTs
+                </span>
+              </div>
+            </div>
+            <div className="desc-bottom">
+              profits from running validator node will be distributed back to
+              nft stakers
+            </div>
+          </div>
+        </div>
+
+        {/* Staking */}
+        <div id="staking" className="staking">
+          <div className="main">
+            <div className="card">
+              <img
+                className="frame"
+                alt="frame-connect"
+                src="/assets/frame-staking.svg"
+              />
+              <div className="title">
+                <h3>nft stakers benefits</h3>
+              </div>
+
+              <div className="text">
+                <div className="icon">
+                  <img alt="icon-connect" src="/assets/tokenomics-bullet.svg" />
+                </div>
+                <span className="desc">
+                  30% share of the platform’s profit (1)
+                </span>
+              </div>
+              <div className="text">
+                <div className="icon">
+                  <img alt="icon-connect" src="/assets/tokenomics-bullet.svg" />
+                </div>
+                <span className="desc">
+                  50% share of profit from running validator node (2){" "}
+                </span>
+              </div>
+              <div className="spacer"> </div>
+              <div className="desc-bottom-title">staker share:</div>
+              <div className="desc-bottom-text">
+                [0.3 x (profit 1) + 0.5 x (profit 2)] x number of staked nfts /
+                total nft supply
+              </div>
+            </div>
+
+            <div className="info-cols">
+              <div className="info-1">
+                <div className="title">
+                  <h3>stakers</h3>
+                </div>
+
+                <div className="text">
+                  <span className="desc">1 NFT</span>
+                  <div className="icon">
+                    <img
+                      alt="icon-connect"
+                      src="/assets/staking-nft-level-1.svg"
+                    />
+                  </div>
+                </div>
+                <div className="text">
+                  <span className="desc">5 NFTs</span>
+                  <div className="icon">
+                    <img
+                      alt="icon-connect"
+                      src="/assets/staking-nft-level-2.svg"
+                    />
+                  </div>
+                </div>
+                <div className="text">
+                  <span className="desc">7 NFTs</span>
+                  <div className="icon">
+                    <img
+                      alt="icon-connect"
+                      src="/assets/staking-nft-level-3.svg"
+                    />
+                  </div>
+                </div>
+                <div className="text">
+                  <span className="desc">9 NFTs</span>
+                  <div className="icon">
+                    <img
+                      alt="icon-connect"
+                      src="/assets/staking-nft-level-4.svg"
+                    />
+                  </div>
+                </div>
+                <div className="text">
+                  <span className="desc">20 NFTs</span>
+                  <div className="icon">
+                    <img
+                      alt="icon-connect"
+                      src="/assets/staking-nft-level-5.svg"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div className="info-2">
+                <div className="title">
+                  <h3>trade discount</h3>
+                </div>
+
+                
+                <div className="level">
+                  <span className="percent">30%</span>
+                  <div className="desc">
+                    <div className="desc1">off</div>
+                    <span className="desc2">transaction fee</span>
+                  </div>
+                </div>
+                <div className="level">
+                  <span className="percent">50%</span>
+                  <div className="desc">
+                    <div className="desc1">off</div>
+                    <span className="desc2">transaction fee</span>
+                  </div>
+                </div>
+                <div className="level">
+                  <span className="percent">66%</span>
+                  <div className="desc">
+                    <div className="desc1">off</div>
+                    <span className="desc2">transaction fee</span>
+                  </div>
+                </div>
+                <div className="level">
+                  <span className="percent">80%</span>
+                  <div className="desc">
+                    <div className="desc1">off</div>
+                    <span className="desc2">transaction fee</span>
+                  </div>
+                </div>
+                <div className="level">
+                  <span className="percent">90%</span>
+                  <div className="desc">
+                    <div className="desc1">off</div>
+                    <span className="desc2">transaction fee</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section ref={partnersRef} id="partners" className="partners">
         <div className="bg" />
         <div className="heading">
@@ -438,6 +669,7 @@ const HomePage = () => {
           <div className="border bottom" />
         </div>
       </section>
+
       <section ref={subscribeRef} className="subscribe">
         <div className="bg" />
         <h2>Subscribe to us</h2>

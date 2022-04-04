@@ -5,42 +5,6 @@ function TeamCarousel({ size }) {
   const showNumber = size?.width >= 600 ? 5 : 2;
   return (
     <>
-      {/* <div
-        style={{
-          maxWidth: "1186px",
-          margin: "0 auto",
-          padding: "0 24px 194px 24px ",
-        }}
-      >
-        <Carousel
-          className="team-carousel"
-          show={showNumber}
-          slide={1}
-          responsive={true}
-          swiping={true}
-          infinite={false}
-          leftArrow={<div className="arrow left" />}
-          rightArrow={<div className="arrow right" />}
-        >
-          {teams.map(({ isFounder, src, name, position, position2 }) => (
-            <>
-              <div key={name} className="member">
-                {isFounder && <div className="circle" />}
-                <img
-                  className={isFounder ? "brian" : ""}
-                  alt="team-brian"
-                  src={`/assets/${src}`}
-                />
-                <div className="name" style={{ marginBottom: "8px" }}>
-                  {name}
-                </div>
-                <div className="position">{position}</div>
-                {position2 && <div className="position2">{position2}</div>}
-              </div>
-            </>
-          ))}
-        </Carousel>
-      </div> */}
       <div
         style={{
           maxWidth: "1186px",
@@ -60,12 +24,12 @@ function TeamCarousel({ size }) {
         >
           {teams.map(({ isFounder, src, name, position, position2 }) => (
             <>
-              <div key={name} className="member">
-                {isFounder && <div className="circle" />}
+              <div key={name} className={`${src} member`}>
+                {isFounder && <div className={`${src} circle`} />}
                 <img
-                  className={isFounder ? "brian" : ""}
+                  className={src}
                   alt="team-brian"
-                  src={`/assets/${src}`}
+                  src={`/assets/${src}.png`}
                 />
                 <div className="name" style={{ marginBottom: "8px" }}>
                   {name}
@@ -86,33 +50,33 @@ export default TeamCarousel;
 const teams = [
   {
     isFounder: true,
-    src: "team-brian-nguyen.png",
+    src: "team-brian-nguyen",
     name: "Brian Nguyen",
     position: "Founder",
   },
   {
-    isFounder: false,
-    src: "team-ha-vu.png",
+    isFounder: true,
+    src: "team-ha-vu",
     name: "Ha Vu",
     position: "Business",
     position2: "Development",
   },
   {
-    isFounder: false,
-    src: "team-frankie-kao.png",
+    isFounder: true,
+    src: "team-frankie-kao",
     name: "Frankie kao",
     position: "Art Director",
   },
   {
-    isFounder: false,
-    src: "team-albert-tran.png",
+    isFounder: true,
+    src: "team-albert-tran",
     name: "Albert Tran",
     position: "Smart Contract &",
     position2: "Back-end Developer",
   },
   {
-    isFounder: false,
-    src: "team-j.png",
+    isFounder: true,
+    src: "team-j",
     name: "J.",
     position: "Full-Stack",
     position2: "Developer",
