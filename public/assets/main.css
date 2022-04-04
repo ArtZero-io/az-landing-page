@@ -301,7 +301,7 @@ a {
 
 .tokenomics .wrapper .chart {
   flex-basis: 45%;
-  background-image: url("/assets/tokenomics-circle-chart.png")
+
   width: 567px;
   height: 567px;
   display: flex;
@@ -313,60 +313,55 @@ a {
   background-size: cover;
 }
 
-.tokenomics .wrapper .chart .chart-wrapper{
-  position:relative
+.tokenomics .wrapper .chart .chart-wrapper {
+  position: relative;
 }
 
 .tokenomics .wrapper .chart .chart-wrapper .percent-30,
-.tokenomics .wrapper .chart .chart-wrapper .percent-70
-{
-  position:absolute;
+.tokenomics .wrapper .chart .chart-wrapper .percent-70 {
+  position: absolute;
   width: 195px;
 }
 
-.tokenomics .wrapper .chart .chart-wrapper .title{
-   font-family: "DS-Digital", sans-serif;
-    font-size: 58px;
-    line-height: 40px;
-    font-weight: 400;
-  }
+.tokenomics .wrapper .chart .chart-wrapper .title {
+  font-family: "DS-Digital", sans-serif;
+  font-size: 58px;
+  line-height: 40px;
+  font-weight: 400;
+}
 
-.tokenomics .wrapper .chart .chart-wrapper .text{
-     font-size: 15px;
-     font-weight: 400;
-     margin-top:14px
-  }
+.tokenomics .wrapper .chart .chart-wrapper .text {
+  font-size: 15px;
+  font-weight: 400;
+  margin-top: 14px;
+}
 
-
-
- .tokenomics .wrapper .chart .chart-wrapper .percent-30 {
+.tokenomics .wrapper .chart .chart-wrapper .percent-30 {
   text-align: left;
   top: -30px;
   right: -205px;
 }
 
- .tokenomics .wrapper .chart .chart-wrapper .percent-70{
+.tokenomics .wrapper .chart .chart-wrapper .percent-70 {
   text-align: right;
-  color: #7AE7FF;
+  color: #7ae7ff;
   bottom: -40px;
-    left: -200px;
+  left: -200px;
 }
 
- .tokenomics .wrapper .cards  {
-    width: 500px;
-    height: 400px;
-    text-align: center;
-
-} 
+.tokenomics .wrapper .cards {
+  width: 500px;
+  height: 400px;
+  text-align: center;
+}
 
 .tokenomics .wrapper .cards .nft-supply {
   position: relative;
   width: 530px;
   height: 320px;
   text-align: left;
-margin-bottom:60px
-} 
-
+  margin-bottom: 60px;
+}
 
 .tokenomics .wrapper .cards .nft-supply .frame {
   position: absolute;
@@ -376,77 +371,70 @@ margin-bottom:60px
   z-index: -1;
 }
 
-.tokenomics .wrapper .cards .nft-supply .title h3{
-font-size:28px
+.tokenomics .wrapper .cards .nft-supply .title h3 {
+  font-size: 28px;
 }
- 
-.tokenomics .wrapper .cards .nft-supply .text{
-  display:flex;
-   justify-contain: center;
+
+.tokenomics .wrapper .cards .nft-supply .text {
+  display: flex;
+  justify-contain: center;
   align-items: center;
   margin-top: 20px;
   width: 495px;
-
 }
-.tokenomics .wrapper .cards .nft-supply .icon{
-  margin-right:10px
-  
+.tokenomics .wrapper .cards .nft-supply .icon {
+  margin-right: 10px;
 }
-.tokenomics .wrapper .cards .nft-supply .text .desc{
-font-size:18px;
-color:#ABABAB
+.tokenomics .wrapper .cards .nft-supply .text .desc {
+  font-size: 18px;
+  color: #ababab;
 }
-.tokenomics .wrapper .cards .desc-bottom{
+.tokenomics .wrapper .cards .desc-bottom {
   width: 400px;
-  font-style:italic;
-  font-size:15px;
-  text-align:center;
- margin-left: auto;
- margin-right: auto;
+  font-style: italic;
+  font-size: 15px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
- 
+
 /* end tokenomics */
 
 /* staking */
- 
 
 .staking {
   width: 1290px;
-  height: 551px;
   margin: 0 auto;
-   padding-bottom: 40px;
+  padding-bottom: 40px;
 }
- 
- 
+
 .staking .main {
-    width: 100%;
-  height: 522px;
+  width: 100%;
+  /* height: 522px; */
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
- }
- 
+}
 
 .staking .main .card {
   position: relative;
   width: 400px;
   height: 475px;
   text-align: left;
-margin-right:140px;
-padding: 40px;
-display:flex;
-flex-direction: column;
-/* align-items: stretch;
+  margin-right: 140px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  /* align-items: stretch;
 justify-content: space-between; */
-
-} 
-.staking .main .card .spacer{
+}
+.staking .main .card .spacer {
   /* background-color:yellow; */
   /* height: 100%; */
   flex: 1;
-    justifySelf: "stretch";
-    alignSelf: "stretch";
+  justifyself: "stretch";
+  alignself: "stretch";
 }
 
 .staking .main .card .frame {
@@ -457,47 +445,34 @@ justify-content: space-between; */
   z-index: -1;
 }
 
-.staking .main .card .title h3{
-font-size:28px
+.staking .main .card .title h3 {
+  font-size: 28px;
 }
- 
-.staking .main .card .text{
-  display:flex;
-   justify-contain: center;
+
+.staking .main .card .text {
+  display: flex;
+  justify-contain: center;
   align-items: center;
   margin-top: 20px;
   width: 310px;
-
 }
-.staking .main .card .icon{
-  margin-right:10px
-  
+.staking .main .card .icon {
+  margin-right: 10px;
 }
-.staking .main .card .text .desc{
-font-size:18px;
-color:#ABABAB
+.staking .main .card .text .desc {
+  font-size: 18px;
+  color: #ababab;
 }
-.staking .main .card .desc-bottom-title{
-font-size:18px;
-margin-bottom: 14px;
+.staking .main .card .desc-bottom-title {
+  font-size: 18px;
+  margin-bottom: 14px;
 }
-
-
-
-
-
-
-
-
-
 
 .staking .main .info-cols {
   display: flex;
   justify-content: space-between;
   width: 100%;
- }
- 
- 
+}
 
 .staking .main .info-1,
 .staking .main .info-2 {
@@ -513,56 +488,40 @@ margin-bottom: 14px;
 
 .staking .main .info-1 .title,
 .staking .main .info-2 .title {
-    margin-bottom: 0px;
-    text-align: left;
-    color:#7AE7FF
+  margin-bottom: 0px;
+  text-align: left;
+  color: #7ae7ff;
 }
 
- 
-
-.staking .main .info-1 .text  {
+.staking .main .info-1 .text {
   display: flex;
   justify-content: space-between;
-  margin-top: 36px
+  margin-top: 36px;
 }
- 
 
 .staking .main .info-2 .level {
   display: flex;
   justify-content: start;
   margin-top: 8px;
-  height:60px
+  height: 60px;
 }
 
 .staking .main .info-2 .level .percent {
   font-family: DS-Digital, sans-serif;
-font-size: 58px;
- margin-right:8px;
- 
- }
+  font-size: 58px;
+  margin-right: 8px;
+}
 .staking .main .info-2 .level .desc {
-   text-align:left;
-   height:60px
+  text-align: left;
+  height: 60px;
+}
+.staking .main .info-2 .level .desc .desc1 {
+  color: #7ae7ff;
+}
+.staking .main .info-2 .level .desc .desc2 {
+  font-size: 14px;
+}
 
-  
- }
-.staking .main .info-2 .level .desc .desc1{
-   color:#7AE7FF
- 
- }
-.staking .main .info-2 .level .desc .desc2{
-  font-size: 14px
- 
- }
-
-
-
-
-
-
-
-
- 
 /* end staking */
 
 .nft {
@@ -723,7 +682,7 @@ font-size: 58px;
   background-image: url("/assets/bg-partners.png");
   background-size: cover;
 }
- 
+
 .partners .subwallet {
   margin: 0 50px 0 130px;
   /* new partner edit */
@@ -742,7 +701,6 @@ font-size: 58px;
   align-items: center;
   justify-content: center;
 }
-
 
 .team {
   padding-top: 100px;
@@ -1659,6 +1617,78 @@ input:focus {
   .team .team-carousel .right {
     right: -15px;
     transform: rotate(180deg);
+  }
+
+  .tokenomics .wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .tokenomics .wrapper .chart,
+  .tokenomics .wrapper .chart .chart-wrapper {
+    width: 380px;
+  }
+
+  .tokenomics .wrapper .chart .chart-wrapper .frame,
+  .tokenomics .wrapper .chart .chart-wrapper .percent-70,
+  .tokenomics .wrapper .chart .chart-wrapper .percent-30 {
+    width: 335px;
+    margin-bottom: 16px;
+    text-align: right;
+  }
+  .tokenomics .wrapper .chart .chart-wrapper .percent-30,
+  .tokenomics .wrapper .chart .chart-wrapper .percent-70 {
+    position: unset;
+  }
+  .tokenomics .wrapper .chart .chart-wrapper .percent-70 {
+    text-align: left;
+    padding-left: 16px;
+  }
+
+  .tokenomics .wrapper .cards {
+    margin-top: 50px;
+    width: 360px;
+    height: 400px;
+  }
+
+  .tokenomics .wrapper .cards .nft-supply .frame {
+    display: none;
+  }
+  .tokenomics .wrapper .cards .desc-bottom,
+  .tokenomics .wrapper .cards .nft-supply {
+    width: 360px;
+    margin-bottom: 10px;
+  }
+  .tokenomics .wrapper .cards .nft-supply .text {
+    display: flex;
+    justify-contain: center;
+    align-items: center;
+    margin-top: 20px;
+    width: 340px;
+  }
+
+  #staking.staking,
+  #staking.staking .main,
+  #staking.staking .main .info-cols {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 380px;
+  }
+  #staking.staking .main .info-cols .info-1 {
+    margin-bottom: 26px;
+  }
+
+  #staking.staking .main .card {
+    margin: 0;
+  }
+  #staking.staking .main .card .frame {
+    display: none;
+  }
+  #partners > div.subwallet {
+    margin: 0;
   }
 }
 
