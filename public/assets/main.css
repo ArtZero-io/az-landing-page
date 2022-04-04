@@ -16,7 +16,7 @@
 }
 
 * {
-  /* border: 1px dotted lightyellow; */
+  border: 1px dotted lightyellow;
   scroll-behavior: smooth;
   background-repeat: no-repeat;
   box-sizing: border-box;
