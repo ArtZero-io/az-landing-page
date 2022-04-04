@@ -16,7 +16,7 @@
 }
 
 * {
-  border: 1px dotted lightyellow;
+  /* border: 1px dotted lightyellow; */
   scroll-behavior: smooth;
   background-repeat: no-repeat;
   box-sizing: border-box;
@@ -274,6 +274,7 @@ a {
   position: relative;
   padding-top: 100px;
   text-align: center;
+  padding: auto 20px;
 }
 
 .tokenomics h2 {
@@ -300,8 +301,7 @@ a {
 }
 
 .tokenomics .wrapper .chart {
-  flex-basis: 45%;
-
+  flex-basis: 54%;
   width: 567px;
   height: 567px;
   display: flex;
@@ -403,7 +403,7 @@ a {
 /* staking */
 
 .staking {
-  width: 1290px;
+  max-width: 1290px;
   margin: 0 auto;
   padding-bottom: 40px;
 }
@@ -1085,9 +1085,27 @@ input:focus {
   .roadmap .main .grid {
     width: 100%;
   }
+  .staking .main .card {
+    margin: 0 20px;
+  }
+
+  .staking .main .card .info-cols {
+    margin: 0 20px;
+  }
+
+  #staking.staking .main .info-cols {
+    margin-right: 20px;
+    margin-left: 60px;
+  }
 }
 
 @media (max-width: 1200px) {
+  .staking {
+    width: 1190px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+  }
+
   .hero-bg {
     height: 100vw;
   }
@@ -1659,6 +1677,7 @@ input:focus {
   .tokenomics .wrapper .cards .nft-supply {
     width: 360px;
     margin-bottom: 10px;
+    padding-left: 10px;
   }
   .tokenomics .wrapper .cards .nft-supply .text {
     display: flex;
@@ -1677,6 +1696,7 @@ input:focus {
     justify-content: center;
     width: 380px;
   }
+
   #staking.staking .main .info-cols .info-1 {
     margin-bottom: 26px;
   }
