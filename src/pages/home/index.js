@@ -362,6 +362,9 @@ const HomePage = () => {
         <div className="subwallet">
           <img alt="partners-logo" src="/assets/partners-logo-subwallet.png" />
         </div>
+        <div className="ventures32">
+          <img alt="partners-logo" src="/assets/partners-logo-32ventures.png" />
+        </div>
       </section>
 
       <section ref={teamRef} id="team" className="team">
@@ -456,7 +459,7 @@ const HomePage = () => {
             />
 
             <button
-              class="button pageclip-form__submit"
+              className="button pageclip-form__submit"
               type="submit"
               style={{ border: 0 }}
             >

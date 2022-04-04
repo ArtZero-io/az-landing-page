@@ -10,15 +10,14 @@
   font-family: "DS-Digital";
   src: url("./fonts/DS-DIGI.TTF");
 }
-* {
-  scroll-behavior: smooth;
-}
 @font-face {
   font-family: "DS-Digital-Bold";
   src: url("./fonts/DS-DIGIB.TTF");
 }
 
 * {
+  /* border: 1px dotted yellow; */
+  scroll-behavior: smooth;
   background-repeat: no-repeat;
   box-sizing: border-box;
 }
@@ -28,8 +27,15 @@ body {
   background: #000;
   font-family: Evogria, sans-serif;
   color: #fff;
+  -ms-overflow-style: "none";
+  scrollbar-width: "none";
 }
 
+body::-webkit-scrollbar {
+  display: "none";
+}
+
+,
 h2 {
   font-size: 48px;
   font-family: "Evogria Italic", sans-serif;
@@ -340,7 +346,7 @@ a {
   background-image: url("/assets/frame-create-nft.svg");
 }
 .nft .wrapper .cards .create-collection {
-  height: 324px;
+  height: 340px;
   background-image: url("/assets/frame-create-collection.svg");
 }
 .nft .wrapper .cards .list-nft {
@@ -421,10 +427,20 @@ a {
   background-image: url("/assets/bg-partners.png");
   background-size: cover;
 }
-.partners .heading {
+/* .partners .heading {
   margin: 0 78px;
-}
+} */
 .partners .subwallet {
+  margin: 0 70px;
+  /* new partner edit */
+  width: 468px;
+  height: 201px;
+  background: url("/assets/partners-grid-subwallet.svg") no-repeat center center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.partners .ventures32 {
   width: 468px;
   height: 201px;
   background: url("/assets/partners-grid-subwallet.svg") no-repeat center center;
@@ -1154,8 +1170,16 @@ input:focus {
     height: 140px;
     background-size: cover;
   }
+  .partners .ventures32 {
+    width: 327px;
+    height: 140px;
+    background-size: cover;
+  }
   .partners .subwallet img {
     width: 250px;
+  }
+  .partners .ventures32 img {
+    width: 140px;
   }
   .team {
     padding: 50px 0;
