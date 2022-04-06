@@ -100,7 +100,7 @@ const HomePage = () => {
           <div className="menu" style={{ overflow: "auto" }}>
             <div className="navbar">
               <div onClick={closeMenu} className="closeButton">
-                <img alt="icon-close" src="/assets/icon-close.svg" />
+                <img alt="icon-close" src="/assets/icon-close.svg" style={{height: '35px'}}/>
               </div>
               <img alt="logo.png" src="/assets/logo.png" />
               <span className="icons" />
@@ -166,7 +166,7 @@ const HomePage = () => {
 
       <div className="navbar">
         <div onClick={openMenu} className="burger">
-          <img alt="icon-burger" src="/assets/icon-burger.svg" />
+          <img alt="icon-burger" src="/assets/icon-burger.svg" style={{height: '35px'}}/>
         </div>
 
         <img alt="logo.png" src="/assets/logo.png" />
@@ -373,6 +373,10 @@ const HomePage = () => {
 
         <div className="wrapper">
           <div className="chart">
+            <div className="chart-title">
+              <h3>AZERO Distribution</h3>
+              <h3>from TGE</h3>
+            </div>
             <div className="chart-wrapper">
               <div className="percent-30">
                 <div className="title">30%</div>
@@ -465,7 +469,8 @@ const HomePage = () => {
                   <img alt="icon-connect" src="/assets/tokenomics-bullet.svg" />
                 </div>
                 <span className="desc">
-                  30% share of the platform’s profit (1)
+                  30% share of the platform’s profit{" "}
+                  <span style={{ color: "white" }}>(1)</span>
                 </span>
               </div>
               <div className="text">
@@ -473,7 +478,8 @@ const HomePage = () => {
                   <img alt="icon-connect" src="/assets/tokenomics-bullet.svg" />
                 </div>
                 <span className="desc">
-                  50% share of profit from running validator node (2){" "}
+                  50% share of profit from running validator node{" "}
+                  <span style={{ color: "white" }}>(2)</span>
                 </span>
               </div>
               <div className="spacer"> </div>
@@ -542,7 +548,6 @@ const HomePage = () => {
                   <h3>trade discount</h3>
                 </div>
 
-                
                 <div className="level">
                   <span className="percent">30%</span>
                   <div className="desc">
