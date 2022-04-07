@@ -221,6 +221,15 @@ const HomePage = () => {
             <a
               target="_blank"
               rel="noopener noreferrer"
+              href="https://medium.com/@artzero_io"
+            >
+              <img alt="header-medium" src="/assets/header-medium.svg" />
+            </a>
+          </li>
+          <li className="icons-div icons-animation">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
               href="mailto:admin@artzero.io"
             >
               <img alt="header-email" src="/assets/header-email.svg" />
@@ -741,7 +750,10 @@ const HomePage = () => {
         >
           We believe in Aleph Zero
         </div>
-        <TeamCarousel style={{ maxWidth: "1186px" }} size={size} />
+        <TeamCarousel
+          style={{ maxWidth: "1186px" }}
+          size={size}
+        />
       </section>
 
       <section className="advisors">
@@ -765,6 +777,7 @@ const HomePage = () => {
                 <img
                   className="bg desktop"
                   alt="advisor-frame"
+                  // src="/assets/advisor-frame-light.svg"
                   src="/assets/advisor-frame-light.svg"
                 />
                 <img

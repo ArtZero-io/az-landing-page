@@ -27,7 +27,7 @@ function TeamCarousel({ size }) {
         >
           {teams.map(({ isFounder, src, name, position, position2 }) => (
             <>
-              <div key={name} className={`${src} member`}>
+              <div key={name} className={`${src} member`} style={{paddingTop:'40px'}}>
                 {isFounder && <div className={`${src} circle`} />}
                 <img
                   className={src}
@@ -57,13 +57,6 @@ const teams = [
     name: "Brian Nguyen",
     position: "Founder",
   },
-  // {
-  //   isFounder: true,
-  //   src: "team-ha-vu",
-  //   name: "Ha Vu",
-  //   position: "Business",
-  //   position2: "Development",
-  // },
   {
     isFounder: true,
     src: "team-phoebe-hoang",

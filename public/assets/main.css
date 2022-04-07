@@ -633,7 +633,8 @@ justify-content: space-between; */
 }
 .nft .wrapper .cards .list-nft {
   height: 348px;
-  background-image: url("/assets/frame-list-nft.svg");
+  /* background-image: url("/assets/frame-list-nft.svg"); */
+  background-image: url("/assets/frame-create-collection.svg");
 }
 
 .roadmap {
@@ -736,7 +737,7 @@ justify-content: space-between; */
   text-align: center;
 }
 .team .desc {
-  margin-bottom: 24px;
+  /* margin-bottom: 24px; */
   text-align: center;
 }
 
@@ -832,7 +833,7 @@ justify-content: space-between; */
 }
 .team .team-carousel.team-scrolling-carousel .member .circle {
   position: absolute;
-  top: -20px;
+  top: 20px;
   left: -20px;
   background-image: url("/assets/team-jedi-circle.svg");
   width: 270px;
@@ -840,6 +841,9 @@ justify-content: space-between; */
   z-index: -1;
   opacity: 0;
   transition: all 0.25s ease-in-out;
+  filter: drop-shadow(0px 0px 25px #7ae7ff);
+  -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 .team .team-carousel.team-scrolling-carousel .member {
   position: relative;
@@ -1048,6 +1052,12 @@ input:focus {
 }
 .social .twitter:hover .icon {
   background: url("/assets/subscribe-twitter-hover.svg") no-repeat center center;
+}
+.social .medium .icon {
+  background: url("/assets/header-medium.svg") no-repeat center center;
+}
+.social .medium:hover .icon {
+  background: url("/assets/subscribe-medium-hover.svg") no-repeat center center;
 }
 .social .email .icon {
   background: url("/assets/subscribe-email.svg") no-repeat center center;
@@ -1589,7 +1599,7 @@ input:focus {
     padding: 50px 0;
   }
   .team .desc {
-    margin-bottom: 37px;
+    /* margin-bottom: 37px; */
   }
   .team .carousel {
     /*Mobile */
@@ -1611,6 +1621,7 @@ input:focus {
   .team .carousel .member img.team-j,
   .team .carousel .member img {
     margin: 0 0 14px 0;
+    border-radius: 100%;
   }
   .team .carousel .member {
     width: 175px;
@@ -2006,11 +2017,8 @@ position: relative
   }
 
   .tokenomics .wrapper .chart .chart-title {
-     margin-bottom: 4rem;
+    margin-bottom: 4rem;
   }
-
-
-
 }
 
 /* Pageclip */
@@ -2181,20 +2189,28 @@ position: relative
 .nft .wrapper .cards .connect-wallet:hover,
 .nft .wrapper .cards .create-nft:hover,
 .nft .wrapper .cards .create-collection:hover,
-.nft .wrapper .cards .list-nft:hover {
-  background-color: rgba(88, 155, 217, 0.4);
+.nft .wrapper .cards .list-nft:hover,
+.advisors .main .person.thong:hover,
+.advisors .main .person.hieu:hover {
+  filter: drop-shadow(0px 4px 60px rgba(122, 231, 255, 0.5));
+  -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  /* background-color: rgba(88, 155, 217, 0.4);
   border-radius: 12px;
   box-shadow: -3px -2px 22px 25px rgba(88, 155, 217, 0.4);
   transform: scale(1.025) rotate(0.62deg);
-  -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+   */
 }
 
-.team .member img:hover {
+/* .team .member img:hover {
+  filter: drop-shadow(0px 0px 25px #7ae7ff);
+  -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    
   background-color: rgba(88, 155, 217, 0.4);
   border-radius: 100%;
   box-shadow: 0px 0px 28px 8px rgba(88, 155, 217, 0.4);
   transform: scale(1.085);
   -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-}
+} */

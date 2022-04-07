@@ -22,6 +22,15 @@ const Footer = () => {
             <div className="icon" />
           </a>
         </div>
+        <div className="medium">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://medium.com/@artzero_io"
+          >
+            <div className="icon" />
+          </a>
+        </div>
         <div className="email">
           <a
             target="_blank"
