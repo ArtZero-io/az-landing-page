@@ -338,6 +338,9 @@ a {
 
 .tokenomics .wrapper .chart .chart-wrapper {
   position: relative;
+  max-width: 255px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .tokenomics .wrapper .chart .chart-wrapper .percent-30,
