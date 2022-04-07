@@ -203,8 +203,7 @@ a {
   align-items: center;
   color: #000;
   text-transform: uppercase;
-    border-width: 1px;
-
+  border-width: 1px;
 }
 .hero .text .button:hover {
   -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -980,7 +979,7 @@ input:focus {
 }
 .subscribe .inputs .button,
 .subscribe .inputs button {
-  width: 158px;
+  width: 148px;
   height: 60px;
   background: #7ae7ff;
   clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 10px, 144px 0, 0 0);
@@ -1930,6 +1929,9 @@ position: relative
   #staking.staking .main .card .desc-bottom-text {
     font-size: 13px;
   }
+  #staking.staking .main .card .desc-bottom-text {
+    width: 300px;
+  }
   #staking.staking .main .card .title h3,
   #staking.staking .main .card .desc-bottom-title {
     font-size: 18px;
@@ -1947,9 +1949,11 @@ position: relative
     flex-direction: row;
     justify-content: start;
     align-items: center;
-    width: 360px;
+    width: 330px;
     margin-bottom: 3rem;
     order: 1;
+    margin-left: 16px;
+    margin-right: 16px;
   }
 
   #staking.staking .main .info-cols .info-1,
@@ -1985,6 +1989,9 @@ position: relative
 
   .tokenomics .wrapper .cards .nft-supply .title {
     margin-top: 10px;
+  }
+  section.subscribe .inputs form button {
+    width: 110px;
   }
 }
 
