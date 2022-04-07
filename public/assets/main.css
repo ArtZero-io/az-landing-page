@@ -1822,8 +1822,8 @@ position: relative
   .tokenomics .wrapper .chart .chart-wrapper .percent-30 {
     /* background-color: "yellow"; */
     text-align: left;
-    top: -42px;
-    right: -100px;
+    top: -55px;
+    right: -85px;
   }
   .tokenomics .wrapper .chart .chart-wrapper .text {
     margin-top: 0px;
@@ -1831,8 +1831,8 @@ position: relative
   .tokenomics .wrapper .chart .chart-wrapper .percent-70 {
     text-align: right;
     color: #7ae7ff;
-    bottom: -48px;
-    left: -100px;
+    bottom: -65px;
+    left: -80px;
     display: flex;
     flex-direction: column;
     align-items: end;
@@ -1908,7 +1908,7 @@ position: relative
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 380px;
+    width: 360px;
   }
 
   #staking.staking .main .info-cols .info-1 {
