@@ -203,16 +203,17 @@ a {
   align-items: center;
   color: #000;
   text-transform: uppercase;
+    border-width: 1px;
+
 }
 .hero .text .button:hover {
   -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-  /* color: var(--mg-button-hover-text, #fff); */
-  border-color: var(--mg-button-hover-border, #004bff);
-  background-color: var(--mg-button-hover-background, #004bff);
-  box-shadow: 0 0 0 0.2rem var(--mg-button-hover-background, #004bff);
-
-  transform: scale(1.1);
+  border-color: "#7ae7ff";
+  background-color: "#7ae7ff";
+  box-shadow: 0 0 0 2rem #7ae7ff;
+  transform: scaleX(1.015);
+  /* border-width: 2px; */
 }
 
 .airdrop {

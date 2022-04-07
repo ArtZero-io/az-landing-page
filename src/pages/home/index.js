@@ -100,7 +100,11 @@ const HomePage = () => {
           <div className="menu" style={{ overflow: "auto" }}>
             <div className="navbar">
               <div onClick={closeMenu} className="closeButton">
-                <img alt="icon-close" src="/assets/icon-close.svg" style={{height: '35px'}}/>
+                <img
+                  alt="icon-close"
+                  src="/assets/icon-close.svg"
+                  style={{ height: "35px" }}
+                />
               </div>
               <img alt="logo.png" src="/assets/logo.png" />
               <span className="icons" />
@@ -166,7 +170,11 @@ const HomePage = () => {
 
       <div className="navbar">
         <div onClick={openMenu} className="burger">
-          <img alt="icon-burger" src="/assets/icon-burger.svg" style={{height: '35px'}}/>
+          <img
+            alt="icon-burger"
+            src="/assets/icon-burger.svg"
+            style={{ height: "35px" }}
+          />
         </div>
 
         <img alt="logo.png" src="/assets/logo.png" />
@@ -485,7 +493,13 @@ const HomePage = () => {
               <div className="spacer"> </div>
               <div className="desc-bottom-title">staker share:</div>
               <div className="desc-bottom-text">
-              <span style={{ color: "#7AE7FF" }}>[</span>0.3 <span style={{ color: "#7AE7FF" }}>x (</span> profit 1<span style={{ color: "#7AE7FF" }}>) + (</span>0.5 <span style={{ color: "#7AE7FF" }}>x (</span>profit 2<span style={{ color: "#7AE7FF" }}>)] x</span> number of staked nfts <span style={{ color: "#7AE7FF" }}>/</span> TOTAL STAKED NFTS
+                <span style={{ color: "#7AE7FF" }}>[</span>0.3{" "}
+                <span style={{ color: "#7AE7FF" }}>x (</span> profit 1
+                <span style={{ color: "#7AE7FF" }}>) + (</span>0.5{" "}
+                <span style={{ color: "#7AE7FF" }}>x (</span>profit 2
+                <span style={{ color: "#7AE7FF" }}>)] x</span> number of staked
+                nfts <span style={{ color: "#7AE7FF" }}>/</span> TOTAL STAKED
+                NFTS
               </div>
             </div>
 
@@ -685,6 +699,7 @@ const HomePage = () => {
             action="https://send.pageclip.co/zqaVEbuvCPviRe5ho1vL42Drc3GyedOG/subscribe"
           >
             <input
+              style={{ height: "60px" }}
               value={subEmail}
               onChange={({ target }) => setSubEmail(target.value)}
               type="text"
