@@ -54,12 +54,19 @@ const teams = [
     name: "Brian Nguyen",
     position: "Founder",
   },
+  // {
+  //   isFounder: true,
+  //   src: "team-ha-vu",
+  //   name: "Ha Vu",
+  //   position: "Business",
+  //   position2: "Development",
+  // },
   {
     isFounder: true,
-    src: "team-ha-vu",
-    name: "Ha Vu",
-    position: "Business",
-    position2: "Development",
+    src: "team-phoebe-hoang",
+    name: "Phoebe Hoang",
+    position: "CMO",
+    position2: "",
   },
   {
     isFounder: true,

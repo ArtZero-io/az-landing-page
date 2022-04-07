@@ -369,7 +369,7 @@ const HomePage = () => {
         <div className="bg" />
         <h2>tokenomics</h2>
 
-        <div className="desc">We believe in Aleph Zero</div>
+        <div className="desc">PASSIVE GROWTH FOR NFT HODLERS</div>
 
         <div className="wrapper">
           <div className="chart">
@@ -485,8 +485,7 @@ const HomePage = () => {
               <div className="spacer"> </div>
               <div className="desc-bottom-title">staker share:</div>
               <div className="desc-bottom-text">
-                [0.3 x (profit 1) + 0.5 x (profit 2)] x number of staked nfts /
-                total nft supply
+              <span style={{ color: "#7AE7FF" }}>[</span>0.3 <span style={{ color: "#7AE7FF" }}>x (</span> profit 1<span style={{ color: "#7AE7FF" }}>) + (</span>0.5 <span style={{ color: "#7AE7FF" }}>x (</span>profit 2<span style={{ color: "#7AE7FF" }}>)] x</span> number of staked nfts <span style={{ color: "#7AE7FF" }}>/</span> TOTAL STAKED NFTS
               </div>
             </div>
 

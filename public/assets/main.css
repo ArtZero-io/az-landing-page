@@ -204,6 +204,16 @@ a {
   color: #000;
   text-transform: uppercase;
 }
+.hero .text .button:hover {
+  -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  /* color: var(--mg-button-hover-text, #fff); */
+  border-color: var(--mg-button-hover-border, #004bff);
+  background-color: var(--mg-button-hover-background, #004bff);
+  box-shadow: 0 0 0 0.2rem var(--mg-button-hover-background, #004bff);
+
+  transform: scale(1.1);
+}
 
 .airdrop {
   height: 989px;
