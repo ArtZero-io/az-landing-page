@@ -1829,7 +1829,7 @@ position: relative
     /* background-color: "yellow"; */
     text-align: left;
     top: -55px;
-    right: -85px;
+    right: -108px;
   }
   .tokenomics .wrapper .chart .chart-wrapper .text {
     margin-top: 0px;
@@ -1838,7 +1838,7 @@ position: relative
     text-align: right;
     color: #7ae7ff;
     bottom: -65px;
-    left: -80px;
+    left: -108px;
     display: flex;
     flex-direction: column;
     align-items: end;
@@ -2004,6 +2004,13 @@ position: relative
   section.subscribe .inputs form button {
     width: 110px;
   }
+
+  .tokenomics .wrapper .chart .chart-title {
+     margin-bottom: 4rem;
+  }
+
+
+
 }
 
 /* Pageclip */
