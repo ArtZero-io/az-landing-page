@@ -6,6 +6,9 @@ function TeamCarousel({ size }) {
   return (
     <>
       <div
+        data-aos="fade-up"
+        data-aos-delay="200"
+        data-aos-duration="1000"
         style={{
           maxWidth: "1186px",
           margin: "0 auto",

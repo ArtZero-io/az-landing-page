@@ -106,10 +106,10 @@ a {
   cursor: pointer;
 }
 
-.navbar a:hover {
+/* .navbar a:hover {
   text-decoration: underline;
   color: #7ae7ff;
-}
+} */
 .navbar .icons-div {
   display: flex;
   gap: 27px;
@@ -205,15 +205,15 @@ a {
   text-transform: uppercase;
   border-width: 1px;
 }
-.hero .text .button:hover {
-  -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+/* .hero .text .button:hover { */
+/* -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   border-color: "#7ae7ff";
   background-color: "#7ae7ff";
   box-shadow: 0 0 0 2rem #7ae7ff;
-  transform: scaleX(1.015);
-  /* border-width: 2px; */
-}
+  transform: scaleX(1.015); */
+/* border-width: 2px; */
+/* } */
 
 .airdrop {
   height: 989px;
@@ -626,6 +626,7 @@ justify-content: space-between; */
   height: 396px;
   background-image: url("/assets/frame-create-nft.svg");
 }
+
 .nft .wrapper .cards .create-collection {
   height: 340px;
   background-image: url("/assets/frame-create-collection.svg");
@@ -845,6 +846,8 @@ justify-content: space-between; */
 }
 .team .team-carousel.team-scrolling-carousel .member:hover .circle {
   opacity: 100;
+  -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 .team .team-carousel.team-scrolling-carousel button {
   display: none;
@@ -2108,4 +2111,83 @@ position: relative
   to {
     transform: rotate(1turn);
   }
+}
+
+/* Menu AniUnderline */
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+}
+.hover-underline-animation:hover {
+  color: #7ae7ff;
+}
+
+.hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 10px;
+  left: 0;
+  background-color: #7ae7ff;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+/* END Menu AniUnderline */
+.icons-animation {
+  border-radius: 100%;
+}
+.icons-animation:hover {
+  background-color: #7ae7ff;
+  border-radius: 100%;
+  color: #020722;
+  box-shadow: 0 4px 4px rgba(102, 255, 182, 0.3);
+
+  -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.icons-animation:hover img {
+  filter: invert(0.95);
+}
+
+.button.button-animation:hover {
+  transform: scale(1.025) rotate(0.22deg);
+  color: #fff;
+  border-color: #7ae7ff;
+  background-color: #58a0af;
+  box-shadow: 0 0 0 0.2rem #004bff;
+  -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+/* 
+.card.card-animation:hover {
+  box-shadow: 4px 1px 13px rgba(88, 155, 217, 0.4); 
+   z-index: -10;
+} */
+.nft .wrapper .cards .connect-wallet:hover,
+.nft .wrapper .cards .create-nft:hover,
+.nft .wrapper .cards .create-collection:hover,
+.nft .wrapper .cards .list-nft:hover {
+  background-color: rgba(88, 155, 217, 0.4);
+  border-radius: 12px;
+  box-shadow: -3px -2px 22px 25px rgba(88, 155, 217, 0.4);
+  transform: scale(1.025) rotate(0.62deg);
+  -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.team .member img:hover {
+  background-color: rgba(88, 155, 217, 0.4);
+  border-radius: 100%;
+  box-shadow: 0px 0px 28px 8px rgba(88, 155, 217, 0.4);
+  transform: scale(1.085);
+  -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 }

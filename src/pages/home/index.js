@@ -179,15 +179,27 @@ const HomePage = () => {
 
         <img alt="logo.png" src="/assets/logo.png" />
 
-        <a onClick={scrollToAirdrop}>AIRDROP/BOUNTY</a>
-        <a onClick={scrollToRoadmap}>ROAD MAP</a>
-        <a onClick={scrollToTokenomics}>tokenomics</a>
-        <a onClick={scrollToPartners}>PARTNERS</a>
-        <a onClick={scrollToTeam}>TEAM & ADVISORS</a>
-        <a onClick={scrollToSubscribe}>SUBSCRIBE</a>
+        <a class="hover-underline-animation" onClick={scrollToAirdrop}>
+          AIRDROP/BOUNTY
+        </a>
+        <a class="hover-underline-animation" onClick={scrollToRoadmap}>
+          ROAD MAP
+        </a>
+        <a class="hover-underline-animation" onClick={scrollToTokenomics}>
+          tokenomics
+        </a>
+        <a class="hover-underline-animation" onClick={scrollToPartners}>
+          PARTNERS
+        </a>
+        <a class="hover-underline-animation" onClick={scrollToTeam}>
+          TEAM & ADVISORS
+        </a>
+        <a class="hover-underline-animation" onClick={scrollToSubscribe}>
+          SUBSCRIBE
+        </a>
 
         <ul className="icons">
-          <li className="icons-div">
+          <li className="icons-div icons-animation">
             <a
               target="_blank"
               rel="noopener noreferrer"
@@ -196,7 +208,7 @@ const HomePage = () => {
               <img alt="header-telegram" src="/assets/header-telegram.svg" />
             </a>
           </li>
-          <li className="icons-div">
+          <li className="icons-div icons-animation">
             <a
               target="_blank"
               rel="noopener noreferrer"
@@ -205,7 +217,7 @@ const HomePage = () => {
               <img alt="header-twitter" src="/assets/header-twitter.svg" />
             </a>
           </li>
-          <li className="icons-div">
+          <li className="icons-div icons-animation">
             <a
               target="_blank"
               rel="noopener noreferrer"
@@ -228,13 +240,18 @@ const HomePage = () => {
           <div className="corner left-bottom" />
           <div className="corner left-top" />
         </div>
-        <div className="text">
+        <div
+          className="text"
+          data-aos="fade-up"
+          data-aos-delay="200"
+          data-aos-duration="1000"
+        >
           <div className="heading">Discover, Create, Collect & Trade NFTs</div>
           <div className="desc">
             Get quick & easy access to digital collectibles, explore & trade
             NFTs from different collections & artists.
           </div>
-          <div className="button">Coming soon on Smartnet</div>
+          <div className="button button-animation">Coming soon on Smartnet</div>
         </div>
       </section>
 
@@ -244,17 +261,46 @@ const HomePage = () => {
           alt="ufo-ellipse"
           src="/assets/ufo-ellipse.svg"
           className="ufo-ellipse"
+          data-aos="fade-up"
+          data-aos-delay="200"
+          data-aos-duration="1000"
         />
-        <img alt="ufo.png" src="/assets/ufo.png" className="ufo" />
+        <img
+          alt="ufo.png"
+          src="/assets/ufo.png"
+          className="ufo"
+          data-aos="fade-up"
+          data-aos-delay="200"
+          data-aos-duration="1000"
+        />
         <img alt="stars.png" src="/assets/stars.png" className="stars-right" />
         <div className="ground" />
 
-        <h2>Airdrop / Bounty programs</h2>
-        <div className="desc">
+        <h2 data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+          Airdrop / Bounty programs
+        </h2>
+        <div
+          className="desc"
+          data-aos="fade-up"
+          data-aos-delay="200"
+          data-aos-duration="1000"
+        >
           We recently announced 80 winners for our first airdrop campaign.
         </div>
-        <div className="winners">80 WINNERS</div>
-        <div className="desc follow">
+        <div
+          className="winners"
+          data-aos="fade-up"
+          data-aos-delay="200"
+          data-aos-duration="1000"
+        >
+          80 WINNERS
+        </div>
+        <div
+          className="desc follow"
+          data-aos="fade-up"
+          data-aos-delay="200"
+          data-aos-duration="1000"
+        >
           Follow our{" "}
           <a
             target="_blank"
@@ -273,14 +319,19 @@ const HomePage = () => {
 
       <section className="nft">
         <div className="bg" />
-        <div className="wrapper">
+        <div
+          className="wrapper"
+          data-aos="fade-up"
+          data-aos-delay="200"
+          data-aos-duration="1000"
+        >
           <div className="text">
             <h2>Create & sell your NFTs</h2>
           </div>
           <div className="cards">
-            <div className="card connect-wallet">
+            <div className="card card-animation connect-wallet">
               <img
-                className="frame"
+                className="frame "
                 alt="frame-connect"
                 src="/assets/frame-connect-wallet.svg"
               />
@@ -294,7 +345,7 @@ const HomePage = () => {
                 </div>
               </div>
             </div>
-            <div className="card create-nft">
+            <div className="card card-animation create-nft">
               <div className="icon">
                 <img alt="icon-create" src="/assets/icon-create-nft.svg" />
               </div>
@@ -307,7 +358,7 @@ const HomePage = () => {
                 </div>
               </div>
             </div>
-            <div className="card create-collection">
+            <div className="card card-animation create-collection">
               <div className="icon">
                 <img
                   alt="icon-create"
@@ -322,7 +373,7 @@ const HomePage = () => {
                 </div>
               </div>
             </div>
-            <div className="card list-nft">
+            <div className="card card-animation list-nft">
               <div className="icon">
                 <img alt="icon-list" src="/assets/icon-list-nft.svg" />
               </div>
@@ -346,24 +397,46 @@ const HomePage = () => {
             alt="roadmap-grid"
             src="/assets/roadmap-grid.svg"
           />
-          <h2>Roadmap</h2>
-          <div className="desc">
+          <h2 data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+            Roadmap
+          </h2>
+          <div
+            className="desc"
+            data-aos="fade-up"
+            data-aos-delay="200"
+            data-aos-duration="1000"
+          >
             Note: ArtZero launch will depend on Smart Contract launch on Aleph
             Zero's Mainnet
           </div>
           <div className="cards">
-            <div className="q1">
+            <div
+              className="q1"
+              data-aos="fade-up"
+              data-aos-delay="200"
+              data-aos-duration="1000"
+            >
               <h3>Q1 - 2022</h3>
               <RoadmapItem text="Public Smartnet version" />
               <RoadmapItem text="Announce NFT Winners" />
             </div>
-            <div className="q2">
+            <div
+              className="q2"
+              data-aos="fade-up"
+              data-aos-delay="200"
+              data-aos-duration="1000"
+            >
               <h3>Q2 - 2022</h3>
               <RoadmapItem text="Public Testnet version" />
               <RoadmapItem text="Code Audit and Review" />
               <RoadmapItem text="Incentive programs for contributors" />
             </div>
-            <div className="q3">
+            <div
+              className="q3"
+              data-aos="fade-up"
+              data-aos-delay="200"
+              data-aos-duration="1000"
+            >
               <h3>Q3 Q4 - 2022</h3>
               <RoadmapItem text="Mainnet launch" />
               <RoadmapItem text="Multi-chain support" />
@@ -375,12 +448,26 @@ const HomePage = () => {
 
       <section ref={tokenomicsRef} id="tokenomics" className="tokenomics">
         <div className="bg" />
-        <h2>tokenomics</h2>
+        <h2 data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+          tokenomics
+        </h2>
 
-        <div className="desc">PASSIVE GROWTH FOR NFT HODLERS</div>
+        <div
+          data-aos="fade-up"
+          data-aos-delay="200"
+          data-aos-duration="1000"
+          className="desc"
+        >
+          PASSIVE GROWTH FOR NFT HODLERS
+        </div>
 
         <div className="wrapper">
-          <div className="chart">
+          <div
+            className="chart"
+            data-aos="fade-up"
+            data-aos-delay="200"
+            data-aos-duration="1000"
+          >
             <div className="chart-title">
               <h3>AZERO Distribution</h3>
               <h3>from TGE</h3>
@@ -405,7 +492,12 @@ const HomePage = () => {
             </div>
           </div>
 
-          <div className="cards">
+          <div
+            className="cards"
+            data-aos="fade-up"
+            data-aos-delay="200"
+            data-aos-duration="1000"
+          >
             <div className="nft-supply">
               <img
                 className="frame"
@@ -460,7 +552,13 @@ const HomePage = () => {
         </div>
 
         {/* Staking */}
-        <div id="staking" className="staking">
+        <div
+          id="staking"
+          className="staking"
+          data-aos="fade-up"
+          data-aos-delay="200"
+          data-aos-duration="1000"
+        >
           <div className="main">
             <div className="card">
               <img
@@ -604,21 +702,45 @@ const HomePage = () => {
 
       <section ref={partnersRef} id="partners" className="partners">
         <div className="bg" />
-        <div className="heading">
+        <div
+          className="heading"
+          data-aos="fade-up"
+          data-aos-delay="200"
+          data-aos-duration="1000"
+        >
           <h2>Partners</h2>
           <div className="desc">Friends along for a ride</div>
         </div>
-        <div className="subwallet">
+        <div
+          className="subwallet"
+          data-aos="fade-up"
+          data-aos-delay="200"
+          data-aos-duration="1000"
+        >
           <img alt="partners-logo" src="/assets/partners-logo-subwallet.png" />
         </div>
-        <div className="ventures32">
+        <div
+          className="ventures32"
+          data-aos="fade-up"
+          data-aos-delay="200"
+          data-aos-duration="1000"
+        >
           <img alt="partners-logo" src="/assets/partners-logo-32ventures.png" />
         </div>
       </section>
 
       <section ref={teamRef} id="team" className="team">
-        <h2>Core Team</h2>
-        <div className="desc">We believe in Aleph Zero</div>
+        <h2 data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+          Core Team
+        </h2>
+        <div
+          className="desc"
+          data-aos="fade-up"
+          data-aos-delay="200"
+          data-aos-duration="1000"
+        >
+          We believe in Aleph Zero
+        </div>
         <TeamCarousel style={{ maxWidth: "1186px" }} size={size} />
       </section>
 
@@ -626,7 +748,12 @@ const HomePage = () => {
         <div className="wrapper">
           <div className="border top" />
 
-          <div className="main">
+          <div
+            className="main"
+            data-aos="fade-up"
+            data-aos-delay="200"
+            data-aos-duration="1000"
+          >
             <div className="heading">
               <h2>Our Advisors</h2>
               <div className="desc">
@@ -690,9 +817,24 @@ const HomePage = () => {
 
       <section ref={subscribeRef} className="subscribe">
         <div className="bg" />
-        <h2>Subscribe to us</h2>
-        <div className="desc">Let’s make a great impact together</div>
-        <div className="inputs" style={{ height: "60px" }}>
+        <h2 data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+          Subscribe to us
+        </h2>
+        <div
+          className="desc"
+          data-aos="fade-up"
+          data-aos-delay="200"
+          data-aos-duration="1000"
+        >
+          Let’s make a great impact together
+        </div>
+        <div
+          className="inputs"
+          style={{ height: "60px" }}
+          data-aos="fade-up"
+          data-aos-delay="200"
+          data-aos-duration="1000"
+        >
           <form
             className="pageclip-form"
             method="post"
