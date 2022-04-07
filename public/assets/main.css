@@ -16,7 +16,7 @@
 }
 
 * {
-  /* border: 1px dotted lightyellow; */
+  border: 1px dotted lightyellow;
   scroll-behavior: smooth;
   background-repeat: no-repeat;
   box-sizing: border-box;
@@ -88,7 +88,7 @@ a {
   align-items: center;
   max-width: 1290px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0px;
 }
 .navbar .burger,
 .navbar .closeButton {
@@ -1206,6 +1206,10 @@ input:focus {
   .advisors .main .heading {
     margin-right: 50px;
   }
+
+  #staking.staking .main .info-cols {
+    margin-left: 1rem;
+  }
 }
 
 @media (max-width: 1050px) {
@@ -1234,7 +1238,7 @@ input:focus {
   }
   .menu > a {
     display: block;
-    margin-left: 2em;
+    margin-left: 2rem;
     font-size: 32px;
     line-height: 56px;
     margin-bottom: 14px;
@@ -1471,7 +1475,7 @@ input:focus {
   .tokenomics .wrapper .cards .desc-bottom,
   .tokenomics .wrapper .cards .nft-supply {
     width: 360px;
-    margin-bottom: 10px;
+    margin-bottom: 60px;
     padding-left: 10px;
   }
 
@@ -1484,7 +1488,7 @@ input:focus {
     justify-contain: center;
     align-items: center;
     margin-top: 20px;
-    width: 340px;
+    width: 510px;
   }
 
   #staking.staking,
@@ -1519,6 +1523,10 @@ input:focus {
     padding-top: 0;
     min-width: 20rem;
     min-height: 20rem;
+  }
+
+  #staking.staking .main .info-cols{
+    margin-top: 30px;
   }
 }
 
@@ -1727,7 +1735,7 @@ input:focus {
   .FooterMenuMobile {
     margin-top: 24px;
     position: relative;
-    max-width: 400px;
+    max-width: 360px;
   }
   .copyright .copyright-break {
     display: block;
@@ -1743,7 +1751,7 @@ input:focus {
   }
 
   .navbar .closeButton {
-    margin-right: 0.875rem;
+    margin-right: 0rem;
   }
   .team .member .circle {
     display: none;
@@ -2019,6 +2027,12 @@ position: relative
   .tokenomics .wrapper .chart .chart-title {
     margin-bottom: 4rem;
   }
+
+  .navbar {
+   
+    padding: 0x;
+}
+
 }
 
 /* Pageclip */
