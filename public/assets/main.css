@@ -1962,6 +1962,11 @@ position: relative
     margin: 0 1rem 0 0.75rem;
     padding: 0;
   }
+  
+  #staking.staking .main .info-cols .info-1 {
+    margin-right: 0;
+  }
+
   #staking.staking .main .info-1 .text {
     margin-top: 0px;
     height: 62px;
