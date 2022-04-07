@@ -16,7 +16,7 @@
 }
 
 * {
-  border: 1px dotted lightyellow;
+  /* border: 1px dotted lightyellow; */
   scroll-behavior: smooth;
   background-repeat: no-repeat;
   box-sizing: border-box;
@@ -1962,7 +1962,7 @@ position: relative
     margin: 0 1rem 0 0.75rem;
     padding: 0;
   }
-  
+
   #staking.staking .main .info-cols .info-1 {
     margin-right: 0;
   }
