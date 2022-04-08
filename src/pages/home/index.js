@@ -230,6 +230,15 @@ const HomePage = () => {
             <a
               target="_blank"
               rel="noopener noreferrer"
+              href="https://discord.gg/wzkZ2JTvN4"
+            >
+              <img alt="header-discord" src="/assets/header-discord.svg" />
+            </a>
+          </li>
+          <li className="icons-div icons-animation">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
               href="mailto:admin@artzero.io"
             >
               <img alt="header-email" src="/assets/header-email.svg" />

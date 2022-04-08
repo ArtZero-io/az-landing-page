@@ -31,6 +31,15 @@ const Footer = () => {
             <div className="icon" />
           </a>
         </div>
+        <div className="discord">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://discord.gg/wzkZ2JTvN4"
+          >
+            <div className="icon" />
+          </a>
+        </div>
         <div className="email">
           <a
             target="_blank"
