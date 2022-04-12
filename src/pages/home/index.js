@@ -681,35 +681,35 @@ const HomePage = () => {
                   <span className="percent">30%</span>
                   <div className="desc">
                     <div className="desc1">off</div>
-                    <span className="desc2">transaction fee</span>
+                    <span className="desc2">trade fee</span>
                   </div>
                 </div>
                 <div className="level">
                   <span className="percent">50%</span>
                   <div className="desc">
                     <div className="desc1">off</div>
-                    <span className="desc2">transaction fee</span>
+                    <span className="desc2">trade fee</span>
                   </div>
                 </div>
                 <div className="level">
                   <span className="percent">66%</span>
                   <div className="desc">
                     <div className="desc1">off</div>
-                    <span className="desc2">transaction fee</span>
+                    <span className="desc2">trade fee</span>
                   </div>
                 </div>
                 <div className="level">
                   <span className="percent">80%</span>
                   <div className="desc">
                     <div className="desc1">off</div>
-                    <span className="desc2">transaction fee</span>
+                    <span className="desc2">trade fee</span>
                   </div>
                 </div>
                 <div className="level">
                   <span className="percent">90%</span>
                   <div className="desc">
                     <div className="desc1">off</div>
-                    <span className="desc2">transaction fee</span>
+                    <span className="desc2">trade fee</span>
                   </div>
                 </div>
               </div>
