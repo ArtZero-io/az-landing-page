@@ -97,7 +97,7 @@ const HomePage = () => {
     <React.Fragment>
       <>
         {isMenuOpen ? (
-          <div className="menu" style={{ overflow: "auto" }}>
+          <div className="mobile-menu" style={{ overflow: "auto" }}>
             <div className="navbar">
               <div onClick={closeMenu} className="closeButton">
                 <img
@@ -110,54 +110,56 @@ const HomePage = () => {
               <span className="icons" />
             </div>
 
-            <a
-              onClick={() => {
-                closeMenu();
-                setTimeout(() => scrollToAirdrop(), 0);
-              }}
-            >
-              AIRDROP/BOUNTY
-            </a>
-            <a
-              onClick={() => {
-                closeMenu();
-                setTimeout(() => scrollToRoadmap(), 0);
-              }}
-            >
-              ROAD MAP
-            </a>
-            <a
-              onClick={() => {
-                closeMenu();
-                setTimeout(() => scrollToTokenomics(), 0);
-              }}
-            >
-              tokenomics
-            </a>
-            <a
-              onClick={() => {
-                closeMenu();
-                setTimeout(() => scrollToPartners(), 0);
-              }}
-            >
-              PARTNERS
-            </a>
-            <a
-              onClick={() => {
-                closeMenu();
-                setTimeout(() => scrollToTeam(), 0);
-              }}
-            >
-              TEAM & ADVISORS
-            </a>
-            <a
-              onClick={() => {
-                closeMenu();
-                setTimeout(() => scrollToSubscribe(), 0);
-              }}
-            >
-              SUBSCRIBE
-            </a>
+            <div className="menu">
+              <a
+                  onClick={() => {
+                    closeMenu();
+                    setTimeout(() => scrollToAirdrop(), 0);
+                  }}
+              >
+                AIRDROP/BOUNTY
+              </a>
+              <a
+                  onClick={() => {
+                    closeMenu();
+                    setTimeout(() => scrollToRoadmap(), 0);
+                  }}
+              >
+                ROAD MAP
+              </a>
+              <a
+                  onClick={() => {
+                    closeMenu();
+                    setTimeout(() => scrollToTokenomics(), 0);
+                  }}
+              >
+                tokenomics
+              </a>
+              <a
+                  onClick={() => {
+                    closeMenu();
+                    setTimeout(() => scrollToPartners(), 0);
+                  }}
+              >
+                PARTNERS
+              </a>
+              <a
+                  onClick={() => {
+                    closeMenu();
+                    setTimeout(() => scrollToTeam(), 0);
+                  }}
+              >
+                TEAM & ADVISORS
+              </a>
+              <a
+                  onClick={() => {
+                    closeMenu();
+                    setTimeout(() => scrollToSubscribe(), 0);
+                  }}
+              >
+                SUBSCRIBE
+              </a>
+            </div>
 
             <FooterMenuMobile />
           </div>
