@@ -179,24 +179,26 @@ const HomePage = () => {
 
         <img alt="logo.png" src="/assets/logo.png" />
 
-        <a class="hover-underline-animation" onClick={scrollToAirdrop}>
-          AIRDROP/BOUNTY
-        </a>
-        <a class="hover-underline-animation" onClick={scrollToRoadmap}>
-          ROAD MAP
-        </a>
-        <a class="hover-underline-animation" onClick={scrollToTokenomics}>
-          tokenomics
-        </a>
-        <a class="hover-underline-animation" onClick={scrollToPartners}>
-          PARTNERS
-        </a>
-        <a class="hover-underline-animation" onClick={scrollToTeam}>
-          TEAM & ADVISORS
-        </a>
-        <a class="hover-underline-animation" onClick={scrollToSubscribe}>
-          SUBSCRIBE
-        </a>
+        <div className="primary-menu">
+          <a className="hover-underline-animation" onClick={scrollToAirdrop}>
+            AIRDROP/BOUNTY
+          </a>
+          <a className="hover-underline-animation" onClick={scrollToRoadmap}>
+            ROAD MAP
+          </a>
+          <a className="hover-underline-animation" onClick={scrollToTokenomics}>
+            tokenomics
+          </a>
+          <a className="hover-underline-animation" onClick={scrollToPartners}>
+            PARTNERS
+          </a>
+          <a className="hover-underline-animation" onClick={scrollToTeam}>
+            TEAM & ADVISORS
+          </a>
+          <a className="hover-underline-animation" onClick={scrollToSubscribe}>
+            SUBSCRIBE
+          </a>
+        </div>
 
         <ul className="icons">
           <li className="icons-div icons-animation">

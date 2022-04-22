@@ -86,7 +86,8 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1290px;
+  width: 100%;
+  max-width: 1520px;
   margin: 0 auto;
   padding: 0px;
 }
@@ -100,6 +101,7 @@ a {
 }
 
 .navbar a {
+  font-size: 15px;
   height: 50px;
   display: flex;
   align-items: center;
@@ -110,6 +112,18 @@ a {
   text-decoration: underline;
   color: #7ae7ff;
 } */
+
+.primary-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.primary-menu a {
+  padding: 5px 0;
+  margin: 0 25px;
+}
+
 .navbar .icons-div {
   display: flex;
   gap: 27px;
@@ -1046,7 +1060,7 @@ input:focus {
 .social .telegram:hover .icon {
   background: url("/assets/subscribe-telegram-hover.svg") no-repeat center
     center;
-} 
+}
 .social .twitter .icon {
   background: url("/assets/subscribe-twitter.svg") no-repeat center center;
 }
@@ -1780,7 +1794,7 @@ input:focus {
     right: -15px;
     transform: rotate(180deg);
   }
-  /* 
+  /*
   .tokenomics .wrapper {
     display: flex;
     flex-direction: column;
@@ -1804,7 +1818,7 @@ position: relative
     margin-bottom: 16px;
     text-align: right;
   }
-  
+
   .tokenomics .wrapper .chart .chart-wrapper .percent-30,
   .tokenomics .wrapper .chart .chart-wrapper .percent-70 {
     position: absolute;
@@ -1815,7 +1829,7 @@ position: relative
     padding-left: 16px;
   }
 
-  
+
 .tokenomics .wrapper .chart .chart-wrapper .percent-30 {
   text-align: left;
   top: -30px;
@@ -2035,7 +2049,7 @@ position: relative
   }
 
   .navbar {
-   
+
     padding: 0x;
 }
 
@@ -2201,9 +2215,9 @@ position: relative
   -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
-/* 
+/*
 .card.card-animation:hover {
-  box-shadow: 4px 1px 13px rgba(88, 155, 217, 0.4); 
+  box-shadow: 4px 1px 13px rgba(88, 155, 217, 0.4);
    z-index: -10;
 } */
 .nft .wrapper .cards .connect-wallet:hover,
@@ -2226,7 +2240,7 @@ position: relative
   filter: drop-shadow(0px 0px 25px #7ae7ff);
   -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-    
+
   background-color: rgba(88, 155, 217, 0.4);
   border-radius: 100%;
   box-shadow: 0px 0px 28px 8px rgba(88, 155, 217, 0.4);
