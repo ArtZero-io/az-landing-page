@@ -12,7 +12,7 @@ function TeamCarousel({ size }) {
         style={{
           maxWidth: "1186px",
           margin: "0 auto",
-          padding: "0 24px 194px 24px ",
+          padding: "0 24px 60px 24px ",
         }}
       >
         <ScrollingCarousel
