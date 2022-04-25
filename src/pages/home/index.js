@@ -251,7 +251,7 @@ const HomePage = () => {
         </ul>
       </div>
 
-      <section className="hero">
+      <section className="hero container">
         <div className="robot">
           {[...Array(25)].map((e, i) => (
             <div className="block" key={i} />
@@ -273,7 +273,9 @@ const HomePage = () => {
             Get quick & easy access to digital collectibles, explore & trade
             NFTs from different collections & artists.
           </div>
-          <div className="button button-animation">Coming soon on Smartnet</div>
+          <a href="#" className="button button-animation">
+            Coming soon on Smartnet
+          </a>
         </div>
       </section>
 
@@ -342,13 +344,16 @@ const HomePage = () => {
       <section className="nft">
         <div className="bg" />
         <div
-          className="wrapper"
+          className="wrapper container"
           data-aos="fade-up"
           data-aos-delay="200"
           data-aos-duration="1000"
         >
           <div className="text">
-            <h2>Create & sell your NFTs</h2>
+            <div className="inner">
+              <h2>Create & sell your NFTs</h2>
+              <div className="desc">Discover, collect, and sell extraordinary NFTs</div>
+            </div>
           </div>
           <div className="cards">
             <div className="card card-animation connect-wallet">
@@ -362,7 +367,7 @@ const HomePage = () => {
               </div>
               <div className="text">
                 <h3>Connect your wallet</h3>
-                <div className="desc">
+                <div className="card__desc">
                   ArtZero supports SubWallet and Polkadot JS wallet.
                 </div>
               </div>
@@ -373,7 +378,7 @@ const HomePage = () => {
               </div>
               <div className="text">
                 <h3>Create your NFTs</h3>
-                <div className="desc">
+                <div className="card__desc">
                   Upload your work (image, video, audio, or 3D art), & a title &
                   description, & customize your NFTs with properties, stats, &
                   unlockable content.
@@ -389,7 +394,7 @@ const HomePage = () => {
               </div>
               <div className="text">
                 <h3>Create your collection</h3>
-                <div className="desc">
+                <div className="card__desc">
                   Add social links, a description, profile and banner images,
                   and set a secondary sales fee.
                 </div>
@@ -401,7 +406,7 @@ const HomePage = () => {
               </div>
               <div className="text">
                 <h3>List NFTs for sale</h3>
-                <div className="desc">
+                <div className="card__desc">
                   Choose the NFT you want to sell and we help you sell them.
                   Buyers can bid for the NFT or simply buy at fixed-price
                 </div>
@@ -438,9 +443,11 @@ const HomePage = () => {
               data-aos-delay="200"
               data-aos-duration="1000"
             >
-              <h3>Q1 - 2022</h3>
-              <RoadmapItem text="Public Smartnet version" />
-              <RoadmapItem text="Announce NFT Winners" />
+              <div className="inner">
+                <h3>Q1 - 2022</h3>
+                <RoadmapItem text="Public Smartnet version" />
+                <RoadmapItem text="Announce NFT Winners" />
+              </div>
             </div>
             <div
               className="q2"
@@ -448,10 +455,12 @@ const HomePage = () => {
               data-aos-delay="200"
               data-aos-duration="1000"
             >
-              <h3>Q2 - 2022</h3>
-              <RoadmapItem text="Public Testnet version" />
-              <RoadmapItem text="Code Audit and Review" />
-              <RoadmapItem text="Incentive programs for contributors" />
+              <div className="inner">
+                <h3>Q2 - 2022</h3>
+                <RoadmapItem text="Public Testnet version" />
+                <RoadmapItem text="Code Audit and Review" />
+                <RoadmapItem text="Incentive programs for contributors" />
+              </div>
             </div>
             <div
               className="q3"
@@ -459,9 +468,11 @@ const HomePage = () => {
               data-aos-delay="200"
               data-aos-duration="1000"
             >
-              <h3>Q3 Q4 - 2022</h3>
-              <RoadmapItem text="Mainnet launch" />
-              <RoadmapItem text="Multi-chain support" />
+              <div className="inner">
+                <h3>Q3 Q4 - 2022</h3>
+                <RoadmapItem text="Mainnet launch" />
+                <RoadmapItem text="Multi-chain support" />
+              </div>
             </div>
           </div>
         </div>
@@ -483,7 +494,7 @@ const HomePage = () => {
           PASSIVE GROWTH FOR NFT HODLERS
         </div>
 
-        <div className="wrapper">
+        <div className="wrapper container">
           <div
             className="chart"
             data-aos="fade-up"
@@ -734,20 +745,20 @@ const HomePage = () => {
           <div className="desc">Friends along for a ride</div>
         </div>
         <div
-          className="subwallet"
+          className="partner subwallet"
           data-aos="fade-up"
           data-aos-delay="200"
           data-aos-duration="1000"
         >
-          <img alt="partners-logo" src="/assets/partners-logo-subwallet.png" />
+          <div className="inner"><img alt="partners-logo" src="/assets/partners-logo-subwallet.png" /></div>
         </div>
         <div
-          className="ventures32"
+          className="partner ventures32"
           data-aos="fade-up"
           data-aos-delay="200"
           data-aos-duration="1000"
         >
-          <img alt="partners-logo" src="/assets/partners-logo-32ventures.png" />
+          <div className="inner"><img alt="partners-logo" src="/assets/partners-logo-32ventures.png" /></div>
         </div>
       </section>
 

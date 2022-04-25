@@ -26,7 +26,7 @@ body {
   margin: 0;
   background: #000;
   font-family: Evogria, sans-serif;
-
+  font-size: 15px;
   font-weight: 400;
   color: #fff;
   -ms-overflow-style: "none";
@@ -43,6 +43,7 @@ h2 {
   line-height: 60px;
   margin: 0 auto 18px;
   font-weight: 400;
+  text-transform: uppercase;
 }
 
 h3 {
@@ -57,6 +58,14 @@ h3 {
 a {
   text-decoration: none;
   color: #fff;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
 }
 
 .desc {
@@ -140,10 +149,10 @@ a {
 /* Fix Safari */
 .hero {
   max-width: 1290px;
-  margin: 115px auto 142px;
+  margin-top: 115px;
+  margin-bottom: 142px;
   display: flex;
   align-items: center;
-  padding: 0 20px;
 }
 
 .hero .robot {
@@ -160,6 +169,8 @@ a {
 }
 
 .hero .robot .block {
+  position: relative;
+  z-index: -1;
   width: 113px;
   height: 113px;
   border: 1px solid #ffffff;
@@ -210,16 +221,16 @@ a {
   margin-bottom: 49px;
 }
 .hero .text .button {
-  width: 296px;
+  display: inline-block;
+  text-align: center;
   height: 60px;
+  line-height: 60px;
   background: #7ae7ff;
-  clip-path: polygon(0 0, 0 50px, 14px 100%, 100% 100%, 100% 10px, 282px 0);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  clip-path: polygon(0 0, 0 calc(100% - 12px), 18px 100%, 100% 100%, 100% 12px, calc(100% - 18px) 0);
+  font-size: 18px;
+  padding: 0 32px;
   color: #000;
   text-transform: uppercase;
-  border-width: 1px;
 }
 /* .hero .text .button:hover { */
 /* -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -232,7 +243,7 @@ a {
 /* } */
 
 .airdrop {
-  height: 989px;
+  height: 890px;
   position: relative;
   padding-top: 100px;
 }
@@ -304,7 +315,6 @@ a {
   position: relative;
   padding-top: 100px;
   text-align: center;
-  padding: auto 20px;
 }
 
 .tokenomics h2 {
@@ -319,21 +329,19 @@ a {
   background-image: url("/assets/bg-tokenomics.png");
   width: 100%;
   height: 100%;
-
   background-size: cover;
 }
 
 .tokenomics .wrapper {
   max-width: 1290px;
-  margin: 45px auto;
+  margin-top: 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-right: 2rem;
 }
 
 .tokenomics .wrapper .chart {
-  flex-basis: 54%;
+  flex-basis: 50%;
   min-width: 567px;
   min-height: 567px;
   display: flex;
@@ -446,7 +454,7 @@ a {
 
 .staking {
   max-width: 1290px;
-  margin: 0 auto;
+  margin: 50px auto 0;
   padding-bottom: 40px;
 }
 
@@ -464,7 +472,7 @@ a {
   width: 400px;
   height: 475px;
   text-align: left;
-  margin-right: 140px;
+  margin-right: 125px;
   padding: 40px;
   display: flex;
   flex-direction: column;
@@ -538,13 +546,13 @@ justify-content: space-between; */
 .staking .main .info-1 .text {
   display: flex;
   justify-content: space-between;
-  margin-top: 36px;
+  margin-top: 30px;
 }
 
 .staking .main .info-2 .level {
   display: flex;
   justify-content: start;
-  margin-top: 8px;
+  margin-top: 12px;
   height: 60px;
 }
 
@@ -573,25 +581,28 @@ justify-content: space-between; */
 .nft .bg {
   position: absolute;
   left: 0;
-  top: -42px;
+  top: 100px;
   z-index: -1;
   background-image: url("/assets/bg-nft.png");
   width: 100%;
   height: 100%;
 }
 .nft .wrapper {
-  max-width: 1290px;
+  max-width: 1170px;
   margin: 0 auto;
   display: flex;
   align-items: center;
 }
 .nft .wrapper .text {
-  flex-basis: 45%;
+  flex-basis: 50%;
 }
-.nft .wrapper .text h2 {
-  width: 405px;
-  text-align: left;
-  margin-bottom: 250px;
+.nft .wrapper .text .inner {
+  max-width: 405px;
+  margin-bottom: 150px;
+}
+.nft .wrapper .text .desc {
+  font-size: 15px;
+  max-width: 205px;
 }
 .nft .wrapper .cards {
   height: 900px;
@@ -620,7 +631,7 @@ justify-content: space-between; */
   margin-bottom: 23px;
 }
 
-.nft .wrapper .cards .card .desc {
+.nft .wrapper .cards .card__desc {
   color: #ababab;
   font-size: 15px;
   line-height: 24px;
@@ -643,14 +654,18 @@ justify-content: space-between; */
   background-image: url("/assets/frame-create-nft.svg");
 }
 
+.nft .wrapper .cards .create-nft h3 {
+  max-width: 230px;
+}
+
 .nft .wrapper .cards .create-collection {
-  height: 340px;
+  height: 324px;
   background-image: url("/assets/frame-create-collection.svg");
+
 }
 .nft .wrapper .cards .list-nft {
   height: 348px;
-  /* background-image: url("/assets/frame-list-nft.svg"); */
-  background-image: url("/assets/frame-create-collection.svg");
+  background-image: url("/assets/frame-list-nft.svg");
 }
 
 .roadmap {
@@ -683,21 +698,21 @@ justify-content: space-between; */
 .roadmap .main .cards {
   display: flex;
 }
-.roadmap .main .cards > div {
+.roadmap .main .cards .inner {
   padding: 36px 20px 0 26px;
   width: 361px;
   background-repeat: no-repeat;
 }
-.roadmap .main .cards .q1 {
+.roadmap .main .cards .q1 .inner {
   background-image: url("./roadmap-frame-small.svg");
   height: 193px;
 }
-.roadmap .main .cards .q2 {
+.roadmap .main .cards .q2 .inner {
   background-image: url("./roadmap-frame-big.svg");
   margin: 50px 35px 0 50px;
   height: 263px;
 }
-.roadmap .main .cards .q3 {
+.roadmap .main .cards .q3 .inner {
   background-image: url("./roadmap-frame-small.svg");
   margin-top: 100px;
   height: 193px;
@@ -727,23 +742,27 @@ justify-content: space-between; */
   background-size: cover;
 }
 
-.partners .subwallet {
+.partners .partner .inner {
+  width: 316px;
+  height: 137px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.partners .partner .inner:hover {
+  transform: translateY(-10px);
+}
+
+.partners .subwallet .inner {
   margin: 0 50px 0 130px;
   /* new partner edit */
-  width: 316px;
-  height: 137px;
   background: url("/assets/partners-grid-subwallet.svg") no-repeat center center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
-.partners .ventures32 {
-  width: 316px;
-  height: 137px;
+.partners .ventures32 .inner {
   background: url("/assets/partners-grid-subwallet.svg") no-repeat center center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .team {
@@ -1185,6 +1204,9 @@ input:focus {
   .nft .bg {
     width: 100%;
   }
+  .nft .wrapper .text {
+    flex-basis: 40%;
+  }
   .nft .wrapper .cards {
     height: 850px;
   }
@@ -1211,8 +1233,8 @@ input:focus {
     align-items: center;
     gap: 22px;
   }
-  .roadmap .main .cards .q2,
-  .roadmap .main .cards .q3 {
+  .roadmap .main .cards .q2 .inner,
+  .roadmap .main .cards .q3 .inner {
     margin: 0;
   }
   .partners {
@@ -1291,9 +1313,6 @@ input:focus {
     width: 65px;
     height: 65px;
   }
-  .hero .text {
-    padding-left: 0;
-  }
   .hero .text .heading {
     font-size: 40px;
     line-height: 48px;
@@ -1304,6 +1323,9 @@ input:focus {
   }
   .hero .text .button {
     margin: 0 auto;
+    font-size: 15px;
+    height: 50px;
+    line-height: 50px;
   }
   .airdrop {
     padding-top: 45px;
@@ -1332,9 +1354,13 @@ input:focus {
   .nft .wrapper .text {
     flex-basis: auto;
   }
-  .nft .wrapper .text h2 {
+  .nft .wrapper .text .inner {
+    max-width: 270px;
     margin-bottom: 42px;
-    width: 270px;
+    text-align: center;
+  }
+  .nft .wrapper .text .desc {
+    max-width: 100%;
   }
   .nft .wrapper .cards {
     height: auto;
@@ -1347,7 +1373,7 @@ input:focus {
     display: flex;
     padding: 27px 17px 0 0;
   }
-  .nft .wrapper .cards .card .desc {
+  .nft .wrapper .cards .card__desc {
     font-size: 13px;
   }
   .nft .wrapper .cards .card .icon {
@@ -1395,24 +1421,24 @@ input:focus {
   .roadmap .main .desc {
     text-align: center;
   }
-  .roadmap .main .cards .q1 {
+  .roadmap .main .cards .q1 .inner {
     height: 147px;
     background-image: url("./roadmap-mobile-frame-small.svg");
   }
-  .roadmap .main .cards .q2 {
+  .roadmap .main .cards .q2 .inner {
     height: 174px;
     background-image: url("./roadmap-mobile-frame-big.svg");
   }
-  .roadmap .main .cards .q3 {
+  .roadmap .main .cards .q3 .inner {
     height: 147px;
     background-image: url("./roadmap-mobile-frame-small.svg");
   }
 
-  .roadmap .main .cards > div {
+  .roadmap .main .cards .inner  {
     width: 330px;
     padding: 27px 0 0 25px;
   }
-  .roadmap .main .cards > div h3 {
+  .roadmap .main .cards h3 {
     margin-bottom: 11px;
   }
   .roadmap .main .cards .item {
@@ -1544,7 +1570,7 @@ input:focus {
   #staking.staking .main .card .frame {
     display: none;
   }
-  #partners > div.subwallet {
+  #partners > div.subwallet .inner {
     margin: 0;
   }
 
@@ -1564,6 +1590,7 @@ input:focus {
 }
 
 @media (max-width: 600px) {
+  .nft .wrapper .text .desc,
   .desc {
     font-size: 13px;
     line-height: 21px;
@@ -1574,6 +1601,12 @@ input:focus {
   }
   .hero .text .desc {
     width: 310px;
+  }
+  .hero .text .button {
+    font-size: 15px;
+    height: 48px;
+    line-height: 48px;
+    width: 100%;
   }
   .airdrop h2 {
     width: 340px;
@@ -2215,29 +2248,43 @@ position: relative
   filter: invert(0.95);
 }
 
-.button.button-animation:hover {
-  transform: scale(1.025) rotate(0.22deg);
-  color: #fff;
-  border-color: #7ae7ff;
-  background-color: #58a0af;
-  box-shadow: 0 0 0 0.2rem #004bff;
+.button {
   -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.button.button-animation:hover {
+  transform: translateY(-5px);
 }
 /*
 .card.card-animation:hover {
   box-shadow: 4px 1px 13px rgba(88, 155, 217, 0.4);
    z-index: -10;
 } */
+.nft .wrapper .cards .connect-wallet,
+.nft .wrapper .cards .create-nft,
+.nft .wrapper .cards .create-collection,
+.nft .wrapper .cards .list-nft,
+.roadmap .main .cards .q1 .inner,
+.roadmap .main .cards .q2 .inner,
+.roadmap .main .cards .q3 .inner,
+.roadmap .main .cards .q4 .inner,
+.advisors .main .person.thong,
+.advisors .main .person.hieu {
+  -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
 .nft .wrapper .cards .connect-wallet:hover,
 .nft .wrapper .cards .create-nft:hover,
 .nft .wrapper .cards .create-collection:hover,
 .nft .wrapper .cards .list-nft:hover,
+.roadmap .main .cards .q1 .inner:hover,
+.roadmap .main .cards .q2 .inner:hover,
+.roadmap .main .cards .q3 .inner:hover,
+.roadmap .main .cards .q4 .inner:hover,
 .advisors .main .person.thong:hover,
 .advisors .main .person.hieu:hover {
   filter: drop-shadow(0px 4px 60px rgba(122, 231, 255, 0.5));
-  -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transform: translateY(-10px);
   /* background-color: rgba(88, 155, 217, 0.4);
   border-radius: 12px;
   box-shadow: -3px -2px 22px 25px rgba(88, 155, 217, 0.4);
