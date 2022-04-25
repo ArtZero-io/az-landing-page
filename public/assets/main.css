@@ -221,16 +221,34 @@ a {
   margin-bottom: 49px;
 }
 .hero .text .button {
+  position: relative;
   display: inline-block;
   text-align: center;
   height: 60px;
   line-height: 60px;
-  background: #7ae7ff;
-  clip-path: polygon(0 0, 0 calc(100% - 12px), 18px 100%, 100% 100%, 100% 12px, calc(100% - 18px) 0);
   font-size: 18px;
   padding: 0 32px;
   color: #000;
   text-transform: uppercase;
+}
+.hero .text .button:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #7ae7ff;
+  clip-path: polygon(0 0, 0 calc(100% - 12px), 18px 100%, 100% 100%, 100% 12px, calc(100% - 18px) 0);
+  -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.hero .text .button-text {
+  position: relative;
+  z-index: 1;
+}
+.hero .text .button:hover:before {
+  transform: scale(1.05);
 }
 /* .hero .text .button:hover { */
 /* -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -1049,9 +1067,6 @@ input:focus {
 .subscribe .inputs button {
   padding: 0 35px;
   height: 60px;
-  background: #7ae7ff;
-  /*clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 10px, 144px 0, 0 0);*/
-  clip-path: polygon(0 0, 0 calc(100% - 12px), 18px 100%, 100% 100%, 100% 12px, calc(100% - 18px) 0);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1059,8 +1074,11 @@ input:focus {
   cursor: pointer;
   position: relative;
   transform: translateX(-18px);
+  background-color: transparent;
 }
 .subscribe .inputs button span {
+  position: relative;
+  z-index: 1;
   font-size: 18px;
   font-family: Evogria, sans-serif;
 }
@@ -1625,6 +1643,9 @@ input:focus {
     background-image: url("/assets/bg-hero-mobile.png");
     height: 217vw;
   }
+  .hero .text {
+    padding-left: 0;
+  }
   .hero .text .desc {
     width: 310px;
   }
@@ -2174,22 +2195,19 @@ position: relative
   position: relative;
 }
 .pageclip-form__submit:after {
-  display: inline-block;
-  position: relative;
-  text-indent: -9999em;
-  transform: scale(0.01) translateZ(0);
-  border: 3px solid hsla(0, 0%, 100%, 0.3);
-  border-left: 3px solid #fff;
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  content: "";
+  content: '';
   position: absolute;
-  left: 50%;
-  top: 50%;
-  margin-left: -10px;
-  margin-top: -10px;
-  z-index: 2;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #7ae7ff;
+  clip-path: polygon(0 0, 0 calc(100% - 12px), 18px 100%, 100% 100%, 100% 12px, calc(100% - 18px) 0);
+  -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.pageclip-form__submit:hover:after {
+  transform: scale(1.05);
 }
 .pageclip-form__submit.pageclip-form__submit--dark-loader:after {
   border-color: rgba(0, 0, 0, 0.3);
@@ -2298,9 +2316,6 @@ position: relative
 .button {
   -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-}
-.button.button-animation:hover {
-  transform: translateY(-5px);
 }
 /*
 .card.card-animation:hover {

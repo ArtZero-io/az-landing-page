@@ -274,7 +274,7 @@ const HomePage = () => {
             NFTs from different collections & artists.
           </div>
           <a href="#" className="button button-animation">
-            Coming soon on Smartnet
+            <span className="button-text">Coming soon on Smartnet</span>
           </a>
         </div>
       </section>
