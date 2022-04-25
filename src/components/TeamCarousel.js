@@ -25,14 +25,13 @@ function TeamCarousel({ size }) {
           leftArrow={<div className="" />}
           rightArrow={<div className="" />}
         >
-          {teams.map(({ isFounder, src, name, position, position2 }) => (
-            <>
-              <div key={name} className={`${src} member`} style={{paddingTop:'40px'}}>
+          {teams.map(({ isFounder, src, name, position, position2 }, index) => (
+              <div key={index} className={`${src} member`} style={{paddingTop:'40px'}}>
                 {isFounder && <div className={`${src} circle`} />}
                 <img
-                  className={src}
-                  alt="team-brian"
-                  src={`/assets/${src}.png`}
+                    className={src}
+                    alt="team-brian"
+                    src={`/assets/${src}.png`}
                 />
                 <div className="name" style={{ marginBottom: "8px" }}>
                   {name}
@@ -40,7 +39,6 @@ function TeamCarousel({ size }) {
                 <div className="position">{position}</div>
                 {position2 && <div className="position2">{position2}</div>}
               </div>
-            </>
           ))}
         </ScrollingCarousel>
       </div>
