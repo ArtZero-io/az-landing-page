@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 @font-face {
   font-family: "Evogria";
   src: url("./fonts/Evogria.otf");
@@ -13,6 +15,11 @@
 @font-face {
   font-family: "DS-Digital-Bold";
   src: url("./fonts/DS-DIGIB.TTF");
+}
+
+:root {
+  --font-digital: "DS-Digital";
+  --color-primary: #7ae7ff;
 }
 
 * {
@@ -68,6 +75,14 @@ a {
   max-width: 1200px;
 }
 
+.digital-font {
+  font-family: var(--font-digital);
+}
+
+.primary-color {
+  color: var(--color-primary);
+}
+
 .desc {
   font-size: 18px;
   line-height: 30px;
@@ -109,7 +124,6 @@ a {
   width: 70px;
   height: 70px;
   display: none;
-  justify-content: center;
   align-items: center;
 }
 
@@ -148,7 +162,6 @@ a {
 }
 /* Fix Safari */
 .hero {
-  max-width: 1290px;
   margin-top: 115px;
   margin-bottom: 142px;
   display: flex;
@@ -250,15 +263,40 @@ a {
 .hero .text .button:hover:before {
   transform: scale(1.05);
 }
-/* .hero .text .button:hover { */
-/* -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-  border-color: "#7ae7ff";
-  background-color: "#7ae7ff";
-  box-shadow: 0 0 0 2rem #7ae7ff;
-  transform: scaleX(1.015); */
-/* border-width: 2px; */
-/* } */
+
+.section-ongoing {
+  margin: 180px auto 80px;
+  background-image: url("/assets/advisor-grid.png");
+}
+.section-ongoing .border {
+  background-size: cover;
+  height: 14px;
+  width: 100%;
+}
+.section-ongoing .border.top {
+  background-image: url("/assets/advisor-border-top.svg");
+}
+.section-ongoing .border.bottom {
+  background-image: url("/assets/advisor-border-bottom.svg");
+}
+
+.section-ongoing .main {
+  text-align: center;
+  padding: 100px 15px;
+}
+.section-ongoing .main .sub-title {
+  font-size: 24px;
+}
+.section-ongoing .main .heading {
+  margin: 10px 0 27px;
+}
+.section-ongoing .main .digital-font {
+  margin-top: 55px;
+  font-size: 90px;
+  font-weight: 400;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+}
 
 .airdrop {
   height: 890px;
@@ -1224,6 +1262,9 @@ input:focus {
   .hero-bg {
     height: 100vw;
   }
+  .section-ongoing .border {
+    background-size: contain;
+  }
   .airdrop {
     height: auto;
   }
@@ -1334,7 +1375,8 @@ input:focus {
     margin-bottom: 45px;
   }
   .hero .robot {
-    margin-bottom: 40px;
+    margin-top: 30px;
+    margin-bottom: 56px;
     width: 327px;
     height: 327px;
   }
@@ -1359,6 +1401,19 @@ input:focus {
   .airdrop {
     padding-top: 45px;
   }
+  .section-ongoing {
+    margin: 120px auto 70px;
+  }
+  .section-ongoing .main {
+    padding: 80px 15px;
+  }
+  .section-ongoing .main .sub-title {
+    font-size: 18px;
+  }
+  .section-ongoing .main .digital-font {
+    margin-top: 35px;
+    font-size: 70px;
+  }
   .airdrop h2 {
     margin-bottom: 9px;
   }
@@ -1373,12 +1428,15 @@ input:focus {
     margin-bottom: 40px;
   }
 
+  .ntf {
+    padding-top: 80px;
+  }
+
   .nft .bg {
     top: 0;
   }
   .nft .wrapper {
     flex-direction: column;
-    padding-top: 40px;
   }
   .nft .wrapper .text {
     flex-basis: auto;
@@ -1478,9 +1536,14 @@ input:focus {
     line-height: 28px;
   }
   .partners {
-    padding-top: 54px;
+    padding-top: 56px;
     flex-direction: column;
-    gap: 35px;
+  }
+  .partners .heading {
+    margin-bottom: 34px;
+  }
+  .partners .partner {
+    margin-top: 20px;
   }
   .partners .bg {
     top: 0;
@@ -1628,12 +1691,15 @@ input:focus {
   }
 
   .subscribe {
-    padding-top: 150px;
-    padding-bottom: 80px;
+    padding-top: 200px;
+    padding-bottom: 30px;
   }
 }
 
 @media (max-width: 600px) {
+  h2 {
+    margin-bottom: 10px;
+  }
   .nft .wrapper .text .desc,
   .desc {
     font-size: 13px;
@@ -1655,6 +1721,15 @@ input:focus {
     line-height: 48px;
     width: 100%;
   }
+  .section-ongoing {
+    margin: 90px auto 40px;
+  }
+  .section-ongoing .main {
+    padding: 70px 15px;
+  }
+  .section-ongoing .main .digital-font {
+    font-size: 45px;
+  }
   .airdrop h2 {
     width: 340px;
   }
@@ -1668,7 +1743,7 @@ input:focus {
     top: 300px;
   }
   .airdrop .ufo {
-    top: 180px;
+    top: 148px;
   }
   .airdrop .ground {
     background-image: url("/assets/bg-ground-mobile.png");
@@ -1680,7 +1755,7 @@ input:focus {
     margin-bottom: 194px;
   }
   .nft {
-    padding-top: 0;
+    padding-top: 60px;
   }
   .nft .bg {
     width: 100%;
@@ -1691,6 +1766,12 @@ input:focus {
   .nft .wrapper .text h2 {
     text-align: center;
     width: 270px;
+  }
+  .tokenomics {
+    padding-top: 56px;
+  }
+  .tokenomics .wrapper {
+    margin-top: 34px;
   }
 
   .partners .bg {
@@ -1717,7 +1798,10 @@ input:focus {
     width: 140px;
   }
   .team {
-    padding: 50px 0;
+    padding-top: 56px;
+  }
+  .team .member {
+    padding-top: 0;
   }
   .team .desc {
     /* margin-bottom: 37px; */
@@ -1817,6 +1901,9 @@ input:focus {
     top: -118px;
     left: -119px;
   }
+  .subscribe .desc {
+    margin-bottom: 50px;
+  }
   .subscribe .bg {
     background-image: url("/assets/bg-subscribe-mobile.png");
     height: 59vw;
@@ -1848,6 +1935,7 @@ input:focus {
   .footer {
     max-width: 400px;
     margin: 0 auto;
+    padding-top: 45px;
   }
   .FooterMenuMobile {
     margin-top: 80px;
@@ -1893,54 +1981,6 @@ input:focus {
     right: -15px;
     transform: rotate(180deg);
   }
-  /*
-  .tokenomics .wrapper {
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-  }
-
-  .tokenomics .wrapper .chart,
-  .tokenomics .wrapper .chart .chart-wrapper {
-    width: 326px;
-  }
-
-  .tokenomics .wrapper .chart .chart-wrapper .frame{
-position: relative
-
-  }
-
-  .tokenomics .wrapper .chart .chart-wrapper .frame,
-  .tokenomics .wrapper .chart .chart-wrapper .percent-70,
-  .tokenomics .wrapper .chart .chart-wrapper .percent-30 {
-    width: 8.25rem;
-    margin-bottom: 16px;
-    text-align: right;
-  }
-
-  .tokenomics .wrapper .chart .chart-wrapper .percent-30,
-  .tokenomics .wrapper .chart .chart-wrapper .percent-70 {
-    position: absolute;
-  }
-
-  .tokenomics .wrapper .chart .chart-wrapper .percent-70 {
-    text-align: left;
-    padding-left: 16px;
-  }
-
-
-.tokenomics .wrapper .chart .chart-wrapper .percent-30 {
-  text-align: left;
-  top: -30px;
-  right: -205px;
-}
-
-.tokenomics .wrapper .chart .chart-wrapper .percent-70 {
-  text-align: right;
-  color: #7ae7ff;
-  bottom: -40px;
-  left: -200px;
-} */
 
   .tokenomics .wrapper .chart .chart-wrapper .percent-30,
   .tokenomics .wrapper .chart .chart-wrapper .percent-70 {
@@ -1966,8 +2006,8 @@ position: relative
   .tokenomics .wrapper .chart .chart-wrapper .percent-30 {
     /* background-color: "yellow"; */
     text-align: left;
-    top: -55px;
-    right: -108px;
+    top: -46px;
+    right: -125px;
   }
   .tokenomics .wrapper .chart .chart-wrapper .text {
     margin-top: 0px;
@@ -1990,9 +2030,14 @@ position: relative
     width: 8rem;
   }
   .tokenomics .wrapper .cards {
-    margin-top: 50px;
+    margin-top: 30px;
     min-width: 330px;
     height: 400px;
+  }
+
+  .tokenomics .wrapper .cards .desc-bottom,
+  .tokenomics .wrapper .cards .nft-supply {
+    margin-bottom: 56px;
   }
 
   .tokenomics .wrapper .cards .nft-supply .frame {
@@ -2094,10 +2139,8 @@ position: relative
     justify-content: space-between;
     align-items: start;
     width: 330px;
-    margin-bottom: 3rem;
     order: 1;
-    margin-left: 16px;
-    margin-right: 16px;
+    margin: 0 0 56px;
   }
 
   #staking.staking .main .info-cols .info-1,
@@ -2114,11 +2157,7 @@ position: relative
   .staking .main .info-1 .title h3,
   .staking .main .info-2 .title h3 {
     font-size: 20px;
-    margin-bottom: 40px;
-  }
-
-  .staking .main .info-2 .title h3 {
-    margin-bottom: 41px;
+    margin-bottom: 20px;
   }
 
   #staking.staking .main .info-1 .text {
@@ -2140,7 +2179,7 @@ position: relative
   }
 
   #staking.staking .main .card {
-    margin: 20px 15px 0;
+    margin: 0 15px;
   }
 
   #staking.staking .main .card > div {
@@ -2149,6 +2188,14 @@ position: relative
   #staking.staking .main .card .title {
     margin-top: 4px;
   }
+  .staking {
+    padding-bottom: 0;
+  }
+  .partners {
+    padding-top: 56px;
+    margin-bottom: 0;
+  }
+
   .tokenomics .wrapper .cards .nft-supply > div {
     margin-left: 10px;
   }
@@ -2161,7 +2208,7 @@ position: relative
   }
 
   .tokenomics .wrapper .chart .chart-title {
-    margin-bottom: 4rem;
+    margin-bottom: 40px;
   }
 }
 

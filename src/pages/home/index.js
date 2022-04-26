@@ -279,6 +279,30 @@ const HomePage = () => {
         </div>
       </section>
 
+      <section className="section-ongoing container">
+        <div className="wrapper">
+          <div className="border top" />
+
+          <div
+              className="main"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+          >
+            <div className="section-ongoing--content">
+              <div className="sub-title primary-color">ON-GOING</div>
+              <h2 className="heading">Early Contribution Program</h2>
+              <div className="desc">
+                On first come first served basis,<br/>
+                Contribute 69 AZERO to get 1 NFT, <span className="primary-color">Contribution Form</span>
+              </div>
+              <div className="digital-font">2500 NFT</div>
+            </div>
+          </div>
+
+          <div className="border bottom" />
+        </div>
+      </section>
+
       <section ref={airdropRef} id="airdrop" className="airdrop">
         <img alt="stars.png" src="/assets/stars.png" className="stars-left" />
         <img
