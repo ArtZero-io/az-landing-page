@@ -389,11 +389,6 @@ const HomePage = () => {
           </div>
           <div className="cards">
             <div className="card card-animation connect-wallet">
-              <img
-                className="frame "
-                alt="frame-connect"
-                src="/assets/frame-connect-wallet.svg"
-              />
               <div className="icon">
                 <img alt="icon-connect" src="/assets/icon-connect-wallet.svg" />
               </div>
