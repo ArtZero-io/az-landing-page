@@ -245,14 +245,21 @@ a {
   text-transform: uppercase;
 }
 .hero .text .button:before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   background: #7ae7ff;
-  clip-path: polygon(0 0, 0 calc(100% - 12px), 18px 100%, 100% 100%, 100% 12px, calc(100% - 18px) 0);
+  clip-path: polygon(
+    0 0,
+    0 calc(100% - 12px),
+    18px 100%,
+    100% 100%,
+    100% 12px,
+    calc(100% - 18px) 0
+  );
   -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
@@ -294,7 +301,7 @@ a {
   margin-top: 55px;
   font-size: 90px;
   font-weight: 400;
-  letter-spacing: .3em;
+  letter-spacing: 0.3em;
   text-transform: uppercase;
 }
 
@@ -728,7 +735,6 @@ justify-content: space-between; */
 .nft .wrapper .cards .create-collection {
   height: 324px;
   background-image: url("/assets/frame-create-collection.svg");
-
 }
 .nft .wrapper .cards .list-nft {
   height: 348px;
@@ -1153,6 +1159,22 @@ input:focus {
   background: url("/assets/subscribe-telegram-hover.svg") no-repeat center
     center;
 }
+
+/* LinkedIn Icon */
+
+.team-carousel .linkedin .icon {
+  background: url("/assets/linkedin-icon.svg") no-repeat center center;
+  width: 27px;
+  height: 27px;
+  margin-top: 8px;
+}
+.team-carousel .linkedin:hover .icon {
+  background: url("/assets/linkedin-icon.svg") no-repeat center center;
+  width: 27px;
+  height: 27px;
+  margin-top: 8px;
+}
+/* LinkedIn Icon */
 .social .twitter .icon {
   background: url("/assets/subscribe-twitter.svg") no-repeat center center;
 }
@@ -1521,7 +1543,7 @@ input:focus {
     background-image: url("./roadmap-mobile-frame-small.svg");
   }
 
-  .roadmap .main .cards .inner  {
+  .roadmap .main .cards .inner {
     width: 330px;
     padding: 27px 0 0 25px;
   }
@@ -1657,7 +1679,8 @@ input:focus {
     margin-right: 15px;
   }
 
-  #staking.staking .main .info-cols .info-1, #staking.staking .main .info-cols .info-2 {
+  #staking.staking .main .info-cols .info-1,
+  #staking.staking .main .info-cols .info-2 {
     min-width: auto;
   }
 
@@ -1686,7 +1709,7 @@ input:focus {
     min-height: 20rem;
   }
 
-  #staking.staking .main .info-cols{
+  #staking.staking .main .info-cols {
     margin-top: 30px;
   }
 
@@ -2168,7 +2191,7 @@ input:focus {
     justify-content: start;
     align-items: center;
   }
-  #staking.staking .main .info-1 .text ~.text {
+  #staking.staking .main .info-1 .text ~ .text {
     margin-top: 19px;
   }
   .staking .main .info-2 .level {
@@ -2242,14 +2265,21 @@ input:focus {
   position: relative;
 }
 .pageclip-form__submit:after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   background: #7ae7ff;
-  clip-path: polygon(0 0, 0 calc(100% - 12px), 18px 100%, 100% 100%, 100% 12px, calc(100% - 18px) 0);
+  clip-path: polygon(
+    0 0,
+    0 calc(100% - 12px),
+    18px 100%,
+    100% 100%,
+    100% 12px,
+    calc(100% - 18px) 0
+  );
   -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 }

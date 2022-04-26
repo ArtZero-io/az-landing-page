@@ -25,21 +25,35 @@ function TeamCarousel({ size }) {
           leftArrow={<div className="" />}
           rightArrow={<div className="" />}
         >
-          {teams.map(({ isFounder, src, name, position, position2 }, index) => (
-              <div key={index} className={`${src} member`} style={{paddingTop:'40px'}}>
+          {teams.map(
+            (
+              { isFounder, src, name, position, position2, linkedin },
+              index
+            ) => (
+              <div
+                key={index}
+                className={`${src} member`}
+                style={{ paddingTop: "40px" }}
+              >
                 {isFounder && <div className={`${src} circle`} />}
                 <img
-                    className={src}
-                    alt="team-brian"
-                    src={`/assets/${src}.png`}
+                  className={src}
+                  alt="team-brian"
+                  src={`/assets/${src}.png`}
                 />
                 <div className="name" style={{ marginBottom: "8px" }}>
                   {name}
                 </div>
                 <div className="position">{position}</div>
                 {position2 && <div className="position2">{position2}</div>}
+                <div className="linkedin">
+                  <a target="_blank" rel="noopener noreferrer" href={linkedin}>
+                    <div className="icon" />
+                  </a>
+                </div>
               </div>
-          ))}
+            )
+          )}
         </ScrollingCarousel>
       </div>
     </>
@@ -53,12 +67,14 @@ const teams = [
     isFounder: true,
     src: "team-brian-nguyen",
     name: "Brian Nguyen",
+    linkedin: "https://www.linkedin.com/in/tran-albert-469b6319a",
     position: "Founder",
   },
   {
     isFounder: true,
     src: "team-phoebe-hoang",
     name: "Phoebe Hoang",
+    linkedin: "http://linkedin.com/in/phuong-phoebe-hoang-4b5888148",
     position: "CMO",
     position2: "",
   },
@@ -66,12 +82,14 @@ const teams = [
     isFounder: true,
     src: "team-frankie-kao",
     name: "Frankie kao",
+    linkedin: "#",
     position: "Art Director",
   },
   {
     isFounder: true,
     src: "team-albert-tran",
     name: "Albert Tran",
+    linkedin: "https://www.linkedin.com/in/tran-albert-469b6319a",
     position: "Smart Contract &",
     position2: "Back-end Developer",
   },
@@ -79,6 +97,7 @@ const teams = [
     isFounder: true,
     src: "team-j",
     name: "J.",
+    linkedin: "#",
     position: "Full-Stack",
     position2: "Developer",
   },

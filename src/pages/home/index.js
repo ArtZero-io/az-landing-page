@@ -112,50 +112,50 @@ const HomePage = () => {
 
             <div className="menu">
               <a
-                  onClick={() => {
-                    closeMenu();
-                    setTimeout(() => scrollToAirdrop(), 0);
-                  }}
+                onClick={() => {
+                  closeMenu();
+                  setTimeout(() => scrollToAirdrop(), 0);
+                }}
               >
                 AIRDROP/BOUNTY
               </a>
               <a
-                  onClick={() => {
-                    closeMenu();
-                    setTimeout(() => scrollToRoadmap(), 0);
-                  }}
+                onClick={() => {
+                  closeMenu();
+                  setTimeout(() => scrollToRoadmap(), 0);
+                }}
               >
                 ROAD MAP
               </a>
               <a
-                  onClick={() => {
-                    closeMenu();
-                    setTimeout(() => scrollToTokenomics(), 0);
-                  }}
+                onClick={() => {
+                  closeMenu();
+                  setTimeout(() => scrollToTokenomics(), 0);
+                }}
               >
                 tokenomics
               </a>
               <a
-                  onClick={() => {
-                    closeMenu();
-                    setTimeout(() => scrollToPartners(), 0);
-                  }}
+                onClick={() => {
+                  closeMenu();
+                  setTimeout(() => scrollToPartners(), 0);
+                }}
               >
                 PARTNERS
               </a>
               <a
-                  onClick={() => {
-                    closeMenu();
-                    setTimeout(() => scrollToTeam(), 0);
-                  }}
+                onClick={() => {
+                  closeMenu();
+                  setTimeout(() => scrollToTeam(), 0);
+                }}
               >
                 TEAM & ADVISORS
               </a>
               <a
-                  onClick={() => {
-                    closeMenu();
-                    setTimeout(() => scrollToSubscribe(), 0);
-                  }}
+                onClick={() => {
+                  closeMenu();
+                  setTimeout(() => scrollToSubscribe(), 0);
+                }}
               >
                 SUBSCRIBE
               </a>
@@ -283,17 +283,23 @@ const HomePage = () => {
         <div className="wrapper">
           <div className="border top" />
 
-          <div
-              className="main"
-              data-aos="fade-up"
-              data-aos-duration="1000"
-          >
+          <div className="main" data-aos="fade-up" data-aos-duration="1000">
             <div className="section-ongoing--content">
               <div className="sub-title primary-color">ON-GOING</div>
               <h2 className="heading">Early Contribution Program</h2>
               <div className="desc">
-                On first come first served basis,<br/>
-                Contribute 69 AZERO to get 1 NFT, <span className="primary-color">Contribution Form</span>
+                On first come first served basis,
+                <br />
+                Contribute 69 AZERO to get 1 NFT,{" "}
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ textDecoration: "underline" }}
+                  href="https://docs.google.com/forms/d/1lReygF2cd5y0d5UloMZc8VOu8t2BZBgLu7EVMV7Rt0E/viewform?edit_requested=true"
+                  className="primary-color"
+                >
+                  FILL FORM HERE
+                </a>
               </div>
               <div className="digital-font">2500 NFT</div>
             </div>
@@ -376,7 +382,9 @@ const HomePage = () => {
           <div className="text">
             <div className="inner">
               <h2>Create & sell your NFTs</h2>
-              <div className="desc">Discover, collect, and sell extraordinary NFTs</div>
+              <div className="desc">
+                Discover, collect, and sell extraordinary NFTs
+              </div>
             </div>
           </div>
           <div className="cards">
@@ -774,7 +782,12 @@ const HomePage = () => {
           data-aos-delay="200"
           data-aos-duration="1000"
         >
-          <div className="inner"><img alt="partners-logo" src="/assets/partners-logo-subwallet.png" /></div>
+          <div className="inner">
+            <img
+              alt="partners-logo"
+              src="/assets/partners-logo-subwallet.png"
+            />
+          </div>
         </div>
         <div
           className="partner ventures32"
@@ -782,7 +795,12 @@ const HomePage = () => {
           data-aos-delay="200"
           data-aos-duration="1000"
         >
-          <div className="inner"><img alt="partners-logo" src="/assets/partners-logo-32ventures.png" /></div>
+          <div className="inner">
+            <img
+              alt="partners-logo"
+              src="/assets/partners-logo-32ventures.png"
+            />
+          </div>
         </div>
       </section>
 
@@ -798,10 +816,7 @@ const HomePage = () => {
         >
           We believe in Aleph Zero
         </div>
-        <TeamCarousel
-          style={{ maxWidth: "1186px" }}
-          size={size}
-        />
+        <TeamCarousel style={{ maxWidth: "1186px" }} size={size} />
       </section>
 
       <section className="advisors">
