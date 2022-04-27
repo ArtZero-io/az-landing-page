@@ -1,4 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
+import CountUp from 'react-countup';
+import VisibilitySensor from 'react-visibility-sensor';
 import RoadmapItem from "../../components/RoadmapItem/RoadmapItem";
 import Footer from "../../components/Footer";
 import FooterMenuMobile from "../../components/FooterMenuMobile";
@@ -301,7 +303,15 @@ const HomePage = () => {
                   FILL FORM HERE
                 </a>
               </div>
-              <div className="digital-font">2500 NFT</div>
+              <div className="digital-font">
+                <VisibilitySensor>
+                  {({ isVisible }) => (
+                      <div style={{ height: 90 }}>
+                        {isVisible ? <CountUp end={2500} suffix=" NFT" duration="1" redraw={true} /> : null}
+                      </div>
+                  )}
+                </VisibilitySensor>
+              </div>
             </div>
           </div>
 
@@ -347,7 +357,13 @@ const HomePage = () => {
           data-aos-delay="200"
           data-aos-duration="1000"
         >
-          80 WINNERS
+          <VisibilitySensor>
+            {({ isVisible }) => (
+                <div style={{ height: 120 }}>
+                  {isVisible ? <CountUp end={80} suffix=" WINNERS" duration={1} redraw={true} /> : null}
+                </div>
+            )}
+          </VisibilitySensor>
         </div>
         <div
           className="desc follow"
