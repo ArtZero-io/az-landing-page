@@ -67,7 +67,7 @@ const teams = [
     isFounder: true,
     src: "team-brian-nguyen",
     name: "Brian Nguyen",
-    linkedin: "https://www.linkedin.com/in/tran-albert-469b6319a",
+    linkedin: "https://www.linkedin.com/in/nad128668/",
     position: "Founder",
   },
   {
