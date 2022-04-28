@@ -307,7 +307,7 @@ const HomePage = () => {
                 <VisibilitySensor>
                   {({ isVisible }) => (
                       <div style={{ height: 90 }}>
-                        {isVisible ? <CountUp end={2500} suffix=" NFT" duration="1" redraw={true} /> : null}
+                        {isVisible ? <CountUp end={2500} suffix=" NFT" duration="1.5" redraw={true} /> : null}
                       </div>
                   )}
                 </VisibilitySensor>
@@ -360,7 +360,7 @@ const HomePage = () => {
           <VisibilitySensor>
             {({ isVisible }) => (
                 <div style={{ height: 120 }}>
-                  {isVisible ? <CountUp end={80} suffix=" WINNERS" duration={1} redraw={true} /> : null}
+                  {isVisible ? <CountUp end={80} suffix=" WINNERS" duration="1.5" redraw={true} /> : null}
                 </div>
             )}
           </VisibilitySensor>
@@ -465,8 +465,17 @@ const HomePage = () => {
           <img
             className="grid"
             alt="roadmap-grid"
-            src="/assets/roadmap-grid.svg"
+            src="/assets/roadmap-grid2.svg"
           />
+	        <div className="grid-lines">
+		        <div className="grid-line one"></div>
+		        <div className="grid-line two"></div>
+		        <div className="grid-line three"></div>
+		        <div className="grid-line four"></div>
+		        <div className="grid-line five"></div>
+		        <div className="grid-line six"></div>
+		        <div className="grid-line seven"></div>
+	        </div>
           <h2 data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
             Roadmap
           </h2>
