@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
-import CountUp from 'react-countup';
-import VisibilitySensor from 'react-visibility-sensor';
+import CountUp from "react-countup";
+import VisibilitySensor from "react-visibility-sensor";
 import RoadmapItem from "../../components/RoadmapItem/RoadmapItem";
 import Footer from "../../components/Footer";
 import FooterMenuMobile from "../../components/FooterMenuMobile";
@@ -275,8 +275,11 @@ const HomePage = () => {
             Get quick & easy access to digital collectibles, explore & trade
             NFTs from different collections & artists.
           </div>
-          <a href="#" className="button button-animation">
-            <span className="button-text">Coming soon on Smartnet</span>
+          <a
+            href="https://artzero.io/demo/#/"
+            className="button button-animation"
+          >
+            <span className="button-text">Launch Smartnet Demo</span>
           </a>
         </div>
       </section>
@@ -306,9 +309,16 @@ const HomePage = () => {
               <div className="digital-font">
                 <VisibilitySensor>
                   {({ isVisible }) => (
-                      <div style={{ height: 90 }}>
-                        {isVisible ? <CountUp end={2500} suffix=" NFT" duration="1.5" redraw={true} /> : null}
-                      </div>
+                    <div style={{ height: 90 }}>
+                      {isVisible ? (
+                        <CountUp
+                          end={2500}
+                          suffix=" NFT"
+                          duration="1.5"
+                          redraw={true}
+                        />
+                      ) : null}
+                    </div>
                   )}
                 </VisibilitySensor>
               </div>
@@ -359,9 +369,16 @@ const HomePage = () => {
         >
           <VisibilitySensor>
             {({ isVisible }) => (
-                <div style={{ height: 120 }}>
-                  {isVisible ? <CountUp end={80} suffix=" WINNERS" duration="1.5" redraw={true} /> : null}
-                </div>
+              <div style={{ height: 120 }}>
+                {isVisible ? (
+                  <CountUp
+                    end={80}
+                    suffix=" WINNERS"
+                    duration="1.5"
+                    redraw={true}
+                  />
+                ) : null}
+              </div>
             )}
           </VisibilitySensor>
         </div>
@@ -467,15 +484,15 @@ const HomePage = () => {
             alt="roadmap-grid"
             src="/assets/roadmap-grid2.svg"
           />
-	        <div className="grid-lines">
-		        <div className="grid-line one"></div>
-		        <div className="grid-line two"></div>
-		        <div className="grid-line three"></div>
-		        <div className="grid-line four"></div>
-		        <div className="grid-line five"></div>
-		        <div className="grid-line six"></div>
-		        <div className="grid-line seven"></div>
-	        </div>
+          <div className="grid-lines">
+            <div className="grid-line one"></div>
+            <div className="grid-line two"></div>
+            <div className="grid-line three"></div>
+            <div className="grid-line four"></div>
+            <div className="grid-line five"></div>
+            <div className="grid-line six"></div>
+            <div className="grid-line seven"></div>
+          </div>
           <h2 data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
             Roadmap
           </h2>
