@@ -276,10 +276,11 @@ const HomePage = () => {
             NFTs from different collections & artists.
           </div>
           <a
-            href="https://artzero.io/demo/#/"
+            // href="https://artzero.io/demo/#/"
+            href="#"
             className="button button-animation"
           >
-            <span className="button-text">Launch Smartnet Demo</span>
+            <span className="button-text">Coming soon on Testnet</span>
           </a>
         </div>
       </section>
@@ -291,7 +292,7 @@ const HomePage = () => {
           <div className="main" data-aos="fade-up" data-aos-duration="1000">
             <div className="section-ongoing--content">
               <div className="sub-title primary-color">ON-GOING</div>
-              <h2 className="heading">Early Contribution Program</h2>
+              <h2 className="heading">Launch Testnet</h2>
               <div className="desc">
                 On first come first served basis,
                 <br />
