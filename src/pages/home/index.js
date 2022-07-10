@@ -276,16 +276,15 @@ const HomePage = () => {
             NFTs from different collections & artists.
           </div>
           <a
-            // href="https://artzero.io/demo/#/"
-            href="#"
+            href="https://artzero.io/demotestnet"
             className="button button-animation"
           >
-            <span className="button-text">Coming soon on Testnet</span>
+            <span className="button-text">Launch Testnet Demo</span>
           </a>
         </div>
       </section>
 
-      <section className="section-ongoing container">
+      {/* <section className="section-ongoing container">
         <div className="wrapper">
           <div className="border top" />
 
@@ -328,7 +327,7 @@ const HomePage = () => {
 
           <div className="border bottom" />
         </div>
-      </section>
+      </section> */}
 
       <section ref={airdropRef} id="airdrop" className="airdrop">
         <img alt="stars.png" src="/assets/stars.png" className="stars-left" />
