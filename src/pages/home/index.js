@@ -359,7 +359,8 @@ const HomePage = () => {
           data-aos-delay="200"
           data-aos-duration="1000"
         >
-          We recently announced 80 winners for our first airdrop campaign.
+          we recently announced 80 winners for airdrop & 5 winners for bounty
+          program
         </div>
         <div
           className="winners"
@@ -388,19 +389,19 @@ const HomePage = () => {
           data-aos-delay="200"
           data-aos-duration="1000"
         >
-          Follow our{" "}
+          follow our{" "}
           <a
             target="_blank"
             rel="noreferrer"
             href="https://twitter.com/ArtZero_io"
           >
-            Twitter
+            twitter
           </a>{" "}
           & join our{" "}
           <a target="_blank" rel="noreferrer" href="https://t.me/artzero_io">
-            Telegram
+            telegram
           </a>{" "}
-          For Upcoming bounty programs
+          for latest updates{" "}
         </div>
       </section>
 
@@ -414,9 +415,9 @@ const HomePage = () => {
         >
           <div className="text">
             <div className="inner">
-              <h2>Create & sell your NFTs</h2>
+              <h2>create & sell your NFTs</h2>
               <div className="desc">
-                Discover, collect, and sell extraordinary NFTs
+                discover, collect, and sell extraordinary NFTs
               </div>
             </div>
           </div>
@@ -426,9 +427,9 @@ const HomePage = () => {
                 <img alt="icon-connect" src="/assets/icon-connect-wallet.svg" />
               </div>
               <div className="text">
-                <h3>Connect your wallet</h3>
+                <h3>connect your wallet</h3>
                 <div className="card__desc">
-                  ArtZero supports SubWallet and Polkadot JS wallet.
+                  artzero supports subwallet, talisman and polkadot js wallet.
                 </div>
               </div>
             </div>
@@ -437,9 +438,9 @@ const HomePage = () => {
                 <img alt="icon-create" src="/assets/icon-create-nft.svg" />
               </div>
               <div className="text">
-                <h3>Create your NFTs</h3>
+                <h3>create your NFTs</h3>
                 <div className="card__desc">
-                  Upload your work (image, video, audio, or 3D art), & a title &
+                  upload your work (image, video, audio, or 3D art), & a title &
                   description, & customize your NFTs with properties, stats, &
                   unlockable content.
                 </div>
@@ -453,9 +454,9 @@ const HomePage = () => {
                 />
               </div>
               <div className="text">
-                <h3>Create your collection</h3>
+                <h3>create your collection</h3>
                 <div className="card__desc">
-                  Add social links, a description, profile and banner images,
+                  add social links, a description, profile and banner images,
                   and set a secondary sales fee.
                 </div>
               </div>
@@ -467,8 +468,8 @@ const HomePage = () => {
               <div className="text">
                 <h3>List NFTs for sale</h3>
                 <div className="card__desc">
-                  Choose the NFT you want to sell and we help you sell them.
-                  Buyers can bid for the NFT or simply buy at fixed-price
+                  choose the NFT you want to sell and we help you sell them.
+                  buyers can bid for the NFT or simply buy at fixed-price
                 </div>
               </div>
             </div>
@@ -502,8 +503,8 @@ const HomePage = () => {
             data-aos-delay="200"
             data-aos-duration="1000"
           >
-            Note: ArtZero launch will depend on Smart Contract launch on Aleph
-            Zero's Mainnet
+            note: artzero launch will depend on smart contract launch on aleph
+            zero's mainnet
           </div>
           <div className="cards">
             <div
@@ -514,8 +515,8 @@ const HomePage = () => {
             >
               <div className="inner">
                 <h3>Q1 - 2022</h3>
-                <RoadmapItem text="Public Smartnet version" />
-                <RoadmapItem text="Announce NFT Winners" />
+                <RoadmapItem text="launch early contribution program" />
+                <RoadmapItem text="first airdrop program" />
               </div>
             </div>
             <div
@@ -526,21 +527,24 @@ const HomePage = () => {
             >
               <div className="inner">
                 <h3>Q2 - 2022</h3>
-                <RoadmapItem text="Public Testnet version" />
-                <RoadmapItem text="Code Audit and Review" />
-                <RoadmapItem text="Incentive programs for contributors" />
+                <RoadmapItem text="smartnet demo for public test" />
+                <RoadmapItem text="bug bounty program" />
+                <RoadmapItem text="close early contribution program & upgrade incentive programs for contributors" />
               </div>
             </div>
             <div
-              className="q3"
+              className="q2 tide"
               data-aos="fade-up"
               data-aos-delay="200"
               data-aos-duration="1000"
             >
               <div className="inner">
                 <h3>Q3 Q4 - 2022</h3>
-                <RoadmapItem text="Mainnet launch" />
-                <RoadmapItem text="Multi-chain support" />
+                <RoadmapItem text="testnet demo for public test" />
+                <RoadmapItem text="code audit & review" />
+                <RoadmapItem text="set-up validator node" />
+                <RoadmapItem text="mainnet launch" />
+                <RoadmapItem text="multi-chain support" />
               </div>
             </div>
           </div>
