@@ -429,7 +429,7 @@ const HomePage = () => {
               <div className="text">
                 <h3>connect your wallet</h3>
                 <div className="card__desc">
-                  artzero supports subwallet, talisman and polkadot js wallet.
+                  artzero supports subwallet and polkadot js wallet.
                 </div>
               </div>
             </div>
