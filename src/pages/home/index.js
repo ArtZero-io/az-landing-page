@@ -191,7 +191,7 @@ const HomePage = () => {
             ROAD MAP
           </a>
           <a className="hover-underline-animation" onClick={scrollToTokenomics}>
-            tokenomics
+            TOKENOMICS
           </a>
           <a className="hover-underline-animation" onClick={scrollToPartners}>
             PARTNERS
@@ -276,58 +276,13 @@ const HomePage = () => {
             NFTs from different collections & artists.
           </div>
           <a
-            href="https://artzero.io/demotestnet"
+            href="https://alephzero.artzero.io"
             className="button button-animation"
           >
             <span className="button-text">Launch Testnet Demo</span>
           </a>
         </div>
       </section>
-
-      {/* <section className="section-ongoing container">
-        <div className="wrapper">
-          <div className="border top" />
-
-          <div className="main" data-aos="fade-up" data-aos-duration="1000">
-            <div className="section-ongoing--content">
-              <div className="sub-title primary-color">ON-GOING</div>
-              <h2 className="heading">Launch Testnet</h2>
-              <div className="desc">
-                On first come first served basis,
-                <br />
-                Contribute 69 AZERO to get 1 NFT,{" "}
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ textDecoration: "underline" }}
-                  href="https://docs.google.com/forms/d/1lReygF2cd5y0d5UloMZc8VOu8t2BZBgLu7EVMV7Rt0E/viewform?edit_requested=true"
-                  className="primary-color"
-                >
-                  FILL FORM HERE
-                </a>
-              </div>
-              <div className="digital-font">
-                <VisibilitySensor>
-                  {({ isVisible }) => (
-                    <div style={{ height: 90 }}>
-                      {isVisible ? (
-                        <CountUp
-                          end={2500}
-                          suffix=" NFT"
-                          duration="1.5"
-                          redraw={true}
-                        />
-                      ) : null}
-                    </div>
-                  )}
-                </VisibilitySensor>
-              </div>
-            </div>
-          </div>
-
-          <div className="border bottom" />
-        </div>
-      </section> */}
 
       <section ref={airdropRef} id="airdrop" className="airdrop">
         <img alt="stars.png" src="/assets/stars.png" className="stars-left" />
@@ -514,11 +469,18 @@ const HomePage = () => {
               data-aos-duration="1000"
             >
               <div className="inner">
-                <h3>Q1 - 2022</h3>
-                <RoadmapItem text="launch early contribution program" />
-                <RoadmapItem text="first airdrop program" />
+                <h3>Q1, Q2 – 2022</h3>
+
+                <RoadmapItem text="Project launched with core team" />
+                <RoadmapItem text="Created 10K NFT Collection featuring Praying Mantis Predators" />
+                <RoadmapItem text="Launched Early Contribution Program" />
+                <RoadmapItem text="Launched First Airdrop Program" />
+                <RoadmapItem text="Launched Smartnet Demo for public test" />
+                <RoadmapItem text="Bug Bounty Program" />
+                <RoadmapItem text="Closed Early Contribution Program with upgraded incentives for contributors" />
               </div>
             </div>
+
             <div
               className="q2"
               data-aos="fade-up"
@@ -526,25 +488,31 @@ const HomePage = () => {
               data-aos-duration="1000"
             >
               <div className="inner">
-                <h3>Q2 - 2022</h3>
-                <RoadmapItem text="smartnet demo for public test" />
-                <RoadmapItem text="bug bounty program" />
-                <RoadmapItem text="close early contribution program & upgrade incentive programs for contributors" />
+                <h3>Q3, Q4 - 2022</h3>
+
+                <RoadmapItem text="Testnet Demo for Public Test" />
+                <RoadmapItem text="Re-stage: Deploy Launchpad in Q3 2022 instead of 2023" />
+                <RoadmapItem text="Set up Validator Node" />
+                <RoadmapItem text="Start Code Audit & Review" />
+                <RoadmapItem text="NFT Staking MVP" />
+                <RoadmapItem text="Focus on Business Development while perfecting the platform" />
               </div>
             </div>
+
             <div
-              className="q2 tide"
+              className="q3"
               data-aos="fade-up"
               data-aos-delay="200"
               data-aos-duration="1000"
             >
               <div className="inner">
-                <h3>Q3 Q4 - 2022</h3>
-                <RoadmapItem text="testnet demo for public test" />
-                <RoadmapItem text="code audit & review" />
-                <RoadmapItem text="set-up validator node" />
-                <RoadmapItem text="mainnet launch" />
-                <RoadmapItem text="multi-chain support" />
+                <h3>Q1, Q2 - 2023</h3>
+
+                <RoadmapItem text="Complete Code Audit & Review" />
+                <RoadmapItem text="Mainnet Launch" />
+                <RoadmapItem text="Launch NFT staking" />
+                <RoadmapItem text="Launch NFT marketplace on Astar Network" />
+                <RoadmapItem text="Create fund to support NFT projects" />
               </div>
             </div>
           </div>
@@ -881,7 +849,6 @@ const HomePage = () => {
                 <img
                   className="bg desktop"
                   alt="advisor-frame"
-                  // src="/assets/advisor-frame-light.svg"
                   src="/assets/advisor-frame-light.svg"
                 />
                 <img
