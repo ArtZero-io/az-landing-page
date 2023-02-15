@@ -7,7 +7,7 @@ const Footer = () => {
       data-aos="fade-up"
       data-aos-delay="200"
       data-aos-duration="1000"
-      >
+    >
       <div className="social">
         <div className="telegram">
           <a
@@ -56,8 +56,8 @@ const Footer = () => {
         </div>
       </div>
       <div className="copyright">
-        © Copyright 2022 artZero. <div className="copyright-break"></div>All
-        Rights Reserved
+        &copy; copyright {new Date().getFullYear()} artzero.{" "}
+        <div className="copyright-break"></div>All Rights Reserved
       </div>
     </div>
   );

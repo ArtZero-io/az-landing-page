@@ -275,12 +275,34 @@ const HomePage = () => {
             Get quick & easy access to digital collectibles, explore & trade
             NFTs from different collections & artists.
           </div>
-          <a
-            href="https://alephzero.artzero.io"
-            className="button button-animation"
-          >
-            <span className="button-text">Launch Testnet Demo</span>
-          </a>
+
+          <div className="testnet-button-wrapper">
+            <a
+              style={{
+                marginBottom: "8px",
+                marginTop: "8px",
+                minWidth: "280px",
+              }}
+              href="https://alephzero.artzero.io"
+              className="button button-animation"
+            >
+              <span className="button-text">Aleph Zero Testnet Demo</span>
+            </a>
+          </div>
+
+          <div>
+            <a
+              style={{
+                marginBottom: "8px",
+                marginTop: "8px",
+                minWidth: "280px",
+              }}
+              href="https://shibuya.artzero.io/"
+              className="button button-animation"
+            >
+              <span className="button-text">Shibuya Testnet Demo</span>
+            </a>
+          </div>
         </div>
       </section>
 
@@ -314,7 +336,7 @@ const HomePage = () => {
           data-aos-delay="200"
           data-aos-duration="1000"
         >
-          we recently announced 80 winners for airdrop & 5 winners for bounty
+          we recently announced 101 winners for airdrop & 5 winners for bounty
           program
         </div>
         <div
@@ -328,7 +350,7 @@ const HomePage = () => {
               <div style={{ height: 120 }}>
                 {isVisible ? (
                   <CountUp
-                    end={80}
+                    end={101}
                     suffix=" WINNERS"
                     duration="1.5"
                     redraw={true}
@@ -823,7 +845,7 @@ const HomePage = () => {
           data-aos-delay="200"
           data-aos-duration="1000"
         >
-          We believe in Aleph Zero
+          We believe in NFT
         </div>
         <TeamCarousel style={{ maxWidth: "1186px" }} size={size} />
       </section>
