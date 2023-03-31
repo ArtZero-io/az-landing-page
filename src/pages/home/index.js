@@ -283,6 +283,20 @@ const HomePage = () => {
                 marginTop: "8px",
                 minWidth: "280px",
               }}
+              href="http://localhost:8001/#/launchpad/5F4fBoxKBwXZ5fprZPtkhXtesR7PXEWny6KqwWEHbZWXkg55"
+              className="button button-animation"
+            >
+              <span className="button-text">Aleph Zero Mainnet</span>
+            </a>
+          </div>
+
+          <div className="testnet-button-wrapper">
+            <a
+              style={{
+                marginBottom: "8px",
+                marginTop: "8px",
+                minWidth: "280px",
+              }}
               href="https://alephzero.artzero.io"
               className="button button-animation"
             >
