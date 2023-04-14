@@ -275,47 +275,42 @@ const HomePage = () => {
             Get quick & easy access to digital collectibles, explore & trade
             NFTs from different collections & artists.
           </div>
+          <div className="testnet-button-wrapper-4">
+            <div className="testnet-button-wrapper">
+              <a
+                href="http://a0.artzero.io/#/launchpad/5F4fBoxKBwXZ5fprZPtkhXtesR7PXEWny6KqwWEHbZWXkg55"
+                className="button button-animation"
+              >
+                <span className="button-text">Aleph Zero Mainnet</span>
+              </a>
+            </div>
 
-          <div className="testnet-button-wrapper">
-            <a
-              style={{
-                marginBottom: "8px",
-                marginTop: "8px",
-                minWidth: "280px",
-              }}
-              href="http://localhost:8001/#/launchpad/5F4fBoxKBwXZ5fprZPtkhXtesR7PXEWny6KqwWEHbZWXkg55"
-              className="button button-animation"
-            >
-              <span className="button-text">Aleph Zero Mainnet</span>
-            </a>
-          </div>
+            <div className="testnet-button-wrapper">
+              <a
+                href="https://alephzero.artzero.io"
+                className="button button-animation"
+              >
+                <span className="button-text">Aleph Zero Testnet</span>
+              </a>
+            </div>
 
-          <div className="testnet-button-wrapper">
-            <a
-              style={{
-                marginBottom: "8px",
-                marginTop: "8px",
-                minWidth: "280px",
-              }}
-              href="https://alephzero.artzero.io"
-              className="button button-animation"
-            >
-              <span className="button-text">Aleph Zero Testnet Demo</span>
-            </a>
-          </div>
+            <div className="testnet-button-wrapper">
+              <a
+                href="https://astar.artzero.io/"
+                className="button button-animation"
+              >
+                <span className="button-text">Shibuya Mainnet</span>
+              </a>
+            </div>
 
-          <div>
-            <a
-              style={{
-                marginBottom: "8px",
-                marginTop: "8px",
-                minWidth: "280px",
-              }}
-              href="https://shibuya.artzero.io/"
-              className="button button-animation"
-            >
-              <span className="button-text">Shibuya Testnet Demo</span>
-            </a>
+            <div className="testnet-button-wrapper">
+              <a
+                href="https://shibuya.artzero.io/"
+                className="button button-animation"
+              >
+                <span className="button-text">Shibuya Testnet Demo</span>
+              </a>
+            </div>
           </div>
         </div>
       </section>

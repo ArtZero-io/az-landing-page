@@ -271,6 +271,25 @@ a {
   transform: scale(1.05);
 }
 
+.hero .testnet-button-wrapper-4 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  flex-direction: row;
+}
+
+.hero .testnet-button-wrapper-4 a {
+  margin-bottom: 8px;
+  margin-top: 8px;
+  min-width: 274px;
+}
+
+@media (max-width: 600px) {
+  .hero .testnet-button-wrapper-4 {
+    flex-direction: column;
+  }
+}
+
 .section-ongoing {
   margin: 180px auto 80px;
   background-image: url("/assets/advisor-grid.png");
