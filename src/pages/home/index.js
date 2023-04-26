@@ -278,7 +278,7 @@ const HomePage = () => {
           <div className="testnet-button-wrapper-4">
             <div className="testnet-button-wrapper">
               <a
-                href="http://a0.artzero.io/#/launchpad/5F4fBoxKBwXZ5fprZPtkhXtesR7PXEWny6KqwWEHbZWXkg55"
+                href="https://a0.artzero.io/#/collection/5F4fBoxKBwXZ5fprZPtkhXtesR7PXEWny6KqwWEHbZWXkg55?is_for_sale=true"
                 className="button button-animation"
               >
                 <span className="button-text">Aleph Zero Mainnet</span>
@@ -299,7 +299,7 @@ const HomePage = () => {
                 href="https://astar.artzero.io/"
                 className="button button-animation"
               >
-                <span className="button-text">Shibuya Mainnet</span>
+                <span className="button-text">Astar Mainnet</span>
               </a>
             </div>
 
