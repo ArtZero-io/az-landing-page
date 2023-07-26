@@ -287,7 +287,7 @@ const HomePage = () => {
 
             <div className="testnet-button-wrapper">
               <a
-                href="https://alephzero.artzero.io"
+                href="https://a0-test.artzero.io"
                 className="button button-animation"
               >
                 <span className="button-text">Aleph Zero Testnet</span>
